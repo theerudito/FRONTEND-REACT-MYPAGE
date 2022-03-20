@@ -18,8 +18,8 @@ export const SobreMeApp = () => {
 
       <div id="comentario">
         <p>
-          "Front-End Developer con conocimientos en varias herramientas todo lo
-          aprendido ha sido de manera Autodidacta :) y algo de Back-End."{" "}
+          "Developer con conocimientos en varias herramientas todo lo
+          aprendido ha sido de manera Autodidacta"
         </p>
       </div>
     </div>

@@ -5,7 +5,7 @@ export const FooterApp = () => {
     <>
       <hr />
       <footer className="w-100  d-flex  align-items-center justify-content-center flex-wrap">
-        <div>
+        <div id="derechos">
           <p id="derechos_1">Erudito Dev &copy; </p>
           <p id="derechos_2">Todos Los Derechos Reservados 2022</p>
         </div>

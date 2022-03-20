@@ -72,10 +72,15 @@
   justify-content: center;
 }
 
-
-
 li, a {
   list-style: none;
+  text-decoration: none
+}
+
+.nav-item {
+  list-style: none;
+  margin: 0px 10px;
+  text-decoration: none
 }
 
 
@@ -196,6 +201,9 @@ i {
     margin-left: 40px;
     margin-top: 100px;
   }
+  #paise {
+    margin: auto;
+  }
 
   #programer {
     width: 50px;
@@ -232,7 +240,6 @@ i {
   }
 
   .infor {
-    
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     padding: 10px;
@@ -245,37 +252,57 @@ i {
     border-radius: 10px;
   } 
   #city {
+    margin: auto;
     width: 340px;
-    height: 100px;
-    margin: 10px;
-    margin-left: 20px;
+    height: 35px;
   }
-  #temp {
+  #typewriter {
+    margin: auto;
+  }
+  #temporal {
+    margin: 0;
+    padding: 0;
+  }
+  #country {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  }  
+  #pa_ {
     width: 300px;
-    height: 280px;
-    padding-left: 10px;
-    padding: 10px;
-    
-    margin: 10px;
+    margin-left: 8px;
+    margin-top: 0px;
+  }
+
+  #tempe {
+    width:80px;
+    margin-left: 110px;
+    margin-top: -42px;
+  }
+ 
+  #cli {
+    width:130px;
+    margin-left: 55px;
+    margin-top: -42px;
+  }
+  #log {
+      margin-left: 250px;
+      margin-top: -140px;
   }
   #derechos_1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    margin: 0;
   }
   #derechos_2 {
-    margin-top: -8px;
+    margin-top: -20px;
   }
 }
 
 
-
-
 @media (min-width: 400px) {
   .App-header {
-    background-color: #00bb2d;
+    
   }
   #skills {
     width: 330px;
@@ -298,49 +325,68 @@ i {
     margin: auto;
   }
   .infor {
-    
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     padding: 10px;
   }
-  #map {
-    border: 1px solid white;
-    margin-left: 40px;
-    height: 400px;
-    border-radius: 10px;
+  #mapa {
+    margin: auto;
   } 
-  #city {
-    width: 400px;
-    height: 100px;
-    padding-left: 10px;
-    
-    margin: 10px;
-    margin-left: 40px;
+  #map{
+    margin: auto;
+    width: 380px;
+    height: 250px;
   }
-  #temp {
+  #city {
+    margin: auto;
+    width: 360px;
+    height: 40px;
+  }
+  #typewriter {
+    margin: auto;
+  }
+  #temporal {
+    margin: 0;
+    padding: 10;
+  }
+  #country {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  }  
+  #pa_ {
     width: 300px;
-    height: 280px;
-    padding-left: 10px;
-    padding: 10px;
-    
-    margin: 10px;
-    margin-left: 85px;
+    margin-left: 8px;
+    margin-top: 4px;
+  }
+
+  #tempe {
+    width:80px;
+    margin-left: 125px;
+    margin-top: -42px;
+  }
+ 
+  #cli {
+    width:130px;
+    margin-left: 65px;
+    margin-top: -42px;
+  }
+  #log {
+      margin-left: 250px;
+      margin-top: -140px;
   }
   #derechos_1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    margin: 0;
   }
   #derechos_2 {
-    margin-top: -8px;
+    margin-top: -20px;
   }
 }
 
 @media (min-width: 600px) {
   .App-header {
-    background-color: #0e76a8;
   }
   #texto_0, #texto_1 {
     padding: 0px 80px ;
@@ -360,53 +406,25 @@ i {
     grid-template-columns: repeat(1, 1fr);
     padding: 10px;
   }
-
-  #map {
-    border: 1px solid white;
+  #mapa {
     margin: auto;
-    margin-left: 160px;
-    height: 400px;
-    border-radius: 10px;
+  } 
+  #map{
+    margin: auto;
+    width: 380px;
+    height: 250px;
   }
-
-  #city {
-    width: 500px;
-    height: 100px;
-    padding-left: 10px;
-    
-    margin: 10px;
-  }
-
-  #temp {
-    width: 345px;
-    height: 400px;
-    padding-left: 10px;
-    padding: 10px;
-    
-    margin: 10px;
-  }
+  
+ 
 }
 
 
 
-@media (min-width: 1100px) {
-  .App-header {
-    background-color: #285bc2;
-  }
-  #texto_0, #texto_1 {
-    padding: 0px 200px ;
-  }
-  #titulo_0, #titulo_1 {
-    width: 350px;
-    margin: 10px auto;
-    border-radius: 10px;
-  }
-}
+
 
 
 @media (min-width: 1200px) {
   .App-header {
-    background-color: aqua;
   }
   #texto_0, #texto_1 {
     padding: 0px 200px ;
@@ -419,6 +437,9 @@ i {
   #equipo {
     width: 500px;
     margin: auto;
+  }
+  #programador {
+    margin-left: 200px;
   }
 
   .infor {
@@ -437,16 +458,59 @@ i {
 
   #city {
     width: 500px;
-    height: 100px;
+    height: 50px;
     padding-left: 10px;
     margin: 10px;
+  }
+  
+  #typewriter {
+    margin-left: -500px;
+    margin-top: 60px;
+  }
+  #temporal {
+    border: 1px solid white;
+    border-radius: 10px;
+    position: absolute;
+    margin: auto;
+    margin-left: 500px;
+    margin-top: -320px;
+    padding-left: 5px;
+  }
+  #country {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  }  
+  #pa_ {
+    width: 300px;
+    margin-left: 8px;
+    margin-top: 4px;
   }
 
-  #temp {
-    width: 345px;
-    height: 400px;
-    padding-left: 10px;
-    padding: 10px;
-    margin: 10px;
+  #tempe {
+    width:80px;
+    margin-left: 130px;
+    margin-top: -42px;
   }
+ 
+  #cli {
+    width:130px;
+    margin-left: 65px;
+    margin-top: -44px;
+  }
+  #log {
+      margin-left: 250px;
+      margin-top: -140px;
+  }
+  #derechos {
+    height: 80px;
+    margin: auto;
+  } 
+ 
+  .iconos {
+    margin-top: 100px;
+    margin: auto;
+    height: 30px;
+  }
+
 }
