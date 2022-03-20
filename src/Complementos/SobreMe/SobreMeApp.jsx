@@ -17,7 +17,7 @@ export const SobreMeApp = () => {
         </h5>
         <h5>!Never Give Up..</h5>
         <img
-          src="./img/ubicacion.png"
+          src="../Extras/img/ubicacion.png"
           alt=""
           width="20"
           height="20"
