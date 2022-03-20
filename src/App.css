@@ -188,6 +188,90 @@ i {
 
 
 
+@media (min-width: 300px) {
+  .App-header {
+  }
+  #programador {
+    width: 100px;
+    margin-left: 40px;
+    margin-top: 100px;
+  }
+
+  #programer {
+    width: 50px;
+    margin: 10px 1px;
+  }
+  
+  #comentario {
+    margin: 40px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #skills {
+    width: 330px;
+    padding: 10px;
+    border: white solid 1px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #texto_0, #texto_1 {
+    padding: 0px 40px ;
+  }
+  #titulo_0, #titulo_1 {
+    width: 350px;
+    margin: 10px auto;
+    border-radius: 10px;
+  }
+  #equipo {
+    width: 330px;
+    margin-left: 20px;
+  }
+
+  .infor {
+    
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 10px;
+  }
+  #map {
+    border: 1px solid white;
+    margin-left:20px;
+    width: 330px;
+    height: 200px;
+    border-radius: 10px;
+  } 
+  #city {
+    width: 340px;
+    height: 100px;
+    margin: 10px;
+    margin-left: 20px;
+  }
+  #temp {
+    width: 300px;
+    height: 280px;
+    padding-left: 10px;
+    padding: 10px;
+    
+    margin: 10px;
+  }
+  #derechos_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  #derechos_2 {
+    margin-top: -8px;
+  }
+}
+
+
+
 
 @media (min-width: 400px) {
   .App-header {
