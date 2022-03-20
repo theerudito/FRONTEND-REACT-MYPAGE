@@ -11,26 +11,74 @@
 }
 
 
-#foto {
+#yo {
   border-radius: 50%;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  border: white 2px solid;
+}
+
+#minombre {
+  width: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: -150px;
+}
+#frase, #pais, #reloj {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#ubiyban {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -120px;
+
+}
+
+#ubicacion {
+  width: 40px;
+  margin-top: 70px;
+}
+
+#bandera {
+  width: 40px;
+  margin-top: 70px; 
+  margin-left: 90px;
+}
+
+#programador {
+  width: 100px;
+  margin-left: 40px;
+  margin-top: 70px;
+}
+
+#programer {
   width: 100px;
 }
 
-#yo {
-  margin: 0px 10px;
+#comentario {
+  margin: 40px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+
 
 li, a {
   list-style: none;
-  margin: 0px 10px;
 }
 
-#comentario {
-  font-size: 16px;
-  justify-content: center;
-  align-items: center;
-  
-}
+
 
 #skills {
   width: 400px;

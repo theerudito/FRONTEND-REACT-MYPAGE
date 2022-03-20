@@ -1,11 +1,12 @@
 import React from "react";
 import { Tierrita } from "./Tierrita";
+import equipo from "../Extras/img/sobreme.jpg";
 
 export const MapaApp = () => {
   return (
     <>
       <div id="equipo">
-        <img src="./img/sobreme.jpg" alt="equipo" id="equipo" />
+        <img src={equipo} alt="equipo" id="equipo" />
       </div>
 
       <div className="infor">
@@ -40,7 +41,7 @@ export const MapaApp = () => {
           <h6 id="viento-velocidad"></h6>
         </div>
       </div>
-      <hr/>
+      <hr />
     </>
   );
 };
