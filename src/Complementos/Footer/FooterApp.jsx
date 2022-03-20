@@ -3,13 +3,13 @@ import React from "react";
 export const FooterApp = () => {
   return (
     <>
-      <hr/>
+      <hr />
       <footer className="w-100  d-flex  align-items-center justify-content-center flex-wrap">
-        <p className="fs-6 px-3  pt-3">
-          Erudito Dev &copy; Todos Los Derechos Reservados 2022
-        </p>
-       
-       
+        <div>
+          <p id="derechos_1">Erudito Dev &copy; </p>
+          <p id="derechos_2">Todos Los Derechos Reservados 2022</p>
+        </div>
+
         <div className="iconos">
           <a id="gm" href="mailto:erudito.tv@gmail.com">
             <i className="bi bi-envelope"></i>
@@ -50,7 +50,7 @@ export const FooterApp = () => {
             <i className="bi bi-github"></i>
           </a>
         </div>
-       
+
         <br />
         <br />
       </footer>

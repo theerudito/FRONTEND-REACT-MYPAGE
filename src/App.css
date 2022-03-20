@@ -143,7 +143,15 @@ i {
 
 @media (min-width: 400px) {
   .App-header {
-    
+    background-color: #00bb2d;
+  }
+  #skills {
+    width: 330px;
+    padding: 10px;
+    border: white solid 1px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
   }
   #texto_0, #texto_1 {
     padding: 0px 40px ;
@@ -163,14 +171,12 @@ i {
     grid-template-columns: repeat(1, 1fr);
     padding: 10px;
   }
-
   #map {
     border: 1px solid white;
     margin-left: 40px;
     height: 400px;
     border-radius: 10px;
-  }
-
+  } 
   #city {
     width: 400px;
     height: 100px;
@@ -179,7 +185,6 @@ i {
     margin: 10px;
     margin-left: 40px;
   }
-
   #temp {
     width: 300px;
     height: 280px;
@@ -189,11 +194,21 @@ i {
     margin: 10px;
     margin-left: 85px;
   }
+  #derechos_1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  #derechos_2 {
+    margin-top: -8px;
+  }
 }
 
 @media (min-width: 600px) {
   .App-header {
-    
+    background-color: #0e76a8;
   }
   #texto_0, #texto_1 {
     padding: 0px 80px ;
@@ -238,14 +253,13 @@ i {
     
     margin: 10px;
   }
-  
 }
 
 
 
 @media (min-width: 1100px) {
   .App-header {
-    
+    background-color: #285bc2;
   }
   #texto_0, #texto_1 {
     padding: 0px 200px ;
@@ -260,7 +274,7 @@ i {
 
 @media (min-width: 1200px) {
   .App-header {
-
+    background-color: aqua;
   }
   #texto_0, #texto_1 {
     padding: 0px 200px ;
