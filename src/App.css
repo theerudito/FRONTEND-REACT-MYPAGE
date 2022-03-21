@@ -77,11 +77,26 @@ li, a {
   text-decoration: none
 }
 
-.nav-item {
+.nav-item, #link {
+  border-radius: 10px;
+  padding-left: 5px;
+  margin:  0px 5px ;
+  width: 130px;
   list-style: none;
-  margin: 0px 10px;
-  text-decoration: none
+  text-decoration: none;
+  color: white;
 }
+
+#inicio {
+  border-radius: 10px;
+  padding-left: 5px;
+  margin:  0px 5px ;
+  width: 120px;
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+
 
 
 
@@ -244,51 +259,78 @@ i {
     grid-template-columns: repeat(1, 1fr);
     padding: 10px;
   }
+
+  #mapa {
+    margin: auto;
+    margin-left: 40px;
+    height: 160px;
+    
+  }
   #map {
-    border: 1px solid white;
-    margin-left:20px;
-    width: 330px;
-    height: 200px;
     border-radius: 10px;
-  } 
-  #city {
-    margin: auto;
-    width: 340px;
-    height: 35px;
-  }
-  #typewriter {
-    margin: auto;
-  }
-  #temporal {
-    margin: 0;
-    padding: 0;
-  }
-  #country {
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  }  
-  #pa_ {
-    width: 300px;
-    margin-left: 8px;
-    margin-top: 0px;
+    border: 1px solid white;
   }
 
-  #tempe {
-    width:80px;
-    margin-left: 110px;
-    margin-top: -42px;
+  #city {
+    margin: 5px auto;
+    width: 350px;
   }
- 
+  
+  .RedesSociales {
+    margin: 0px auto;
+  }
+  
+  #contenedorcity {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1px;
+  }
+  #temporal {
+    margin: 5px auto;
+    border-radius: 10px;
+    padding-left: 5px;
+    height: 180px;
+    width: 240px;
+    border: 1px solid white;
+  }
+  #stack {
+    margin: 5px auto;
+    width: 350px;
+  }
+
+  #stac {
+    margin: auto;
+    width: 350px;
+    border-radius: 10px;
+  }
+  #ubi {
+    width: 280px;
+    margin: 5px 2px;
+  }
+
+  #temp {
+    width: 230px;
+  }
+
   #cli {
-    width:130px;
-    margin-left: 55px;
-    margin-top: -42px;
+    width: 210px;
+    margin: 5px 2px;
   }
+
   #log {
-      margin-left: 250px;
-      margin-top: -140px;
+    margin:  10px auto;
+    margin-left: 90px;
   }
+
+  #stack:hover,
+  #temporal:hover,
+  #map:hover,
+  #skills:hover,
+  #yo:hover, .form:hover
+   {
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,.15);
+  }
+
   #derechos_1 {
     display: flex;
     align-items: center;
@@ -297,10 +339,23 @@ i {
   #derechos_2 {
     margin-top: -20px;
   }
+
+  #link:hover {
+    background-color: #3b5998;
+    border-radius: 10px;
+    transition: 2s ease-out;
+  } 
+  #inicio:hover {
+    background-color: #3b5998;
+    border-radius: 10px;
+    transition: 2s ease-out; 
+  } 
 }
 
 
-@media (min-width: 400px) {
+
+
+@media (min-width: 600px) {
   .App-header {
     
   }
@@ -329,102 +384,106 @@ i {
     grid-template-columns: repeat(1, 1fr);
     padding: 10px;
   }
-  #mapa {
-    margin: auto;
-  } 
-  #map{
-    margin: auto;
-    width: 380px;
-    height: 250px;
-  }
-  #city {
-    margin: auto;
-    width: 360px;
-    height: 40px;
-  }
-  #typewriter {
-    margin: auto;
-  }
-  #temporal {
-    margin: 0;
-    padding: 10;
-  }
-  #country {
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  }  
-  #pa_ {
-    width: 300px;
-    margin-left: 8px;
-    margin-top: 4px;
-  }
-
-  #tempe {
-    width:80px;
-    margin-left: 125px;
-    margin-top: -42px;
-  }
  
-  #cli {
-    width:130px;
-    margin-left: 65px;
-    margin-top: -42px;
-  }
-  #log {
-      margin-left: 250px;
-      margin-top: -140px;
-  }
-  #derechos_1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #derechos_2 {
-    margin-top: -20px;
-  }
-}
-
-@media (min-width: 600px) {
-  .App-header {
-  }
-  #texto_0, #texto_1 {
-    padding: 0px 80px ;
-  }
-  #titulo_0, #titulo_1 {
-    width: 350px;
-    margin: 10px auto;
+  #mapa {
+    margin: 0px auto;
+    height: 260px;
     border-radius: 10px;
   }
-  #equipo {
-    width: 450px;
-    margin: auto;
-  }
-  .infor {
-    
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    padding: 10px;
-  }
-  #mapa {
-    margin: auto;
-  } 
-  #map{
-    margin: auto;
-    width: 380px;
-    height: 250px;
+
+  #city {
+    margin: 60px auto;
+    width: 400px;
   }
   
+  .RedesSociales {
+    margin: 0px auto;
+  }
+  
+  #contenedorcity {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #temporal {
+    margin: 10px auto;
+    border-radius: 10px;
+    padding-left: 5px;
+    height: 180px;
+    width: 240px;
+    border: 1px solid white;
+    margin-top: -40px;
+  }
+
+
+  #stack {
+    width: 400px;
+    border-radius: 10px;
+    margin: auto;
+  }
+
+  #stac {
+
+    width: 400px;
+    border-radius: 10px
+  } 
+
+  #ubi {
+    margin: auto;
+    width: 280px;
+    margin: 5px 2px;
+  }
+
+  #temp {
+    width: 230px;
+  }
+
+  #cli {
+    width: 210px;
+    margin: 5px 2px;
+  }
+
+  #log {
+    margin:  10px auto;
+    margin-left: 90px;
+  }
+
+  #derechos {
+    height: 80px;
+    margin:  0px auto;
+  } 
  
+  .iconos {
+    margin-top: 100px;
+    margin: auto;
+    height: 30px;
+  }
+  #stack:hover,
+  #temporal:hover,
+  #map:hover,
+  #skills:hover,
+  #yo:hover, .form:hover
+   {
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,.15);
+  }
+  #link:hover {
+    background-color: #3b5998;
+    border-radius: 10px;
+    transition: 2s ease-out;
+  } 
+  #inicio:hover {
+    background-color: #3b5998;
+    border-radius: 10px;
+    transition: 2s ease-out; 
+  } 
 }
-
-
 
 
 
 
 @media (min-width: 1200px) {
   .App-header {
+
   }
   #texto_0, #texto_1 {
     padding: 0px 200px ;
@@ -449,59 +508,64 @@ i {
   }
 
   #map {
-    border: 1px solid white;
-    margin: 10px;
-    margin-left: 20px;
-    height: 400px;
+    height: 260px;
+    width: 400px;
+  }
+
+  #mapa {
+    margin: auto;
+    margin-left: 40px;
+    height: 260px;
     border-radius: 10px;
   }
 
   #city {
+    margin: 60px auto;
     width: 500px;
-    height: 50px;
-    padding-left: 10px;
-    margin: 10px;
   }
   
-  #typewriter {
-    margin-left: -500px;
-    margin-top: 60px;
+  .RedesSociales {
+    margin: 0px auto;
+  }
+  
+  #contenedorcity {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
   }
   #temporal {
-    border: 1px solid white;
-    border-radius: 10px;
-    position: absolute;
     margin: auto;
-    margin-left: 500px;
-    margin-top: -320px;
+    border-radius: 10px;
     padding-left: 5px;
-  }
-  #country {
-  display: flex;
-  align-items: left;
-  justify-content: left;
-  }  
-  #pa_ {
-    width: 300px;
-    margin-left: 8px;
-    margin-top: 4px;
+    height: 180px;
+    
+    width: 240px;
   }
 
-  #tempe {
-    width:80px;
-    margin-left: 130px;
-    margin-top: -42px;
+  #stac {
+    width: 400px;
+    border-radius: 10px;
   }
- 
+
+  #ubi {
+    width: 280px;
+    margin: 5px 2px;
+  }
+
+  #temp {
+    width: 230px;
+  }
+
   #cli {
-    width:130px;
-    margin-left: 65px;
-    margin-top: -44px;
+    width: 210px;
+    margin: 5px 2px;
   }
+
   #log {
-      margin-left: 250px;
-      margin-top: -140px;
+    margin:  10px auto;
+    margin-left: 90px;
   }
+
   #derechos {
     height: 80px;
     margin: auto;
@@ -513,4 +577,23 @@ i {
     height: 30px;
   }
 
+  #stack:hover,
+  #temporal:hover,
+  #map:hover,
+  #skills:hover,
+  #yo:hover, .form:hover
+   {
+    box-shadow: 0px 0px 20px 5px rgba(0,0,0,.15);
+  }
+
+  #link:hover {
+    background-color: #3b5998;
+    border-radius: 10px;
+    transition: 2s ease-out;
+  } 
+  #inicio:hover {
+    background-color: #3b5998;
+    border-radius: 10px;
+    transition: 2s ease-out; 
+  } 
 }
