@@ -21,7 +21,6 @@ export const RelojApp = () => {
     return () => clearInterval(timer);
   }, []);
 
-  
   return (
     <div className="Reloj">
       <div>

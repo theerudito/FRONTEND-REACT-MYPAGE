@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { MostrarTodosLosContactos } from "../Helpers/ApiRest";
+import { MostrarTodosLosContactos } from "../../Helpers/ApiRest";
 
 const url = "https://erudito-dev.herokuapp.com/api/contactos";
 const incialState = [
@@ -18,7 +18,7 @@ const incialState = [
   },
 ];
 
-export const MostrarContactos = () => {
+export const MostrarContactosApp = () => {
   const [contactos, setContactos] = useState(incialState);
 
   useEffect(() => {

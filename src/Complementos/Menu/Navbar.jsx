@@ -7,7 +7,9 @@ export const Navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg navbar-dark">
         <div className="container-fluid">
-          <NavLink to="/" id="inicio">EruditoDev</NavLink>
+          <NavLink to="/" id="inicio">
+            EruditoDev
+          </NavLink>
 
           <button
             id="togel"
@@ -24,22 +26,26 @@ export const Navbar = () => {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-             
               <li className="nav-item">
                 <a
                   href="https://drive.google.com/file/d/1pvTpWKhotcWqk-ko0XzmgV9W2HvcGtA4/view"
                   target="_blanck"
                   id="link"
-                >Curriculum</a>
-              </li>
-              
-
-              <li className="nav-item">
-                <NavLink to="#contacto" id="link">Contacto</NavLink>
+                >
+                  Curriculum
+                </a>
               </li>
 
               <li className="nav-item">
-                <NavLink to="/porfolio" id="link">Portafolio</NavLink>
+                <NavLink to="#contacto" id="link">
+                  Contacto
+                </NavLink>
+              </li>
+
+              <li className="nav-item">
+                <NavLink to="/porfolio" id="link">
+                  Porfolio
+                </NavLink>
               </li>
             </ul>
 
@@ -85,7 +91,7 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
-      <hr/>
+      <hr />
     </>
   );
 };

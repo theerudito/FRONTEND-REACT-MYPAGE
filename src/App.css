@@ -278,6 +278,7 @@ i {
   
   .RedesSociales {
     margin: 0px auto;
+    font-size: 18px;
   }
   
   #contenedorcity {
@@ -328,7 +329,7 @@ i {
   #skills:hover,
   #yo:hover, .form:hover
    {
-    box-shadow: 0px 0px 20px 5px rgba(0,0,0,.15);
+    box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
   }
 
   #derechos_1 {
@@ -397,8 +398,11 @@ i {
   }
   
   .RedesSociales {
-    margin: 0px auto;
+    margin: 20px auto;
+    margin-bottom: 10px;
+    font-size: 18px;
   }
+
   
   #contenedorcity {
     display: grid;
@@ -423,7 +427,6 @@ i {
   }
 
   #stac {
-
     width: 400px;
     border-radius: 10px
   } 
@@ -464,7 +467,7 @@ i {
   #skills:hover,
   #yo:hover, .form:hover
    {
-    box-shadow: 0px 0px 20px 5px rgba(0,0,0,.15);
+    box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
   }
   #link:hover {
     background-color: #3b5998;
@@ -520,12 +523,13 @@ i {
   }
 
   #city {
-    margin: 60px auto;
+    margin: 10px auto;
     width: 500px;
   }
   
   .RedesSociales {
     margin: 0px auto;
+    font-size: 18px;
   }
   
   #contenedorcity {
@@ -579,11 +583,11 @@ i {
 
   #stack:hover,
   #temporal:hover,
-  #map:hover,
+  #mapa:hover,
   #skills:hover,
   #yo:hover, .form:hover
    {
-    box-shadow: 0px 0px 20px 5px rgba(0,0,0,.15);
+    box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
   }
 
   #link:hover {

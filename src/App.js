@@ -1,8 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Inicio } from './Complementos/Inicio/Inicio';
-import { MostrarContactos } from './Complementos/MostarContactos/MostrarContactos';
-import PorfolioApp from './Complementos/Rutas/porfolio';
+import { MostrarContactosApp } from './Complementos/Rutas/MostarContactos/MostrarContactos';
+import { PorfolioPage } from './Complementos/Rutas/Porfolio/PorfolioPage';
+
+
+
+
 
 
 function App() {
@@ -12,8 +16,8 @@ function App() {
        <Routes>
          <Route path='/' element={<Inicio/>} />
          <Route path='/contacto' element={<Inicio/>} />
-         <Route path='/porfolio' element={<PorfolioApp/>} />
-         <Route path='/api/contactos' element={<MostrarContactos/>} />
+         <Route path='/porfolio' element={<PorfolioPage/>} />
+         <Route path='/api/contactos' element={<MostrarContactosApp/>} />
        </Routes>
       </BrowserRouter>
     </div>

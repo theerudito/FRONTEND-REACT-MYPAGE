@@ -4,7 +4,7 @@ import { IconosClima } from "./IconosClima";
 
 const url = `http://api.openweathermap.org/data/2.5/weather?q=Ecuador&lang=es&units=metric&appid=6a3b130f8cc2a2577fac82539b3ca3cb`;
 
-const iniciaState = { temperatura: "dd", pais: "", clima: "", logo: "" };
+const iniciaState = { temperatura: "", pais: "", clima: "", logo: "" };
 
 export const ClimaApp = () => {
   const [clima, setClima] = useState(iniciaState);
