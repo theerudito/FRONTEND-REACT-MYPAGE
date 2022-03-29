@@ -109,11 +109,13 @@ export const MainPorfolio = () => {
             />
           </div>
 
+    
+
           <div className="carousel-item">
             <MainCardPost
               titulo={post5[0]}
               url={post5[1]}
-              image={post3[2]}
+              image={post5[2]}
               page={post5[3]}
             />
           </div>
