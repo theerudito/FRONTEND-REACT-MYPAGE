@@ -1,0 +1,11 @@
+
+
+.modal {
+   background-color: blueviolet;
+   display: none;
+}
+
+
+.modal-open {
+  display: flex;
+}

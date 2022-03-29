@@ -1,25 +1,60 @@
 import axios from "axios";
+import { Modal } from "bootstrap";
+import MUIDataTable from "mui-datatables";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { MostrarTodosLosContactos } from "../../Helpers/ApiRest";
+import { ModalComponeteApp } from "./ModalComponete";
 
 const url = "https://erudito-dev.herokuapp.com/api/contactos";
+
 const incialState = [
   {
-    nombre: "Jorge",
-    email: "sdsd6",
-    telefono: "0865588",
-    mensaje: "sdsdsd",
+    name: "_id",
+    label: "ID",
+    options: { filter: true, sort: true },
   },
   {
-    nombre: "Jorge",
-    email: "sdsd6",
-    telefono: "0865588",
-    mensaje: "sdsdsd",
+    name: "nombre",
+    label: "NOMBRE",
+    options: { filter: true, sort: true },
+  },
+  {
+    name: "email",
+    label: "EMAIL",
+    options: { filter: true, sort: true },
+  },
+  {
+    name: "telefono",
+    label: "TELEFONO",
+    options: { filter: true, sort: true },
+  },
+  {
+    name: "mensaje",
+    label: "MENSAJE",
+    options: { filter: true, sort: true },
   },
 ];
 
+// const incialState = [
+//   {
+//     nombre: "Jorge",
+//     email: "sdsd6",
+//     telefono: "0865588",
+//     mensaje: "sdsdsd",
+//   },
+//   {
+//     nombre: "Jorge",
+//     email: "sdsd6",
+//     telefono: "0865588",
+//     mensaje: "sdsdsd",
+//   },
+// ];
+
 export const MostrarContactosApp = () => {
   const [contactos, setContactos] = useState(incialState);
+
+  const [isOpenModal, setIsOpenModal] = useState(false);
 
   useEffect(() => {
     getContactos();
@@ -28,50 +63,45 @@ export const MostrarContactosApp = () => {
   const getContactos = async () => {
     const datos = await MostrarTodosLosContactos();
     setContactos(datos);
+    console.log(datos);
   };
 
   //=============BORRAR========================
   const borrarContacto = async (id) => {
-    await axios.delete(`${url}/${id}`)
-    getContactos()
-  } 
+    await axios.delete(`${url}/${id}`);
+    getContactos();
+  };
   //=============BORRAR========================
+
+  const openModal = () => {
+    setIsOpenModal(true);
+    console.log("cli");
+  };
+
+  const closeModal = () => {
+    setIsOpenModal(false);
+  };
 
   return (
     <>
-      <div>
-        <h1>Contactos</h1>
-      </div>
-      <div>
-        <button className="btn btn-primary">Crear</button>
-        <table>
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Telefomo</th>
-              <th>Email</th>
-              <th>Mensaje</th>
-            </tr>
-          </thead>
-          {contactos.map((item) => (
-            <tr>
-              <td>{item.nombre}</td>
-              <td>{item.telefono}</td>
-              <td>{item.email}</td>
-              <td>{item.mensaje}</td>
-              <td>
-                <button className="btn btn-success">Editar</button>
+      <button onClick={openModal}>Crear</button>
 
+      <ModalComponeteApp isOpenModal={isOpenModal} closeModal={closeModal} />
 
-                <button 
-                  className="btn btn-danger"
-                  onClick={() => borrarContacto(item._id)} 
-                  >Borrar</button>
-              </td>
-            </tr>
-          ))}
-        </table>
-      </div>
+      {/* <MUIDataTable
+        title={"Contactos"}
+        data={contactos}
+        columns={incialState}
+      /> */}
+
+      {/* <button className="btn btn-success">Editar</button>
+
+      <button
+        className="btn btn-danger"
+        onClick={() => borrarContacto(contactos._id)}
+      >
+        Borrar
+      </button> */}
     </>
   );
 };
