@@ -82,6 +82,7 @@ export const MainPorfolio = () => {
               page={post1[3]}
             />
           </div>
+          
           <div className="carousel-item">
             <MainCardPost
               titulo={post2[0]}

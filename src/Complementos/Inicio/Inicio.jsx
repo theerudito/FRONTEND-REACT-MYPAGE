@@ -7,10 +7,11 @@ import { Navbar } from "../Menu/Navbar";
 import { Informacion } from "../SobreMe/Informacion";
 import { Skills } from "../SobreMe/Skills";
 import { SobreMeApp } from "../SobreMe/SobreMeApp";
+import "../Inicio/style.css";
 
 export const Inicio = () => {
   return (
-    <>
+    <div className="principal">
       <div>
         <HeaderPrincipal />
       </div>
@@ -32,16 +33,16 @@ export const Inicio = () => {
       </div>
 
       <div>
-        <MapaApp/>
+        <MapaApp />
       </div>
 
-      <div id="formulario">
+      <div>
         <FormularioApp />
       </div>
 
       <div>
         <FooterApp />
       </div>
-    </>
+    </div>
   );
 };

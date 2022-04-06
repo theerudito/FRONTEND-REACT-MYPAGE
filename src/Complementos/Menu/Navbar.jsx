@@ -44,7 +44,7 @@ export const Navbar = () => {
 
               <li className="nav-item">
                 <NavLink to="/porfolio" id="link">
-                  Porfolio
+                  Portfolio
                 </NavLink>
               </li>
             </ul>
