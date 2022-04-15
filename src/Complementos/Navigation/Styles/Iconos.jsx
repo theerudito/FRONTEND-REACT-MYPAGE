@@ -65,6 +65,7 @@ export const Twitter = styled.i`
 `;
 
 export const Lista = styled.nav`
+  border-radius: 10px;
   list-style: none;
   transition: 0.1s ease-in;
   :hover {

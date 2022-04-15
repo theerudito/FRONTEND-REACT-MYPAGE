@@ -2,16 +2,24 @@ import React, { useEffect, useState } from "react";
 import { MostrarTodosLosContactos } from "../../Helpers/ApiRest";
 import { useModalContactApp } from "../../Hooks/useModalContact";
 import { inicialState } from "../../InicialValues/InicialValue";
-import { BotonCrear } from "./Botones";
+import { FooterApp } from "../Home/Footer/FooterApp";
 import { FormularioContactoCrear } from "./Formulario";
 import { Modal } from "./Modal";
+import {
+  BotonCrear,
+  ContenedorPrincipal,
+  ContenedorTabla,
+  Tabla,
+  TH,
+  Thead,
+  Titulo,
+  TR,
+} from "./Styles/Styles";
 import { TablaApp } from "./Tabla";
 
 export const MostrarContactoApp = () => {
   const [contact, setContact] = useState(inicialState);
   const [isOpenModal, openModal, closeModal] = useModalContactApp(false);
-
-
 
   const updateContact = async () => {
     const data = await MostrarTodosLosContactos();
@@ -24,33 +32,33 @@ export const MostrarContactoApp = () => {
   }, []);
 
   return (
-    <div className="container">
-      <h1>Consulta de Contactos</h1>
-      <BotonCrear onClick={openModal}>Crear</BotonCrear>
-      
+    <>
+      <ContenedorPrincipal>
+        <Titulo>Consulta de Contactos</Titulo>
+        <BotonCrear onClick={openModal}>Crear</BotonCrear>
 
-      <Modal isOpen={isOpenModal} closeModal={closeModal}>
-        <FormularioContactoCrear />
-      </Modal>
-      <div className="container">
-        <table className="table table-dark">
-          <thead>
-            <tr>
-              <th>Nombre</th>
-              <th>Email</th>
-              <th>Telefono</th>
-              <th>Mensaje</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
+        <Modal isOpen={isOpenModal} closeModal={closeModal}>
+          <FormularioContactoCrear />
+        </Modal>
+        <ContenedorTabla>
+          <Tabla className="table" style={{ color: "white" }}>
+            <Thead>
+              <TR>
+                <th>Nombre</th>
+                <th>Email</th>
+                <TH>Telefono</TH>
+                <TH>Mensaje</TH>
+                <th>Acciones</th>
+              </TR>
+            </Thead>
 
-          {contact.map(
-            (item, _id) => (
-              (<TablaApp item={item} id={_id} />)
-            )
-          )}
-        </table>
-      </div>
-    </div>
+            {contact.map((item, _id) => (
+              <TablaApp item={item} id={_id} />
+            ))}
+          </Tabla>
+        </ContenedorTabla>
+      </ContenedorPrincipal>
+      <FooterApp />
+    </>
   );
 };

@@ -1,5 +1,6 @@
-import { BotonCerrarModal } from "./Botones";
+
 import "./contactos.css";
+import { BotonCerrarModal } from "./Styles/Styles";
 
 export const Modal = ({ children, isOpen, closeModal }) => {
 

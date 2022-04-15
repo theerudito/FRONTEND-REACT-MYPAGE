@@ -8,19 +8,13 @@ export const DivFoto = styled.div`
 `;
 
 export const Foto = styled.img`
-  width: 150px;
-  height: 150px;
-  margin: 10px auto;
+  width: 100px;
+  height: 100px;
+  margin: 5px auto;
   object-fit: contain;
   border-radius: 50%;
   :hover {
     box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
-  }
-  @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
   }
 `;
 
@@ -28,17 +22,11 @@ export const Foto = styled.img`
 
 export const DivContenedorSaludo = styled.div`
   margin: auto;
-  margin-top: 70px;
+  margin-top: 10px;
   width: 200px;
   display: grid;
   align-items: center;
   justify-content: center;
-  @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-  }
 `;
 
 export const DivContenedorUbicacion = styled.div`
@@ -73,10 +61,13 @@ export const FotoBandera = styled.img`
 
 export const ContendorReloj = styled.div`
   margin: auto;
-  margin-top: 10px;
+  margin-top: -5px;
   display: flex;
-  width: 40px;
+  width: 100px;
   object-fit: cover;
+  border: solid 1px;
+  border-radius: 10px;
+  padding-left: 10px;
 `;
 
 export const ContendorProgramador = styled.div`
@@ -98,8 +89,16 @@ export const ContendorFrase = styled.div`
   @media ${Dispositivos.mobileS} {
     max-width: 320px;
   }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
+  @media ${Dispositivos.mobileL} {
+    max-width: 425px;
+  }
+  @media ${Dispositivos.laptop} {
+    max-width: 1024px;
+    width: 1024px;
+  }
+  @media ${Dispositivos.laptopL} {
+    max-width: 1440px;
+    width: 1300px;
   }
 `;
 
@@ -119,6 +118,10 @@ export const ContendorSkills = styled.div`
   }
   @media ${Dispositivos.mobileM} {
     max-width: 375px;
+  }
+  @media ${Dispositivos.laptop} {
+    max-width: 1024px;
+    width: 600px;
   }
 `;
 
@@ -153,6 +156,10 @@ export const InforFrontend = styled.div`
   @media ${Dispositivos.mobileM} {
     max-width: 375px;
   }
+  @media ${Dispositivos.laptop} {
+    max-width: 1024px;
+    width: 500px;
+  }
 `;
 
 export const InforBackend = styled.div`
@@ -167,6 +174,10 @@ export const InforBackend = styled.div`
   @media ${Dispositivos.mobileM} {
     max-width: 375px;
   }
+  @media ${Dispositivos.laptop} {
+    max-width: 1024px;
+    width: 500px;
+  }
 `;
 //=================INFOR==================
 
@@ -180,10 +191,10 @@ export const ContendorInformacion = styled.div`
     align-items: center;
     justify-content: center;
     @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-  }
+      max-width: 320px;
+    }
+    @media ${Dispositivos.mobileM} {
+      max-width: 375px;
+    }
   }
 `;

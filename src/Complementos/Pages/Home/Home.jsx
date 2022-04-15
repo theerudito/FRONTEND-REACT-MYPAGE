@@ -7,7 +7,6 @@ import { Informacion } from "./SobreMe/Informacion";
 import { Skills } from "./SobreMe/Skills";
 import { DivContenedorHome } from "./StyleHome";
 
-
 export const Home = () => {
   return (
     <DivContenedorHome>
@@ -16,7 +15,6 @@ export const Home = () => {
       <Informacion />
       <MapaApp />
       <FormularioApp />
-      <FooterApp/>
     </DivContenedorHome>
   );
 };

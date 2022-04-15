@@ -60,21 +60,21 @@ export const ClimaApp = () => {
   }, []);
 
   return (
-    <div id="temporal">
-      <div id="country">
-        <h4 id="ubi">Ubicacion: {clima.pais} </h4>
+    <div>
+      <div>
+        <h4>Ciudad: {clima.pais} </h4>
       </div>
 
-      <div id="temperatura">
-        <h4 id="temp">Temperatura: {Math.round(clima.temperatura)} C°</h4>
+      <div>
+        <h4>Temperatura: {Math.round(clima.temperatura)} C°</h4>
       </div>
 
-      <div id="clima">
-        <h4 id="cli">Clima: {clima.clima} </h4>
+      <div>
+        <h4>Clima: {clima.clima} </h4>
       </div>
 
-      <div id="logo">
-        <img src={clima.logo} alt="log" id="log" />
+      <div>
+        <img src={clima.logo} alt="log" />
       </div>
     </div>
   );

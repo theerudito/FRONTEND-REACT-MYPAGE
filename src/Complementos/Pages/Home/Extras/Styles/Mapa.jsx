@@ -1,14 +1,12 @@
 import styled from "styled-components";
 import { Dispositivos } from "../../../../Medias/Medidas";
+//import { Dispositivos } from "../../../../Medias/Medidas";
 
 export const ContenedorEquipo = styled.div`
   width: 400px;
   margin: auto;
   @media ${Dispositivos.mobileS} {
     max-width: 320px;
-  }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
   }
 `;
 
@@ -19,9 +17,6 @@ export const FotoEquipo = styled.img`
   @media ${Dispositivos.mobileS} {
     max-width: 320px;
   }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-  }
 `;
 
 export const ContendorCiudad = styled.div`
@@ -31,33 +26,31 @@ export const ContendorCiudad = styled.div`
   display: grid;
   justify-content: center;
   align-items: center;
-
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-  }
 `;
 
 export const ContendorMapa = styled.div`
-  width: 300px;
+  width: 370px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   @media ${Dispositivos.mobileS} {
     max-width: 320px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
   }
 `;
 
 export const Mapa = styled.iframe`
-  width: 300px;
+  width: 370px;
   height: 250px;
   border: solid 1px white;
   border-radius: 10px;
+  display: flex;
+  margin: auto;
   :hover {
     box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
+  }
+  @media ${Dispositivos.mobileS} {
+    max-width: 320px;
   }
 `;
 
@@ -72,6 +65,19 @@ export const ContendorTemperatura = styled.div`
   justify-content: center;
   :hover {
     box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
+  }
+`;
+
+export const PantallaCompleta = styled.div`
+  margin: auto;
+  @media ${Dispositivos.laptop} {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
   }
   @media ${Dispositivos.mobileS} {
     max-width: 320px;

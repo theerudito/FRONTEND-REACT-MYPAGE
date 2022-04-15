@@ -4,5 +4,5 @@ export const RutasApp = {
   contact: "/api/contactos",
   account: "/account",
   login: "/login",
-  proyects: "/proyects",
+  curriculum: "/curriculum",
 };

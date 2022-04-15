@@ -11,8 +11,9 @@ import {
   ContenedorEquipo,
   FotoEquipo,
   Mapa,
+  PantallaCompleta,
 } from "./Styles/Mapa";
-import { DivStack, PantallaCompleta, StackImagen } from "./Styles/StyleStack";
+import { DivStack, StackImagen } from "./Styles/StyleStack";
 
 const map =
   "https://www.google.com/maps/embed?pb=!4v1643061480277!6m8!1m7!1sR0eXAEN6bwlyd-MZXnbj6g!2m2!1d-0.2111384403907714!2d-79.11275535317631!3f230.52825118808192!4f4.809187930852232!5f0.7820865974627469";

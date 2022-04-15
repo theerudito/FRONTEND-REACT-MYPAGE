@@ -16,7 +16,6 @@ import {
   FotoUbicacion,
 } from "../SobreMe/Styles/Styles";
 
-
 import { RelojApp } from "./Reloj";
 
 export const ImagenesSobreYo = () => {
@@ -27,14 +26,14 @@ export const ImagenesSobreYo = () => {
       </DivFoto>
 
       <DivContenedorSaludo>
-        <p id="minombre"> Soy Jorge Loor</p>
-        <h5 id="frase">!Never Give Up..</h5>
+        <p > Soy Jorge Loor</p>
+        <h5 style={{marginTop: "-15px"}}>!Never Give Up..</h5>
       </DivContenedorSaludo>
 
       <DivContenedorUbicacion>
-        <FotoUbicacion src={ubicacion} alt="ubicacion" id="ubicacion" />
-        <p id="pais">Ecuador</p>
-        <FotoBandera src={Bandera} alt="ubicacion" id="bandera" />
+        <FotoUbicacion src={ubicacion} alt="ubicacion" style={{ marginTop: "-5px", marginRight: "5px"}}/>
+        <p>Ecuador</p>
+        <FotoBandera src={Bandera} alt="ubicacion" style={{ marginTop: "-5px", marginLeft: "10px"}}/>
       </DivContenedorUbicacion>
 
       <ContendorReloj>
@@ -42,18 +41,15 @@ export const ImagenesSobreYo = () => {
       </ContendorReloj>
 
       <ContendorFrase>
-      <ContendorProgramador>
-        <FotoProgramador src={Programador} alt="ubicacion" id="programer" />
-      </ContendorProgramador>
+        <ContendorProgramador>
+          <FotoProgramador src={Programador} alt="ubicacion" />
+        </ContendorProgramador>
 
-
-     
         <p>
-          "Developer con conocimientos en varias herramientas todo lo
-          aprendido ha sido de manera Autodidacta"
+          "Developer con conocimientos en varias herramientas todo lo aprendido
+          ha sido de manera Autodidacta"
         </p>
       </ContendorFrase>
-
     </>
   );
 };

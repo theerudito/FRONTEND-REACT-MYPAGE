@@ -7,7 +7,15 @@ import { DivContenedorHome } from './Complementos/Pages/Home/StyleHome';
 
 function App() {
   return (
-        <div className='contendor'>
+        <div style={{
+          width: "100%", 
+          height: "auto", 
+          margin: "0px", 
+          padding: "0px", 
+          boxSizing: "border-box",
+          color: "red",
+          
+          }} >
           <DivContenedorHome>
               <BrowserRouter>
                 <Layout>

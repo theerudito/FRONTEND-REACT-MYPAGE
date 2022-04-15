@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { BotonGuardar, ContenedorFormulario } from "./Botones";
+
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { BotonGuardar, ContenedorFormulario } from "./Styles/Styles";
 
 const url = "https://erudito-dev.herokuapp.com/api/contactos";
 
@@ -141,6 +142,66 @@ export const FormularioContactoEditar = ({ title }) => {
             </h6>
           </div>
         ) : null}
+      </form>
+    </ContenedorFormulario>
+  );
+};
+
+export const FormularioLogin = ({ title }) => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [guardado, setGuardado] = useState(false);
+
+  return (
+    <ContenedorFormulario>
+      <form>
+        <h4>Login{title} </h4>
+        <input
+          className="form-control mt-5"
+          type="email"
+          placeholder="Email"
+          value={email}
+          required
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        <input
+          className="form-control mt-1"
+          type="password"
+          placeholder="Password"
+          value={password}
+          required
+          onChange={(e) => setPassword(e.target.value)}
+        />
+
+        <BotonGuardar type="submit" className="mt-5">
+          Login
+        </BotonGuardar>
+        {guardado ? (
+          <div className="alert alert-info mt-2">
+            <h6 className="d-flex m-2 justify-content-center">
+              !Guardado Correctamente¡
+            </h6>
+          </div>
+        ) : null}
+      </form>
+    </ContenedorFormulario>
+  );
+};
+
+export const FormularioCV = ({ title }) => {
+
+  return (
+    <ContenedorFormulario>
+      <form>
+        <h4>English{title} </h4>
+        <img alt="english" />
+
+        <h4>OR</h4>
+
+        <h4>English{title} </h4>
+        <img alt="english" />
       </form>
     </ContenedorFormulario>
   );

@@ -1,8 +1,9 @@
 import axios from "axios";
 import { useModalContactApp } from "../../Hooks/useModalContact";
-import { BotonEditar, BotonEliminar } from "./Botones";
+
 import { FormularioContactoEditar } from "./Formulario";
 import { Modal } from "./Modal";
+import { BotonEditar, BotonEliminar, TBody, TD, TR } from "./Styles/Styles";
 
 export const TablaApp = ({ item, id }) => {
   const [isOpenModal, openModal, closeModal] = useModalContactApp(false);
@@ -17,12 +18,12 @@ export const TablaApp = ({ item, id }) => {
 
   return (
     <>
-      <tbody>
-        <tr>
+      <TBody>
+        <TR>
           <td>{item.nombre} </td>
           <td>{item.email} </td>
-          <td>{item.telefono} </td>
-          <td>{item.mensaje} </td>
+          <TD>{item.telefono} </TD>
+          <TD>{item.mensaje} </TD>
           <td>
             <BotonEditar onClick={() => openModal(item._id)}>
               Editar
@@ -35,8 +36,8 @@ export const TablaApp = ({ item, id }) => {
               Eliminar
             </BotonEliminar>
           </td>
-        </tr>
-      </tbody>
+        </TR>
+      </TBody>
     </>
   );
 };

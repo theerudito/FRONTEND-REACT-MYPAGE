@@ -1,4 +1,11 @@
 import styled from "styled-components";
+import { Dispositivos } from "../../../Medias/Medidas";
+
+export const Titulo = styled.h1`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
 export const BotonCrear = styled.button`
   background-color: blue;
@@ -6,8 +13,9 @@ export const BotonCrear = styled.button`
   border-radius: 10px;
   border: none;
   margin: 10px auto;
+  display: flex;
   transition: 0.5 ease-out;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
   &:hover {
     background-color: blueviolet;
@@ -64,11 +72,63 @@ export const BotonGuardar = styled.button`
   }
 `;
 
-// div contenedor formulario
-
 export const ContenedorFormulario = styled.div`
-color: black
+  color: black;
+`;
+
+export const ContenedorPrincipal = styled.div`
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 500px;
+`;
+
+export const ContenedorTabla = styled.div`
+  width: 1200px;
+  margin: auto;
+  font-size: 20px;
+
+`;
+
+export const Tabla = styled.table`
+  /* background-color: #282c34; */
+  border: solid 1px orangered;
+  border-radius: 10px;
+`;
+
+export const Thead = styled.thead`
+  color: red;
+`;
+
+export const TR = styled.tr`
+  color: white;
+`;
+
+export const TH = styled.td`
+  
+  @media ${Dispositivos.mobileM} {
+    max-width: 375px;
+    
+  }
+  @media ${Dispositivos.laptop} {
+    max-width: 1024px;
+    ;
+  }
+`;
+
+export const TBody = styled.tbody`
   
 `;
 
-// div contenedor formulario
+export const TD = styled.td`
+  
+  @media ${Dispositivos.mobileM} {
+    max-width: 375px;
+    
+  }
+  @media ${Dispositivos.laptop} {
+    max-width: 1024px;
+    
+  }
+`;
