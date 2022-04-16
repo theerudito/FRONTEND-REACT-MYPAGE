@@ -5,30 +5,8 @@ export const ContenedorPortafolio = styled.div`
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  /* 
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-    margin: auto;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @media ${Dispositivos.mobileL} {
-    max-width: 425px;
-    margin: auto;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-  }
-
-  @media ${Dispositivos.tablet} {
-    max-width: 768px;
-    margin: auto;
-    display: grid;
-    align-items: center;
-    justify-content: center;
-  } */
+  margin: 0px;
+  padding: 0px;
 `;
 
 export const ContenedorTituloPortafolio = styled.div`
@@ -97,6 +75,7 @@ export const ContenedorImagen = styled.img`
   height: 260px;
   border: solid 1px purple;
   border-radius: 10px;
+  object-fit: cover;
   @media ${Dispositivos.mobileS} {
     max-width: 280px;
     display: flex;

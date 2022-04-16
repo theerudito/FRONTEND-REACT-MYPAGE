@@ -7,6 +7,16 @@ export const Titulo = styled.h1`
   justify-content: center;
 `;
 
+export const ButtonAccount = styled.button`
+  margin: auto;
+  background-color: orange;
+  border-radius: 10px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
 export const BotonCrear = styled.button`
   background-color: blue;
   color: white;
@@ -81,20 +91,71 @@ export const ContenedorPrincipal = styled.div`
   padding: 0px;
   margin: 0px;
   width: 100%;
-  height: 500px;
+  height: 600px;
+  clear: both;
+  overflow: hidden;
 `;
 
 export const ContenedorTabla = styled.div`
-  width: 1200px;
+  width: auto;
   margin: auto;
   font-size: 20px;
 
+  @media ${Dispositivos.mobileS} {
+    max-width: 320px;
+    font-size: 10px;
+    width: 320px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #hide {
+      display: none;
+    }
+    #td,
+    #th {
+      width: 1px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+
+  @media ${Dispositivos.mobileL} {
+    max-width: 425px;
+    font-size: 18px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    #hide {
+      display: none;
+    }
+    #td,
+    #th {
+      width: 230px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
+  @media ${Dispositivos.laptop} {
+    max-width: 1024px;
+    #hide {
+      display: block;
+      text-decoration: none;
+      list-style: none;
+      width: 230px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+  }
 `;
 
 export const Tabla = styled.table`
   /* background-color: #282c34; */
   border: solid 1px orangered;
-  border-radius: 10px;
 `;
 
 export const Thead = styled.thead`
@@ -106,29 +167,21 @@ export const TR = styled.tr`
 `;
 
 export const TH = styled.td`
-  
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-    
+  @media ${Dispositivos.mobileL} {
+    max-width: 425px;
   }
   @media ${Dispositivos.laptop} {
     max-width: 1024px;
-    ;
   }
 `;
 
-export const TBody = styled.tbody`
-  
-`;
+export const TBody = styled.tbody``;
 
 export const TD = styled.td`
-  
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-    
+  @media ${Dispositivos.mobileL} {
+    max-width: 425px;
   }
-  @media ${Dispositivos.laptop} {
-    max-width: 1024px;
-    
+  @media ${Dispositivos.laptopL} {
+    max-width: 1200px;
   }
 `;

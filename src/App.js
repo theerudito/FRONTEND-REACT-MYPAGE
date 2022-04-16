@@ -3,27 +3,32 @@ import { Layout } from './Complementos/Layout/Layout';
 import { Router } from './Complementos/Router/Router';
 // Importar Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { DivContenedorHome } from './Complementos/Pages/Home/StyleHome';
+import styled from 'styled-components';
+
+
+const Contenedor = styled.div`
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  color: "red";
+  background-color: #282c34;
+  color: aliceblue;
+  font-size: calc(10px + 2vmin);
+  clear: both;
+  overflow: hidden;
+`
 
 function App() {
   return (
-        <div style={{
-          width: "100%", 
-          height: "auto", 
-          margin: "0px", 
-          padding: "0px", 
-          boxSizing: "border-box",
-          color: "red",
-          
-          }} >
-          <DivContenedorHome>
+        <Contenedor>
               <BrowserRouter>
                 <Layout>
                     <Router/>
                 </Layout>
               </BrowserRouter>
-          </DivContenedorHome>
-      </div>
+      </Contenedor>
   );
 }
 

@@ -5,9 +5,6 @@ import { Dispositivos } from "../../../../Medias/Medidas";
 export const ContenedorEquipo = styled.div`
   width: 400px;
   margin: auto;
-  @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
 `;
 
 export const FotoEquipo = styled.img`
@@ -15,7 +12,12 @@ export const FotoEquipo = styled.img`
   margin: auto;
   display: flex;
   @media ${Dispositivos.mobileS} {
-    max-width: 320px;
+    max-width: 340px;
+    margin: auto;
+    display: grid;
+    object-fit: contain;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -34,9 +36,6 @@ export const ContendorMapa = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
 `;
 
 export const Mapa = styled.iframe`
@@ -48,9 +47,6 @@ export const Mapa = styled.iframe`
   margin: auto;
   :hover {
     box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
-  }
-  @media ${Dispositivos.mobileS} {
-    max-width: 320px;
   }
 `;
 
@@ -69,20 +65,13 @@ export const ContendorTemperatura = styled.div`
 `;
 
 export const PantallaCompleta = styled.div`
-  margin: auto;
   @media ${Dispositivos.laptop} {
-    max-width: 1024px;
+    max-width: 1440px;
+    width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin: auto;
     align-items: center;
     justify-content: center;
-  }
-  @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
   }
 `;

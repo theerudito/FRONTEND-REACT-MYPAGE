@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Dispositivos } from "../../../../Medias/Medidas";
 
 export const ContendorFooter = styled.div`
+  
 
   @media ${Dispositivos.mobileS} {
     max-width: 320px;

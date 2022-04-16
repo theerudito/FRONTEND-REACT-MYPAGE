@@ -6,6 +6,11 @@ import {
   ContenedorContactos,
   ContenedorPrincipal,
   Botones,
+  ContenedorTitulo,
+  ContenedorPerfil,
+  ContenedorName,
+  ContenedorRol,
+  ContenedorA,
 } from "./Styles";
 
 export const Account = () => {
@@ -24,7 +29,13 @@ export const Account = () => {
       </h1>
       <ContenedorPrincipal>
         <ContenedorContactos>
-          <h1>Contacts</h1>
+          <ContenedorTitulo>Contacts</ContenedorTitulo>
+          <ContenedorA>
+            <ContenedorPerfil
+              src="https://cdn.pixabay.com/photo/2017/06/22/10/11/icon-2430270_960_720.png"
+              alt="perfil"
+            />
+          </ContenedorA>
           <div>
             <Botones as={Link} to={RutasApp.contact}>
               Contactos
@@ -32,10 +43,31 @@ export const Account = () => {
           </div>
         </ContenedorContactos>
 
-        <ContenedorAccount>
-          <h1>Account</h1>
+        <ContenedorContactos>
+          <ContenedorTitulo>Post</ContenedorTitulo>
+          <ContenedorA>
+            <ContenedorPerfil
+              src="https://www.seekpng.com/png/full/326-3269585_digital-marketing-services-for-smes-bicycle-icon-circle.png"
+              alt="perfil"
+            />
+          </ContenedorA>
           <div>
-            <Botones>Contactos</Botones>
+            <Botones>Post</Botones>
+          </div>
+        </ContenedorContactos>
+
+        <ContenedorAccount>
+          <ContenedorTitulo>Account</ContenedorTitulo>
+          <ContenedorA>
+            <ContenedorPerfil
+              src="https://www.pngall.com/wp-content/uploads/5/Profile-Male-PNG.png"
+              alt="perfil"
+            />
+            <ContenedorName>Jorge Loor</ContenedorName>
+            <ContenedorRol>Admin</ContenedorRol>
+          </ContenedorA>
+          <div>
+            <Botones>Logout</Botones>
           </div>
         </ContenedorAccount>
       </ContenedorPrincipal>

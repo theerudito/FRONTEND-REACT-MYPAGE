@@ -35,12 +35,6 @@ export const DivContenedorUbicacion = styled.div`
   display: flex;
   width: 300px;
   height: 45px;
-  @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-  }
 `;
 
 export const FotoUbicacion = styled.img`
@@ -86,19 +80,18 @@ export const FotoProgramador = styled.img`
 export const ContendorFrase = styled.div`
   margin: auto;
   width: 400px;
+
+ 
   @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
-  @media ${Dispositivos.mobileL} {
-    max-width: 425px;
+    max-width: 350px;
   }
   @media ${Dispositivos.laptop} {
-    max-width: 1024px;
-    width: 1024px;
-  }
-  @media ${Dispositivos.laptopL} {
     max-width: 1440px;
-    width: 1300px;
+    width: 1200px;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -113,14 +106,12 @@ export const ContendorSkills = styled.div`
   :hover {
     box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
   }
+
   @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
+    max-width: 350px;
   }
   @media ${Dispositivos.laptop} {
-    max-width: 1024px;
+    max-width: 1440px;
     width: 600px;
   }
 `;
@@ -137,10 +128,7 @@ export const TituloInfor = styled.h1`
   border: solid 1px white;
   border-radius: 10px;
   @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
+    max-width: 350px;
   }
 `;
 
@@ -151,14 +139,16 @@ export const InforFrontend = styled.div`
   justify-content: center;
   align-items: center;
   @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
+    max-width: 350px;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
   }
   @media ${Dispositivos.laptop} {
-    max-width: 1024px;
-    width: 500px;
+    max-width: 1440px;
+    width: 600px;
+    margin-top: 0px;
   }
 `;
 
@@ -169,32 +159,41 @@ export const InforBackend = styled.div`
   justify-content: center;
   align-items: center;
   @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-  }
-  @media ${Dispositivos.mobileM} {
-    max-width: 375px;
+    max-width: 350px;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
   }
   @media ${Dispositivos.laptop} {
-    max-width: 1024px;
-    width: 500px;
+    max-width: 1440px;
+    width: 600px;
   }
 `;
 //=================INFOR==================
 
 export const ContendorInformacion = styled.div`
   @media ${Dispositivos.laptop} {
-    max-width: 1024px;
+    max-width: 1440px;
+    width: 1200px;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-    margin: auto;
     align-items: center;
     justify-content: center;
-    @media ${Dispositivos.mobileS} {
-      max-width: 320px;
-    }
-    @media ${Dispositivos.mobileM} {
-      max-width: 375px;
-    }
+  }
+  @media ${Dispositivos.mobileS} {
+    max-width: 400px;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+  @media ${Dispositivos.laptop} {
+    max-width: 1440px;
+    width: 1250px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 `;

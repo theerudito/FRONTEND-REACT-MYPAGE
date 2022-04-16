@@ -1,4 +1,5 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { useModalContactApp } from "../../Hooks/useModalContact";
 
 import { FormularioContactoEditar } from "./Formulario";
@@ -7,8 +8,6 @@ import { BotonEditar, BotonEliminar, TBody, TD, TR } from "./Styles/Styles";
 
 export const TablaApp = ({ item, id }) => {
   const [isOpenModal, openModal, closeModal] = useModalContactApp(false);
-
-  console.log(item);
 
   const url = "https://erudito-dev.herokuapp.com/api/contactos";
 
@@ -20,12 +19,12 @@ export const TablaApp = ({ item, id }) => {
     <>
       <TBody>
         <TR>
-          <td>{item.nombre} </td>
-          <td>{item.email} </td>
-          <TD>{item.telefono} </TD>
-          <TD>{item.mensaje} </TD>
-          <td>
-            <BotonEditar onClick={() => openModal(item._id)}>
+          <td id="td">{item.nombre} </td>
+          <TD id="hide">{item.email} </TD>
+          <td id="td">{item.telefono} </td>
+          <TD id="hide">{item.mensaje} </TD>
+          <td id="td">
+            <BotonEditar onClick={(e) => openModal(item._id)}>
               Editar
             </BotonEditar>
 

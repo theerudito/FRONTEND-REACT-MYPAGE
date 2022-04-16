@@ -1,23 +1,26 @@
 import English from "./img/en.png";
 import Spanish from "./img/es.png";
 import styled from "styled-components";
-import { FooterApp } from "../Pages/Home/Footer/FooterApp";
 
 const Contenedor = styled.div`
-  height: 475px;
   width: 100%;
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  height: 600px;
+  clear: both;
+  overflow: hidden;
 `;
 
 const FlagSpanish = styled.div`
-  margin: auto;
+  margin: 30px auto;
   display: grid;
   align-items: center;
   justify-content: center;
   width: 200px;
 `;
 const FlagEnglish = styled.div`
-  margin: auto;
+  margin: 30px auto;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -30,9 +33,10 @@ const Flag = styled.img`
   border-radius: 10px;
   object-fit: cover;
   display: flex;
-  margin: auto;
+  margin: 10px auto;
   align-items: center;
   justify-content: center;
+  border: solid 1px white;
   cursor: pointer;
   :hover {
     box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
@@ -64,17 +68,7 @@ export const Curriculum = () => {
             <Flag src={English} alt="english" />
           </a>
         </FlagEnglish>
-        <h4
-          style={{
-            margin: "10pxauto",
-            alignItems: "center",
-            display: "flex",
-            justifyContent: "center",
-            marginTop: "-5px",
-          }}
-        >
-          -
-        </h4>
+
         <FlagSpanish>
           <h4
             style={{

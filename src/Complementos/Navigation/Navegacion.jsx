@@ -9,11 +9,10 @@ import { FormularioLogin } from "../Pages/MostarContactos/Formulario";
 import { Modal } from "../Pages/MostarContactos/Modal";
 
 export const Navegacion = () => {
-  const [isOpenModal, openModal, closeModal] = useModalContactApp(true);
+  const [isOpenModal, openModal, closeModal] = useModalContactApp(false);
 
   const LoginModal = () => {
     openModal();
-    
   };
 
   return (
@@ -22,7 +21,7 @@ export const Navegacion = () => {
         collapseOnSelect
         expand="lg"
         variant="dark"
-        style={{ background: "#282c34" }}
+        style={{ background: "#282c34", width: "100%" }}
       >
         <Navbar.Brand
           as={Link}

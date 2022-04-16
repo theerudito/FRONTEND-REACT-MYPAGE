@@ -22,7 +22,6 @@ export const FormularioContactoCrear = ({ title }) => {
       telefono: telefono,
       mensaje: mensaje,
     });
-    navigate("/api/contactos");
 
     setGuardado(true);
     setTimeout(() => {
@@ -33,6 +32,10 @@ export const FormularioContactoCrear = ({ title }) => {
     setMensaje("");
     setTelefono("");
   };
+
+  useEffect(() => {
+    navigate("/api/contactos");
+  }, [navigate]);
 
   return (
     <ContenedorFormulario>
@@ -185,23 +188,6 @@ export const FormularioLogin = ({ title }) => {
             </h6>
           </div>
         ) : null}
-      </form>
-    </ContenedorFormulario>
-  );
-};
-
-export const FormularioCV = ({ title }) => {
-
-  return (
-    <ContenedorFormulario>
-      <form>
-        <h4>English{title} </h4>
-        <img alt="english" />
-
-        <h4>OR</h4>
-
-        <h4>English{title} </h4>
-        <img alt="english" />
       </form>
     </ContenedorFormulario>
   );
