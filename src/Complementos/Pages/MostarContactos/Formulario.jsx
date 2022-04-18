@@ -33,10 +33,6 @@ export const FormularioContactoCrear = ({ title }) => {
     setTelefono("");
   };
 
-  useEffect(() => {
-    navigate("/api/contactos");
-  }, [navigate]);
-
   return (
     <ContenedorFormulario>
       <form onSubmit={GuardarContacto}>

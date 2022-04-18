@@ -38,11 +38,7 @@ export const Navegacion = () => {
 
         <Navbar.Collapse id="responsive-navbar-nav" style={{ margin: "0 5px" }}>
           <Lista>
-            <Nav.Link
-              as={Link}
-              to={RutasApp.curriculum}
-              style={{ color: "black", listStyle: "none" }}
-            >
+            <Nav.Link as={Link} to={RutasApp.curriculum} className="nav">
               Curriculum
             </Nav.Link>
           </Lista>
@@ -51,14 +47,14 @@ export const Navegacion = () => {
             <Nav.Link
               as={Link}
               to={RutasApp.porfolio}
-              style={{ color: "black" }}
+              className="nav"
             >
               Prorfolio
             </Nav.Link>
           </Lista>
 
           <Lista>
-            <Nav.Link style={{ color: "black" }} onClick={() => LoginModal()}>
+            <Nav.Link className="nav" onClick={() => LoginModal()}>
               Login
             </Nav.Link>
             <Modal isOpen={isOpenModal} closeModal={closeModal}>

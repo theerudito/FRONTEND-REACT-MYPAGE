@@ -2,11 +2,43 @@ import styled from "styled-components";
 import { Dispositivos } from "../../../Medias/Medidas";
 
 export const ContenedorPortafolio = styled.div`
-  height: 100%;
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  clear: both;
+  overflow: hidden;
+
+  @media ${Dispositivos.mobileS} {
+    max-width: 320px;
+    min-height: 60vh;
+    margin: auto;
+  }
+  @media ${Dispositivos.mobileM} {
+    max-width: 375px;
+    min-height: 60vh;
+    margin: auto;
+  }
+  @media ${Dispositivos.mobileL} {
+    max-width: 425px;
+    min-height: 90vh;
+    margin: auto;
+  }
+  @media ${Dispositivos.tablet} {
+    max-width: 768px;
+    min-height: 50vh;
+    margin: auto;
+  }
+  @media ${Dispositivos.laptop} {
+    max-width: 1024px;
+    min-height: 70vh;
+    display: grid;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    
+  }
 `;
 
 export const ContenedorTituloPortafolio = styled.div`

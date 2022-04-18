@@ -66,11 +66,24 @@ export const Twitter = styled.i`
 
 export const Lista = styled.nav`
   border-radius: 10px;
-  list-style: none;
+  color: white;
   transition: 0.1s ease-in;
   :hover {
     background-color: greenyellow;
     border-radius: 10px;
+    color: black;
+  }
+  .nav {
+    color: white;
+    :hover {
+      color: black;
+    }
+  }
+`;
+
+export const Menu = styled.link`
+  color: white;
+  :hover {
     color: black;
   }
 `;

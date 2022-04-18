@@ -1,26 +1,60 @@
 import English from "./img/en.png";
 import Spanish from "./img/es.png";
 import styled from "styled-components";
+import { Dispositivos } from "../Medias/Medidas";
 
 const Contenedor = styled.div`
   width: 100%;
+  min-height: 100vh;
   box-sizing: border-box;
-  margin: 0px;
+  margin: auto;
+  display: grid;
+  justify-content: center;
+  align-items: center;
   padding: 0px;
-  height: 600px;
   clear: both;
   overflow: hidden;
+
+  @media ${Dispositivos.mobileS} {
+    max-width: 320px;
+    min-height: 70vh;
+  }
+  @media ${Dispositivos.mobileM} {
+    max-width: 375px;
+    min-height: 70vh;
+  }
+  @media ${Dispositivos.mobileL} {
+    max-width: 425px;
+    min-height: 70vh;
+  }
+  @media ${Dispositivos.tablet} {
+    max-width: 768px;
+    min-height: 90vh;
+  }
+  @media ${Dispositivos.laptop} {
+    max-width: 1024px;
+    min-height: 70vh;
+  }
+  @media ${Dispositivos.laptopL} {
+    max-width: 1440px;
+    min-height: 80vh;
+  }
+  @media ${Dispositivos.desktop} {
+    max-width: 2560px;
+    min-height: 80vh;
+  }
 `;
 
 const FlagSpanish = styled.div`
-  margin: 30px auto;
+  margin: auto;
   display: grid;
   align-items: center;
   justify-content: center;
   width: 200px;
+  margin-top: -10px;
 `;
 const FlagEnglish = styled.div`
-  margin: 30px auto;
+  margin: auto;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -33,7 +67,7 @@ const Flag = styled.img`
   border-radius: 10px;
   object-fit: cover;
   display: flex;
-  margin: 10px auto;
+  margin: auto;
   align-items: center;
   justify-content: center;
   border: solid 1px white;
@@ -43,24 +77,22 @@ const Flag = styled.img`
   }
 `;
 
+const Titulos = styled.h4`
+  width: 250px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 1px;
+  border-radius: 10px;
+`;
+
 export const Curriculum = () => {
   return (
     <>
       <Contenedor>
         <FlagEnglish>
-          <h4
-            style={{
-              width: "250px",
-              margin: " 10px auto",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              border: "solid 1px",
-              borderRadius: "10px",
-            }}
-          >
-            Curriculum in English
-          </h4>
+          <Titulos>Curriculum in English</Titulos>
           <a
             href="https://drive.google.com/file/d/1iKLQ8L3A6d5dE0dIESmeFi4i6NLX2jNW/view?usp=sharing"
             target="_blanck"
@@ -70,20 +102,7 @@ export const Curriculum = () => {
         </FlagEnglish>
 
         <FlagSpanish>
-          <h4
-            style={{
-              width: "260px",
-              margin: "10px auto",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              marginTop: "-15px",
-              border: "solid 1px",
-              borderRadius: "10px",
-            }}
-          >
-            Curriculum en Español
-          </h4>
+          <Titulos>Curriculum en Español</Titulos>
           <a
             href="https://drive.google.com/file/d/1pvTpWKhotcWqk-ko0XzmgV9W2HvcGtA4/view?usp=sharing"
             target="_blanck"

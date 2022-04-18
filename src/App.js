@@ -8,11 +8,10 @@ import styled from 'styled-components';
 
 const Contenedor = styled.div`
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  color: "red";
   background-color: #282c34;
   color: aliceblue;
   font-size: calc(10px + 2vmin);
