@@ -12,7 +12,7 @@ const Contenedor = styled.div`
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  background-color: #282c34;
+  background-color: #050505;
   color: aliceblue;
   font-size: calc(10px + 2vmin);
   clear: both;

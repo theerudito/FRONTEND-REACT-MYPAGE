@@ -1,10 +1,6 @@
-#image {
-	border-radius: 10px;
-	border: 2px solid purple;
-}
 
 .modal {
-	position: fixed;
+	
 	z-index: 999;
 	top: 0;
 	left: 0;
@@ -22,7 +18,7 @@
 }
 
 .modal-contanier {
-	position: relative;
+	
 	min-width: 320px;
 	max-width: 450px;
 	min-height: 200px;
@@ -30,7 +26,7 @@
 	overflow-y: auto;
 	padding: 1rem;
 	background-color: #fff;
-	border-radius: 10px;
+
 	box-shadow: navajowhite;
 }
 
@@ -38,6 +34,5 @@
 	position: absolute;
 	top: 1rem;
 	right: 1rem;
-	border-radius: 6px;
 	cursor: pointer;
 }
