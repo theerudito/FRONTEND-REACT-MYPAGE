@@ -24,7 +24,7 @@ import {
   TituloPorfolio2,
 } from "./Styles/Styles";
 import { Skills } from "../Home/Skills";
-import {  PostProyects } from "./PostPorfolio";
+import { PostProyects } from "./PostPorfolio";
 
 export const PagePorfolio = () => {
   return (
@@ -45,13 +45,12 @@ export const PagePorfolio = () => {
       </ContenedorTituloPorfolio>
 
       <ContenedorPrincipalPorfolio>
-
-
-
         <ContenedorPrincipalCardPorfolio>
           <CardPorfolio>
             <ContenedorNombreImagenProfolio>
-              <TituloPorfolio2>{PostProyects.name.apicovid.title}</TituloPorfolio2>
+              <TituloPorfolio2>
+                {PostProyects.name.apicovid.title}
+              </TituloPorfolio2>
               <Liks href={PostProyects.name.apicovid.repro} target="_blanck">
                 <ImgGitPorfolio src={Skills.github} alt="github" />
               </Liks>
@@ -80,11 +79,12 @@ export const PagePorfolio = () => {
           </CardPorfolio>
         </ContenedorPrincipalCardPorfolio>
 
-
         <ContenedorPrincipalCardPorfolio>
           <CardPorfolio>
             <ContenedorNombreImagenProfolio>
-              <TituloPorfolio2>{PostProyects.name.relojjs.title} </TituloPorfolio2>
+              <TituloPorfolio2>
+                {PostProyects.name.relojjs.title}{" "}
+              </TituloPorfolio2>
               <Liks href={PostProyects.name.relojjs.repro} target="_blanck">
                 <ImgGitPorfolio src={Skills.github} alt="github" />
               </Liks>
@@ -104,19 +104,14 @@ export const PagePorfolio = () => {
                   </Liks>
                 </ButtonProfolio>
                 <AplicacionesPorfolio>
-                  <TecnologiasProfolio src={Skills.react} alt="app1" />
+                  <TecnologiasProfolio src={Skills.javascript} alt="app1" />
                   <TecnologiasProfolio src={Skills.css} alt="app1" />
-                  <TecnologiasProfolio src={Skills.bootstrap} alt="app1" />
+                  <TecnologiasProfolio src={Skills.html} alt="app1" />
                 </AplicacionesPorfolio>
               </ContendorTecnologias>
             </ContendorBodyProfolio>
           </CardPorfolio>
         </ContenedorPrincipalCardPorfolio>
-
-
-
-
-
       </ContenedorPrincipalPorfolio>
     </>
   );
