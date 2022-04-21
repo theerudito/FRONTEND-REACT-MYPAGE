@@ -260,7 +260,6 @@ export const ContenedorSkill = styled.div`
   }
 
   @media ${Dispositivos.mobileS} {
-    
     margin: auto;
     display: grid;
     align-items: center;
@@ -278,11 +277,9 @@ export const ContenedorSkill = styled.div`
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    
   }
 
   @media ${Dispositivos.mobileL} {
-    
     width: 345px;
     height: 345px;
     display: grid;
@@ -293,7 +290,6 @@ export const ContenedorSkill = styled.div`
   }
 
   @media ${Dispositivos.tablet} {
-    
     width: 425px;
     height: 425px;
     display: grid;
@@ -304,7 +300,6 @@ export const ContenedorSkill = styled.div`
   }
 
   @media ${Dispositivos.laptop} {
-    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin: auto;
@@ -327,7 +322,6 @@ export const ContenedorSkill = styled.div`
 `;
 
 export const ContenedorSkill1 = styled.div`
-
   @media ${Dispositivos.mobileM} {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -347,7 +341,6 @@ export const ContenedorSkill1 = styled.div`
   }
 
   @media ${Dispositivos.tablet} {
-    
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     margin: auto;
@@ -378,13 +371,11 @@ export const SkillsImg = styled.img`
   @media ${Dispositivos.mobileM} {
     height: 30px;
     width: 30px;
-    
   }
 
   @media ${Dispositivos.mobileL} {
     height: 30px;
     width: 30px;
-    
   }
 
   @media ${Dispositivos.tablet} {
@@ -395,7 +386,6 @@ export const SkillsImg = styled.img`
   @media ${Dispositivos.laptop} {
     height: 48px;
     width: 48px;
-    
   }
 `;
 
@@ -448,12 +438,10 @@ export const Titulos = styled.p`
 //==========================MIS CURSOS============================
 
 export const ContenedorMisCursos = styled.div`
-
-
   @media ${Dispositivos.mobileM} {
     .curso {
       width: 360px;
-      
+
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       margin: 10px auto;
@@ -462,7 +450,6 @@ export const ContenedorMisCursos = styled.div`
 
   @media ${Dispositivos.mobileM} {
     .curso {
-      
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       margin: 10px auto;
@@ -471,7 +458,6 @@ export const ContenedorMisCursos = styled.div`
 
   @media ${Dispositivos.mobileL} {
     .curso {
-      
       width: 440px;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -481,7 +467,6 @@ export const ContenedorMisCursos = styled.div`
 
   @media ${Dispositivos.tablet} {
     .curso {
-      
       display: grid;
       width: 500px;
       grid-template-columns: repeat(2, 1fr);
@@ -489,23 +474,20 @@ export const ContenedorMisCursos = styled.div`
     }
   }
 
-    @media ${Dispositivos.laptop} {
+  @media ${Dispositivos.laptop} {
     .curso {
-      
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       margin: 10px auto;
     }
-  
 
-  @media ${Dispositivos.laptop} {
-    
-    max-width: 1024px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: auto;
+    @media ${Dispositivos.laptop} {
+      max-width: 1024px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: auto;
+    }
   }
-}
 `;
 
 export const MisCursosTitulo = styled.p`
@@ -523,7 +505,6 @@ export const CardMisCursos = styled.div`
   }
 
   @media ${Dispositivos.mobileM} {
-    
     width: 350px;
     height: 180px;
   }
@@ -554,9 +535,9 @@ export const CardMisCursos = styled.div`
 `;
 
 export const ImgMisCursos = styled.img`
-  border: solid 1px;
+  border: 1px black;
   border-radius: 5px;
-  object-fit: cover;
+  object-fit: contain;
 
   @media ${Dispositivos.mobileM} {
     width: 150px;
@@ -570,6 +551,7 @@ export const ImgMisCursos = styled.img`
 
   @media ${Dispositivos.mobileL} {
     margin-left: 10px;
+    height: 150px;
     width: 250px;
     display: grid;
     margin: auto;
@@ -594,6 +576,7 @@ export const ImgMisCursos = styled.img`
     margin: 10px auto;
     grid-template-columns: repeat(2, 1fr);
     margin-left: 15px;
+    margin-top: 30px;
   }
 `;
 
@@ -607,7 +590,9 @@ export const CardTitulo = styled.div`
 export const CardButton = styled.button`
   background-color: greenyellow;
   border: none;
+  text-decoration: none;
   border-radius: 10px;
+
   :hover {
     background-color: green;
     color: white;
@@ -616,6 +601,14 @@ export const CardButton = styled.button`
 
 export const TituloCurso = styled(MisCursosTitulo)`
   color: white;
+`;
+
+export const Liks = styled.a`
+  text-decoration: none;
+  color: black;
+  :hover {
+    color: white;
+  }
 `;
 
 //==========================MIS CURSOS============================
@@ -637,7 +630,7 @@ export const ContenedorFormularioPrincipal = styled.div`
 `;
 
 export const ContenedorBoton = styled.button`
-  background-color: orange;
+  background-color: greenyellow;
   width: 100px;
   height: 30px;
   margin: 10px auto;
@@ -645,12 +638,13 @@ export const ContenedorBoton = styled.button`
   margin-bottom: 5px;
   border: none;
   border-radius: 10px;
-  color: white;
+  color: black;
   align-items: center;
   justify-content: center;
   padding: auto;
   :hover {
-    background-color: tomato;
+    background-color: orange;
+    color: black;
   }
 `;
 

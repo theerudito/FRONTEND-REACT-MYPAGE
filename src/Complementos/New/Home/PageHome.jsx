@@ -30,6 +30,7 @@ import {
   Ecuador,
   Frase,
   ImgMisCursos,
+  Liks,
   Localitation,
   MisCursosTitulo,
   ProgramdorStyled,
@@ -44,8 +45,8 @@ import {
 import { RelojApp } from "./RelojApp";
 import { Skills } from "./Skills";
 import { IconosApp } from "./Iconos";
-import { LenguajeBarra, LenguajeEn, LenguajeEs } from "./Lenguaje";
-import { ModoDark } from "./Modos";
+//import { LenguajeBarra, LenguajeEn, LenguajeEs } from "./Lenguaje";
+//import { ModoDark } from "./Modos";
 import { NavBarMenu } from "../Menu/NavBarMenu";
 
 export const PageHome = () => {
@@ -62,7 +63,7 @@ export const PageHome = () => {
       </ContenedorHeader>
 
       <hr />
-      <ContenedorModos>
+      {/* <ContenedorModos>
         <ContenedorLenguaje>
           <LenguajeEs />
           <LenguajeBarra />
@@ -72,7 +73,7 @@ export const PageHome = () => {
         <ContenedorThemes>
           <ModoDark />
         </ContenedorThemes>
-      </ContenedorModos>
+      </ContenedorModos> */}
 
       <ContendorSobreME>
         <YoImagen src={Yo} alt="yo" />
@@ -112,7 +113,7 @@ export const PageHome = () => {
           </CardSkills>
 
           <CardSkills>
-            <SkillsImg src={Skills.css} width="45" height="45" alt="CSS" />
+            <SkillsImg src={Skills.css} alt="CSS" />
             <Titulos>CSS</Titulos>
           </CardSkills>
 
@@ -155,25 +156,41 @@ export const PageHome = () => {
           </CardSkills>
 
           <CardSkills>
-            <SkillsImg src={Skills.express} alt="express" />
+            <SkillsImg
+              src={Skills.express}
+              alt="express"
+              style={{ background: "#301a2b", borderRadius: "50%" }}
+            />
             <Titulos>Express</Titulos>
           </CardSkills>
 
           <CardSkills>
             <SkillsImg src={Skills.firebase} alt="Firebase" />
-
             <Titulos>Firebase</Titulos>
           </CardSkills>
 
           <CardSkills>
             <SkillsImg src={Skills.mongodb} alt="mongodb" />
-
             <Titulos>MongoDB</Titulos>
           </CardSkills>
 
           <CardSkills>
             <SkillsImg src={Skills.mysql} alt="mysql" />
             <Titulos>MySQL</Titulos>
+          </CardSkills>
+
+          <CardSkills>
+            <SkillsImg src={Skills.git} alt="git" />
+            <Titulos>GIT</Titulos>
+          </CardSkills>
+
+          <CardSkills>
+            <SkillsImg
+              src={Skills.github}
+              alt="github"
+              style={{ background: "white", borderRadius: "50%" }}
+            />
+            <Titulos>GitHub</Titulos>
           </CardSkills>
         </ContenedorSkill2>
       </ContenedorSkill>
@@ -182,18 +199,63 @@ export const PageHome = () => {
 
       <ContenedorMisCursos>
         <CardMisCursos className="curso">
-          <ImgMisCursos src={Courses} alt="miscursos" />
+          <ImgMisCursos src={Skills.html} alt="miscursos" />
           <CardTitulo>
             <TituloCurso>HTML</TituloCurso>
-            <CardButton>Ir a Curso</CardButton>
+            <CardButton >
+              <Liks
+                href="https://www.freecodecamp.org/certification/theerudito/responsive-web-design"
+                target="_blanck"
+              >
+                Ir a Curso
+              </Liks>
+            </CardButton>
           </CardTitulo>
         </CardMisCursos>
 
         <CardMisCursos className="curso">
-          <ImgMisCursos src={Courses} alt="miscursos" />
+          <ImgMisCursos src={Skills.css} alt="miscursos" />
           <CardTitulo>
             <TituloCurso>CSS</TituloCurso>
-            <CardButton>Ir a Curso</CardButton>
+            <CardButton>
+              <Liks
+                href="https://www.freecodecamp.org/certification/theerudito/responsive-web-design"
+                target="_blanck"
+              >
+                Ir a Curso
+              </Liks>
+            </CardButton>
+          </CardTitulo>
+        </CardMisCursos>
+
+        <CardMisCursos className="curso">
+          <ImgMisCursos src={Skills.javascript} alt="miscursos" />
+          <CardTitulo>
+            <TituloCurso>JavaScript</TituloCurso>
+            <CardButton>
+              {" "}
+              <Liks
+                href="https://www.freecodecamp.org/certification/theerudito/javascript-algorithms-and-data-structures"
+                target="_blanck"
+              >
+                Ir a Curso
+              </Liks>
+            </CardButton>
+          </CardTitulo>
+        </CardMisCursos>
+
+        <CardMisCursos className="curso">
+          <ImgMisCursos src={Skills.react} alt="miscursos" />
+          <CardTitulo>
+            <TituloCurso>React</TituloCurso>
+            <CardButton>
+              <Liks
+                href="https://ed.team/@iamerudito/curso/reactjs"
+                target="_blanck"
+              >
+                Ir a Curso
+              </Liks>{" "}
+            </CardButton>
           </CardTitulo>
         </CardMisCursos>
       </ContenedorMisCursos>
