@@ -1,8 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.2ce11619.css",
-    "main.js": "/static/js/main.7529d917.js",
-    "static/media/covid19.jpg": "/static/media/covid19.c02b955cef7fb35358eb.jpg",
+    "main.js": "/static/js/main.d941b0da.js",
     "static/media/programin.png": "/static/media/programin.48edc07724cb4890731f.png",
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
@@ -10,10 +9,10 @@
     "static/media/ecuador.png": "/static/media/ecuador.3b07e5e40e8b71d59bd9.png",
     "index.html": "/index.html",
     "main.2ce11619.css.map": "/static/css/main.2ce11619.css.map",
-    "main.7529d917.js.map": "/static/js/main.7529d917.js.map"
+    "main.d941b0da.js.map": "/static/js/main.d941b0da.js.map"
   },
   "entrypoints": [
     "static/css/main.2ce11619.css",
-    "static/js/main.7529d917.js"
+    "static/js/main.d941b0da.js"
   ]
 }

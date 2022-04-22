@@ -2,6 +2,10 @@ import English from "./img/en.png";
 import Spanish from "./img/es.png";
 import styled from "styled-components";
 import { Dispositivos } from "../Medias/Medidas";
+import { ContenedorHeader, ContenedorIconos, ContenedorMenu } from "../Home/styles/Styles";
+import { NavBarMenu } from "../Menu/NavBarMenu";
+import { Icons } from "../Footer/Icons";
+import { Footer } from "../Footer/Footer";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -90,6 +94,19 @@ const Titulos = styled.h4`
 export const Curriculum = () => {
   return (
     <>
+
+
+<ContenedorHeader>
+        <ContenedorMenu>
+          <NavBarMenu />
+        </ContenedorMenu>
+
+        <ContenedorIconos>
+          <Icons />
+        </ContenedorIconos>
+      </ContenedorHeader>
+
+      <hr />
       <Contenedor>
         <FlagEnglish>
           <Titulos>Curriculum in English</Titulos>
@@ -112,6 +129,7 @@ export const Curriculum = () => {
           </a>
         </FlagSpanish>
       </Contenedor>
+      <Footer/>
     </>
   );
 };

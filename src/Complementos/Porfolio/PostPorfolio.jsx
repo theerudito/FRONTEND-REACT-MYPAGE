@@ -1,0 +1,106 @@
+export const PostPorfolio = [
+  {
+    id: 0,
+    post0: {
+      title: "App Clima",
+      urlrepositorio:
+        "https://github.com/theerudito/App-Clima-JavaScript-Fetch",
+      image:
+        "https://cdn.hashnode.com/res/hashnode/image/upload/v1614701212216/SgZ2wvCPn.png",
+      urlpage: "https://appclima-byerudito.netlify.app",
+    },
+  },
+  {
+    id: 1,
+    post1: {
+      title: "Api Covid19 React",
+      urlrepositorio: "https://github.com/theerudito/Api-Covid19-React/",
+      image:
+        "https://d33wubrfki0l68.cloudfront.net/622b6fe3ad3aca1d592d2f99/screenshot_2022-03-11-15-51-07-0000.png",
+      urlpage: "https://api-covid19-react.netlify.app//",
+    },
+  },
+  {
+    id: 2,
+    post2: {
+      title: "Clock JS",
+      urlrepositorio: "https://github.com/theerudito/Reloj",
+      image:
+        "https://d33wubrfki0l68.cloudfront.net/6204554f8da2b500070fe5b1/screenshot_2022-02-09-23-59-19-0000.png",
+      urlpage: "https://reloj-by-erudito.netlify.app/",
+    },
+  },
+  {
+    id: 3,
+    post3: {
+      title: "DataTable-Fetch",
+      urlrepositorio: "https://github.com/theerudito/DataTable-Fetch",
+      image:
+        "https://assets.wpdeveloper.com/2020/01/EA-Advanced-Data-Table.png",
+      urlpage: "https://codesandbox.io/s/github/theerudito/DataTable-Fetch",
+    },
+  },
+  {
+    id: 4,
+    post4: {
+      title: "Data-Table-MUI",
+      urlrepositorio: "https://github.com/theerudito/DataTable-Material-UI",
+      image:
+        "https://user-images.githubusercontent.com/19170080/38026128-eac9d506-3258-11e8-92a7-b0d06e5faa82.gif",
+      urlpage:
+        "https://codesandbox.io/s/github/theerudito/DataTable-Material-UI",
+    },
+  },
+  {
+    id: 5,
+    post5: {
+      title: "Menu Hamburgueza",
+      urlrepositorio: "https://github.com/theerudito/MenuHambuergezaJS",
+      image:
+        "https://www.xn--apaados-6za.es/images/images3926/menu-hamburguesa-p.jpg",
+      urlpage:
+        "https://codesandbox.io/s/menu-hambuergueza-s1uqsq?file=/src/index.js",
+    },
+  },
+  {
+    id: 6,
+    post6: {
+      title: "ApiRest MongoDB ",
+      urlrepositorio:
+        "https://github.com/theerudito/API-Resfull---Node-Express-MongoDB",
+      image: "https://erudito-dev.web.app/img/apimongo.jpeg",
+      urlpage: "https://codesandbox.io/s/practicamongo-myfojt",
+    },
+  },
+];
+
+export const PostProyects = {
+  name: {
+    apicovid: {
+      title: "API COVID REACT",
+      url: "https://api-covid19-react.netlify.app/",
+      pic: "https://d33wubrfki0l68.cloudfront.net/622b6fe3ad3aca1d592d2f99/screenshot_2022-03-11-15-51-07-0000.png",
+      repro: "https://github.com/theerudito/Api-Covid19-React/",
+    },
+    relojjs: {
+      title: "CLOCK JS",
+      url: "https://reloj-by-erudito.netlify.app/",
+      pic: "https://d33wubrfki0l68.cloudfront.net/6204554f8da2b500070fe5b1/screenshot_2022-02-09-23-59-19-0000.png",
+      repro: "https://github.com/theerudito/Reloj",
+    },
+
+    apirest: {
+      title: "API REST MONGO",
+      url: "https://codesandbox.io/s/practicamongo-myfojt",
+      pic: "https://erudito-dev.web.app/img/apimongo.jpeg",
+      repro: "https://github.com/theerudito/API-Resfull---Node-Express-MongoDB",
+    },
+
+    menuburger: {
+      title: "MENU HAMBUERGEZA",
+      url: "https://codesandbox.io/s/menu-hambuergueza-s1uqsq?file=/src/index.js",
+      pic: "https://www.xn--apaados-6za.es/images/images3926/menu-hamburguesa-p.jpg",
+      repro: "https://github.com/theerudito/MenuHambuergezaJS",
+    },
+  },
+};

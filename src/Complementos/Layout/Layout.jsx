@@ -1,14 +1,6 @@
 import React from "react";
-
-import { FooterApp } from "../Pages/Home/Footer/FooterApp";
-
-
+import { Footer } from "../Footer/Footer";
 
 export const Layout = ({ children }) => {
-  return (
-    <>
-      {children}
-      <FooterApp />
-    </>
-  );
+  return <>{children}</>;
 };

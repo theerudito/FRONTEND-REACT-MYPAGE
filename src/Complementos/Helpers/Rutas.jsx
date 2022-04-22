@@ -1,6 +1,6 @@
 export const RutasApp = {
   home: "/",
-  porfolio: "/porfolio",
+  portfolio: "/portfolio",
   contact: "/api/contactos",
   account: "/account",
   login: "/login",
