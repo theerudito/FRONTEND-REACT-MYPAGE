@@ -104,9 +104,9 @@ export const PostProyects = {
     },
     mypage: {
       title: "MY PAGE",
-      url: "https://codesandbox.io/s/menu-hambuergueza-s1uqsq?file=/src/index.js",
-      pic: "https://www.xn--apaados-6za.es/images/images3926/menu-hamburguesa-p.jpg",
-      repro: "https://github.com/theerudito/MenuHambuergezaJS",
+      url: "https://byerudito.web.app/",
+      pic: "https://github.com/theerudito/Front-React-PageErudito/blob/master/src/Complementos/Porfolio/img/mypage.jpg?raw=true",
+      repro: "https://github.com/theerudito/Front-React-PageErudito",
     },
   },
 };
