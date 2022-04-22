@@ -15,7 +15,10 @@ import {
   TecnologiasProfolio,
   TituloPorfolio2,
 } from "./Styles/Styles";
-import { ContenedorCarouseles } from "./Styles/StylesCarousel";
+import {
+  ContenedorCarouseles,
+  ContenedorPrincipalCarousel,
+} from "./Styles/StylesCarousel";
 
 export const Carousel = () => {
   return (
@@ -24,12 +27,12 @@ export const Carousel = () => {
         id="carouselExampleControls"
         class="carousel slide"
         data-bs-ride="carousel"
+        style={{margin: "auto", display: "grid", alignContent: "center", justifyContent: "center", }}
       >
         <ContenedorCarouseles class="carousel-inner">
-
           <div class="carousel-item active">
             <ContenedorPrincipalCardPorfolio>
-              <  CardPorfolio>
+              <CardPorfolio>
                 <ContenedorNombreImagenProfolio>
                   <TituloPorfolio2>
                     {PostProyects.name.apicovid.title}
@@ -65,12 +68,12 @@ export const Carousel = () => {
                     </AplicacionesPorfolio>
                   </ContendorTecnologias>
                 </ContendorBodyProfolio>
-              </ CardPorfolio>
+              </CardPorfolio>
             </ContenedorPrincipalCardPorfolio>
           </div>
           <div class="carousel-item">
             <ContenedorPrincipalCardPorfolio>
-              < CardPorfolio>
+              <CardPorfolio>
                 <ContenedorNombreImagenProfolio>
                   <TituloPorfolio2>
                     {PostProyects.name.relojjs.title}
@@ -103,49 +106,49 @@ export const Carousel = () => {
                     </AplicacionesPorfolio>
                   </ContendorTecnologias>
                 </ContendorBodyProfolio>
-              </ CardPorfolio>
+              </CardPorfolio>
             </ContenedorPrincipalCardPorfolio>
           </div>
 
           <div class="carousel-item">
-          <ContenedorPrincipalCardPorfolio>
-            <  CardPorfolio>
-              <ContenedorNombreImagenProfolio>
-                <TituloPorfolio2>
-                  {PostProyects.name.mypage.title}
-                </TituloPorfolio2>
-                <Liks href={PostProyects.name.mypage.repro} target="_blanck">
-                  <ImgGitPorfolio src={Skills.github} alt="github" />
-                </Liks>
-              </ContenedorNombreImagenProfolio>
-              <ContendorBodyProfolio>
-                <Liks href={PostProyects.name.mypage.url} target="_blanck">
-                  <ImgPorfolio
-                    src={PostProyects.name.mypage.url}
-                    alt="proyect"
-                  />
-                </Liks>
+            <ContenedorPrincipalCardPorfolio>
+              <CardPorfolio>
+                <ContenedorNombreImagenProfolio>
+                  <TituloPorfolio2>
+                    {PostProyects.name.mypage.title}
+                  </TituloPorfolio2>
+                  <Liks href={PostProyects.name.mypage.repro} target="_blanck">
+                    <ImgGitPorfolio src={Skills.github} alt="github" />
+                  </Liks>
+                </ContenedorNombreImagenProfolio>
+                <ContendorBodyProfolio>
+                  <Liks href={PostProyects.name.mypage.url} target="_blanck">
+                    <ImgPorfolio
+                      src={PostProyects.name.mypage.url}
+                      alt="proyect"
+                    />
+                  </Liks>
 
-                <ContendorTecnologias>
-                  <ButtonProfolio>
-                    <Liks href={PostProyects.name.mypage.url} target="_blanck">
-                      Go to Proyect
-                    </Liks>
-                  </ButtonProfolio>
-                  <AplicacionesPorfolio>
-                    <TecnologiasProfolio src={Skills.react} alt="app1" />
-                    <TecnologiasProfolio src={Skills.css} alt="app1" />
-                    <TecnologiasProfolio src={Skills.bootstrap} alt="app1" />
-                  </AplicacionesPorfolio>
-                </ContendorTecnologias>
-              </ContendorBodyProfolio>
-            </ CardPorfolio>
-          </ContenedorPrincipalCardPorfolio>
+                  <ContendorTecnologias>
+                    <ButtonProfolio>
+                      <Liks
+                        href={PostProyects.name.mypage.url}
+                        target="_blanck"
+                      >
+                        Go to Proyect
+                      </Liks>
+                    </ButtonProfolio>
+                    <AplicacionesPorfolio>
+                      <TecnologiasProfolio src={Skills.react} alt="app1" />
+                      <TecnologiasProfolio src={Skills.css} alt="app1" />
+                      <TecnologiasProfolio src={Skills.bootstrap} alt="app1" />
+                    </AplicacionesPorfolio>
+                  </ContendorTecnologias>
+                </ContendorBodyProfolio>
+              </CardPorfolio>
+            </ContenedorPrincipalCardPorfolio>
           </div>
-
-          
         </ContenedorCarouseles>
-
 
         <button
           class="carousel-control-prev"
@@ -155,6 +158,7 @@ export const Carousel = () => {
         >
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
+
         </button>
         <button
           class="carousel-control-next"

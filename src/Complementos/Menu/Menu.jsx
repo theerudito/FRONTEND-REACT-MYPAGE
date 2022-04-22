@@ -6,12 +6,12 @@ import { RutasApp } from "../Helpers/Rutas";
 const Ul = styled.ul`
   list-style: none;
   display: flex;
-  width: 250px;
+  width: 20px;
   align-items: center;
   justify-content: center;
   margin: auto;
   text-decoration: none;
-  padding: 20px;
+  padding: 30px;
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
@@ -21,9 +21,12 @@ const Ul = styled.ul`
     top: 0;
     right: 0;
     height: 100vh;
-    width: 320px;
+    width: 250px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
+    body {
+      overflow: hidden;
+    }
   }
 `;
 
@@ -67,12 +70,12 @@ export const MenuBurger = ({ open }) => {
         <LI as={Link} to={RutasApp.portfolio}>
           Portfolio
         </LI>
-        <LI as={Link} to={RutasApp.home}>
+        {/* <LI as={Link} to={RutasApp.home}>
           Blog
         </LI>
         <LI as={Link} to={RutasApp.home}>
           Login
-        </LI>
+        </LI> */}
       </Ul>
     </>
   );

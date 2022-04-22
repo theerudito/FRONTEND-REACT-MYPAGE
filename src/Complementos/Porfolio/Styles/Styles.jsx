@@ -1,18 +1,18 @@
 import styled from "styled-components";
 import { Dispositivos } from "../../Medias/Medidas";
 
-
-
 export const ContenedorPrincipalPorfolio = styled.div`
   width: 100%;
-  height: 60vh;
+
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
   clear: both;
   overflow: hidden;
+
   @media ${Dispositivos.laptop} {
     width: 1200px;
+    height: auto;
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     margin: auto;
@@ -186,23 +186,29 @@ export const ImgPorfolio = styled.img`
 
   @media ${Dispositivos.mobileS} {
     width: 100px;
-    height: 195px;
+    height: 185px;
   }
+
+  @media ${Dispositivos.mobileM} {
+    width: 100px;
+    height: 185px;
+  }
+
   @media ${Dispositivos.mobileL} {
     width: 140px;
-    height: 190px;
-    margin-left: 5px;
+    height: 185px;
+    margin-left: 10px;
     margin-top: -1px;
   }
   @media ${Dispositivos.tablet} {
     width: 160px;
-    height: 245px;
+    height: 235px;
     margin-left: 5px;
   }
   @media ${Dispositivos.laptop} {
     width: 250px;
     height: 335px;
-    margin-left: -35px;
+    margin-left: -25px;
     margin-top: -15px;
   }
 `;
@@ -266,14 +272,14 @@ export const ImgGitPorfolio = styled.img`
     width: 30px;
     height: 30px;
     margin-left: -25px;
-    
+    cursor: pointer;
     border-radius: 50%;
   }
   @media ${Dispositivos.mobileM} {
     width: 30px;
     height: 30px;
     margin-left: -10px;
-    
+    cursor: pointer;
     border-radius: 50%;
   }
   @media ${Dispositivos.mobileL} {
@@ -283,22 +289,25 @@ export const ImgGitPorfolio = styled.img`
     margin-left: -20px;
     cursor: pointer;
     border-radius: 50%;
+    background-color: orange;
   }
 
   @media ${Dispositivos.tablet} {
     width: 30px;
     height: 30px;
     margin-left: 70px;
-    
+    cursor: pointer;
     border-radius: 50%;
+    background-color: blue;
   }
 
   @media ${Dispositivos.laptop} {
     width: 30px;
     height: 30px;
     margin-left: 60px;
-    
+    cursor: pointer;
     border-radius: 50%;
+    background-color: green;
   }
 `;
 
@@ -311,7 +320,7 @@ export const ButtonProfolio = styled.button`
   }
 
   @media ${Dispositivos.mobileS} {
-    width: 110px;
+    width: 150px;
     height: 30px;
     display: flex;
     align-items: center;
@@ -450,5 +459,14 @@ export const TecnologiasProfolio = styled.img`
     margin: auto;
     align-items: center;
     justify-content: center;
+  }
+`;
+
+export const LiksPorfolio = styled.a`
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  :hover {
+    color: white;
   }
 `;
