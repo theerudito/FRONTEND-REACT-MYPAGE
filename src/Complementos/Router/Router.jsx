@@ -6,6 +6,7 @@ import { RutasApp } from "../Helpers/Rutas";
 import { PageHome } from "../Home/PageHome";
 import { MostrarContactoApp } from "../MostarContactos/MostrarContacto";
 import { Page404App } from "../Page404/Page404";
+import { Carousel } from "../Porfolio/Carousel";
 import { PagePorfolio } from "../Porfolio/PagePorfolio";
 
 export const Router = () => {
@@ -16,8 +17,9 @@ export const Router = () => {
         <Route path={RutasApp.account} element={<AccountPage />} />
         <Route path={RutasApp.portfolio} element={<PagePorfolio />} />
         <Route path={RutasApp.contact} element={<MostrarContactoApp />} />
-        <Route path={RutasApp.curriculum} element={<Curriculum/>} />
-        <Route path="*" element={Page404App} />
+        <Route path={RutasApp.curriculum} element={<Curriculum />} />
+        <Route path={RutasApp.carousel} element={<Carousel />} />
+        <Route path="*" element={<Page404App />} />
       </Routes>
     </>
   );

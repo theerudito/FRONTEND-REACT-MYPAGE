@@ -4,7 +4,7 @@ import { Dispositivos } from "../../Medias/Medidas";
 
 export const ContendorFooter = styled.div`
   width: 100%;
-  min-height: 100vh;
+  min-height: 80vh;
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;

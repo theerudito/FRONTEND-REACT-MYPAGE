@@ -5,4 +5,5 @@ export const RutasApp = {
   account: "/account",
   login: "/login",
   curriculum: "/curriculum",
+  carousel: "/carousel",
 };

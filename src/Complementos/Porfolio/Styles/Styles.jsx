@@ -5,7 +5,7 @@ import { Dispositivos } from "../../Medias/Medidas";
 
 export const ContenedorPrincipalPorfolio = styled.div`
   width: 100%;
-  height: 100%;
+  height: 60vh;
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;

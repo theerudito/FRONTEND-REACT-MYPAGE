@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Footer } from "../Footer/Footer";
+import { Icons } from "../Footer/Icons";
 import { MostrarTodosLosContactos } from "../Helpers/ApiRest";
+import {
+  ContenedorHeader,
+  ContenedorIconos,
+  ContenedorMenu,
+} from "../Home/styles/Styles";
 import { useModalContactApp } from "../Hooks/useModalContact";
 import { inicialState } from "../InicialValues/InicialValue";
-
+import { NavBarMenu } from "../Menu/NavBarMenu";
 
 import { FormularioContactoCrear } from "./Formulario";
 import { Modal } from "./Modal";
@@ -41,6 +48,17 @@ export const MostrarContactoApp = () => {
 
   return (
     <>
+      <ContenedorHeader>
+        <ContenedorMenu>
+          <NavBarMenu />
+        </ContenedorMenu>
+
+        <ContenedorIconos>
+          <Icons />
+        </ContenedorIconos>
+      </ContenedorHeader>
+      <hr />
+
       <ContenedorPrincipal>
         <ButtonAccount onClick={() => Account()}>Account</ButtonAccount>
         <Titulo>Consulta de Contactos</Titulo>
@@ -67,6 +85,7 @@ export const MostrarContactoApp = () => {
           </Tabla>
         </ContenedorTabla>
       </ContenedorPrincipal>
+      <Footer />
     </>
   );
 };

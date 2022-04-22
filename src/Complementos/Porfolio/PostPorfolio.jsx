@@ -102,5 +102,11 @@ export const PostProyects = {
       pic: "https://www.xn--apaados-6za.es/images/images3926/menu-hamburguesa-p.jpg",
       repro: "https://github.com/theerudito/MenuHambuergezaJS",
     },
+    mypage: {
+      title: "MY PAGE",
+      url: "https://codesandbox.io/s/menu-hambuergueza-s1uqsq?file=/src/index.js",
+      pic: "https://www.xn--apaados-6za.es/images/images3926/menu-hamburguesa-p.jpg",
+      repro: "https://github.com/theerudito/MenuHambuergezaJS",
+    },
   },
 };
