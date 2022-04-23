@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FormularioHome } from "./Formularios";
 import Yo from "./img/yo.jpg";
 import Ubicacion from "./img/ubicacion.png";
@@ -25,6 +25,7 @@ import {
   ContenedorSkill2,
   ContenedorThemes,
   ContenedorTituloSkills,
+  CursosTitulo,
   Ec,
   Ecuador,
   Frase,
@@ -35,7 +36,6 @@ import {
   ProgramdorStyled,
   Red,
   SkillsImg,
-  TituloCurso,
   Titulos,
   TituloSkills,
   YoImagen,
@@ -49,8 +49,17 @@ import { Skills } from "./Skills";
 import { NavBarMenu } from "../Menu/NavBarMenu";
 import { Icons } from "../Footer/Icons";
 import { Footer } from "../Footer/Footer";
+import {
+  MisCursos,
+  Tecnologias1,
+  Tecnologias2,
+} from "../Porfolio/PostPorfolio";
 
 export const PageHome = () => {
+  const [cursos, setCursos] = useState(MisCursos);
+  const [tecnology1, setTecnology1] = useState(Tecnologias1);
+  const [tecnology2, setTecnology2] = useState(Tecnologias2);
+
   return (
     <>
       <ContenedorHeader>
@@ -81,7 +90,7 @@ export const PageHome = () => {
         <Red>!Never Say Never¡</Red>
         <ContendorUbiYPais>
           <Ecuador src={Ubicacion} alt="ubicacion" />
-          
+
           <Ec> Ecuador</Ec>
 
           <Localitation src={Pais} alt="Ecuador" />
@@ -105,169 +114,48 @@ export const PageHome = () => {
 
       <ContenedorSkill>
         <ContenedorSkill1>
-          <CardSkills>
-            <SkillsImg src={Skills.html} alt="html" />
-            <Titulos>HTML</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.javascript} alt="js" />
-            <Titulos>Javascript</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.css} alt="CSS" />
-            <Titulos>CSS</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.bootstrap} alt="bootstrap" />
-            <Titulos>Bootstrap</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.vscode} alt="VS Code" />
-            <Titulos>VS Code</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.react} alt="react" />
-            <Titulos>React</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.figma} alt="figma" />
-            <Titulos>Figma</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.illistrator} alt="illustrator" />
-            <Titulos>Illustrator</Titulos>
-          </CardSkills>
+          {tecnology1.map((tec1) => (
+            <CardSkills key={tec1.id}>
+              <SkillsImg src={tec1.pic} alt="html" />
+              <Titulos>{tec1.title} </Titulos>
+            </CardSkills>
+          ))}
         </ContenedorSkill1>
         <br />
 
         <ContenedorSkill2>
-          <CardSkills>
-            <SkillsImg src={Skills.styledc} alt="styled-components" />
-            <Titulos>StyledC</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.npm} alt="NPM" />
-            <Titulos>NPM</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg
-              src={Skills.express}
-              alt="express"
-              style={{ background: "#301a2b", borderRadius: "50%" }}
-            />
-            <Titulos>Express</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.firebase} alt="Firebase" />
-            <Titulos>Firebase</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.mongodb} alt="mongodb" />
-            <Titulos>MongoDB</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.mysql} alt="mysql" />
-            <Titulos>MySQL</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg src={Skills.git} alt="git" />
-            <Titulos>GIT</Titulos>
-          </CardSkills>
-
-          <CardSkills>
-            <SkillsImg
-              src={Skills.github}
-              alt="github"
-              style={{ background: "white", borderRadius: "50%" }}
-            />
-            <Titulos>GitHub</Titulos>
-          </CardSkills>
+          {tecnology2.map((tec2) => (
+            <CardSkills key={tec2.id}>
+              <SkillsImg src={tec2.pic} alt="html" />
+              <Titulos>{tec2.title} </Titulos>
+            </CardSkills>
+          ))}
         </ContenedorSkill2>
       </ContenedorSkill>
 
       <MisCursosTitulo>My Courses</MisCursosTitulo>
 
       <ContenedorMisCursos>
-        <CardMisCursos className="curso">
-          <ImgMisCursos src={Skills.html} alt="miscursos" />
-          <CardTitulo>
-            <TituloCurso>HTML</TituloCurso>
-            <CardButton>
-              <Liks
-                href="https://www.freecodecamp.org/certification/theerudito/responsive-web-design"
-                target="_blanck"
-              >
-                Go to Course
-              </Liks>
-            </CardButton>
-          </CardTitulo>
-        </CardMisCursos>
-
-        <CardMisCursos className="curso">
-          <ImgMisCursos src={Skills.css} alt="miscursos" />
-          <CardTitulo>
-            <TituloCurso>CSS</TituloCurso>
-            <CardButton>
-              <Liks
-                href="https://www.freecodecamp.org/certification/theerudito/responsive-web-design"
-                target="_blanck"
-              >
-                Go to Course
-              </Liks>
-            </CardButton>
-          </CardTitulo>
-        </CardMisCursos>
-
-        <CardMisCursos className="curso">
-          <ImgMisCursos src={Skills.javascript} alt="miscursos" />
-          <CardTitulo>
-            <TituloCurso>JavaScript</TituloCurso>
-            <CardButton>
-              {" "}
-              <Liks
-                href="https://www.freecodecamp.org/certification/theerudito/javascript-algorithms-and-data-structures"
-                target="_blanck"
-              >
-                Go to Course
-              </Liks>
-            </CardButton>
-          </CardTitulo>
-        </CardMisCursos>
-
-        <CardMisCursos className="curso">
-          <ImgMisCursos src={Skills.react} alt="miscursos" />
-          <CardTitulo>
-            <TituloCurso>React</TituloCurso>
-            <CardButton>
-              <Liks
-                href="https://ed.team/@iamerudito/curso/reactjs"
-                target="_blanck"
-              >
-                Go to Course
-              </Liks>{" "}
-            </CardButton>
-          </CardTitulo>
-        </CardMisCursos>
+        {cursos.map((item) => (
+          <CardMisCursos className="curso" key={item.id}>
+            <ImgMisCursos src={item.pic} alt="miscursos" />
+            <CardTitulo>
+              <CursosTitulo>{item.title} </CursosTitulo>
+              <CardButton>
+                <Liks href={item.url} target="_blanck">
+                  Go to Course
+                </Liks>
+              </CardButton>
+            </CardTitulo>
+          </CardMisCursos>
+        ))}
       </ContenedorMisCursos>
 
       <div>
         <FormularioHome />
       </div>
-     
-      <Footer/>
+
+      <Footer />
     </>
   );
 };

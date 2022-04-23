@@ -267,29 +267,23 @@ export const ContendorTecnologias = styled.div``;
 export const ImgGitPorfolio = styled.img`
   object-fit: cover;
   cursor: pointer;
-  background-color: white;
   @media ${Dispositivos.mobileS} {
     width: 30px;
     height: 30px;
     margin-left: -25px;
     cursor: pointer;
-    border-radius: 50%;
   }
   @media ${Dispositivos.mobileM} {
     width: 30px;
     height: 30px;
     margin-left: -10px;
     cursor: pointer;
-    border-radius: 50%;
   }
   @media ${Dispositivos.mobileL} {
-    background-color: red;
     width: 30px;
     height: 30px;
     margin-left: -20px;
     cursor: pointer;
-    border-radius: 50%;
-    background-color: orange;
   }
 
   @media ${Dispositivos.tablet} {
@@ -297,8 +291,6 @@ export const ImgGitPorfolio = styled.img`
     height: 30px;
     margin-left: 70px;
     cursor: pointer;
-    border-radius: 50%;
-    background-color: blue;
   }
 
   @media ${Dispositivos.laptop} {
@@ -306,8 +298,6 @@ export const ImgGitPorfolio = styled.img`
     height: 30px;
     margin-left: 60px;
     cursor: pointer;
-    border-radius: 50%;
-    background-color: green;
   }
 `;
 
@@ -414,51 +404,36 @@ export const ContendorBodyProfolio = styled(ContenedorTituloPorfolio)`
 `;
 
 export const TecnologiasProfolio = styled.img`
-  object-fit: cover;
-  cursor: pointer;
+  object-fit: contain;
+
   @media ${Dispositivos.mobileS} {
-    width: 20px;
-    height: 20px;
-    display: grid;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+    width: 165px;
+    height: 30px;
+    margin-left: 10px;
   }
 
   @media ${Dispositivos.mobileM} {
-    width: 20px;
-    height: 20px;
-    display: grid;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+    width: 165px;
+    height: 30px;
+    margin-left: 40px;
   }
 
   @media ${Dispositivos.mobileL} {
-    width: 20px;
-    height: 20px;
-    display: grid;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+    width: 200px;
+    height: 30px;
+    margin-left: 20px;
   }
 
   @media ${Dispositivos.tablet} {
-    width: 25px;
-    height: 25px;
-    display: grid;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+    width: 250px;
+    height: 30px;
+    margin-left: 40px;
   }
 
   @media ${Dispositivos.laptop} {
-    width: 30px;
-    height: 30px;
-    display: grid;
-    margin: auto;
-    align-items: center;
-    justify-content: center;
+    width: 300px;
+    height: 70px;
+    margin-left: 50px;
   }
 `;
 

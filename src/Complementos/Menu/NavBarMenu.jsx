@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { BurgerMenu } from "./Burger";
 import LogoPage from "../Home/img/programador.png";
+import { Link } from "react-router-dom";
+import { RutasApp } from "../Helpers/Rutas";
 
 const Nav = styled.nav`
   width: 100%;
@@ -25,8 +27,8 @@ const LogoImg = styled.img`
 export const NavBarMenu = () => {
   return (
     <Nav>
-      <ContenedorLogo>
-        <LogoImg src={LogoPage} alt="logo" />
+      <ContenedorLogo as={Link} to={RutasApp.home}>
+        <LogoImg src={LogoPage} alt="logo"  />
       </ContenedorLogo>
       <BurgerMenu />
     </Nav>

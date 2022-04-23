@@ -11,7 +11,8 @@ const Ul = styled.ul`
   justify-content: center;
   margin: auto;
   text-decoration: none;
-  padding: 30px;
+  padding: 27px;
+  margin-left: 20px;
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;

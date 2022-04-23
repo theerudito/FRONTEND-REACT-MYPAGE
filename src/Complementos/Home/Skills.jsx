@@ -1,5 +1,3 @@
-
-
 export const Skills = {
   html: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
   javascript:
@@ -15,10 +13,11 @@ export const Skills = {
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
   illistrator:
     "https://www.vectorlogo.zone/logos/adobe_illustrator/adobe_illustrator-icon.svg",
-  styledc: "https://styled-components.com/logo.png",
+  styledc:
+    "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fstyled-components-1.svg?alt=media&token=f0127793-60d4-481d-8f31-2054aca1ada5",
   npm: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
   express:
-    "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fexpress-original.svg?alt=media&token=59d17661-1e43-4ed9-b2d7-4a8009e196d0",
   firebase:
     "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
   mongodb:

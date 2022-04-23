@@ -251,6 +251,7 @@ export const ContenedorTituloSkills = styled.div`
 
 export const TituloSkills = styled.h4`
   color: white;
+  border-bottom: 2px solid;
 `;
 
 export const ContenedorSkill = styled.div`
@@ -490,8 +491,17 @@ export const ContenedorMisCursos = styled.div`
   }
 `;
 
-export const MisCursosTitulo = styled.p`
-  margin: auto;
+export const MisCursosTitulo = styled(TituloSkills)`
+  margin: 10px auto;
+  width: 130px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const CursosTitulo = styled.h4`
+  margin: 10px auto;
+  width: 130px;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -588,12 +598,10 @@ export const CardTitulo = styled.div`
   justify-content: center;
 
   @media ${Dispositivos.mobileL} {
-    
     margin-left: -20px;
   }
 
   @media ${Dispositivos.laptop} {
-
     margin-left: -50px;
   }
 `;
