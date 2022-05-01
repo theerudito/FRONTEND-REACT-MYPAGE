@@ -560,7 +560,6 @@ export const ImgMisCursos = styled.img`
   }
 
   @media ${Dispositivos.mobileL} {
-    margin-left: 10px;
     height: 150px;
     width: 250px;
     display: grid;
@@ -568,7 +567,7 @@ export const ImgMisCursos = styled.img`
     align-items: center;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
-    margin-left: 25px;
+    margin-left: 10px;
   }
   @media ${Dispositivos.tablet} {
     width: 300px;
@@ -577,6 +576,7 @@ export const ImgMisCursos = styled.img`
     margin: 5px auto;
     grid-template-columns: repeat(2, 1fr);
     margin-left: 15px;
+    margin-top: 10px;
   }
 
   @media ${Dispositivos.laptop} {
@@ -585,8 +585,8 @@ export const ImgMisCursos = styled.img`
     display: grid;
     margin: 10px auto;
     grid-template-columns: repeat(2, 1fr);
-    margin-left: 15px;
-    margin-top: 30px;
+    margin-left: -10px;
+    margin-top: 25px;
   }
 `;
 
@@ -598,11 +598,11 @@ export const CardTitulo = styled.div`
   justify-content: center;
 
   @media ${Dispositivos.mobileL} {
-    margin-left: -20px;
+    margin-left: 15px;
   }
 
   @media ${Dispositivos.laptop} {
-    margin-left: -50px;
+    margin-left: -20px;
   }
 `;
 

@@ -8,6 +8,7 @@ import { MostrarContactoApp } from "../MostarContactos/MostrarContacto";
 import { Page404App } from "../Page404/Page404";
 import { Carousel } from "../Porfolio/Carousel";
 import { PagePorfolio } from "../Porfolio/PagePorfolio";
+import { RedesApp } from "../Redes/RedesApp";
 
 export const Router = () => {
   return (
@@ -18,6 +19,7 @@ export const Router = () => {
         <Route path={RutasApp.portfolio} element={<PagePorfolio />} />
         <Route path={RutasApp.contact} element={<MostrarContactoApp />} />
         <Route path={RutasApp.curriculum} element={<Curriculum />} />
+        <Route path={RutasApp.redes} element={<RedesApp />} />
         <Route path={RutasApp.carousel} element={<Carousel />} />
         <Route path="*" element={<Page404App />} />
       </Routes>

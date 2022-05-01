@@ -22,7 +22,7 @@ export const PostProyects = [
     id: 2,
     title: "CLOCK JS",
     url: "https://reloj-by-erudito.netlify.app/",
-    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Mis%20Images%20Page%2Freloj.jpg?alt=media&token=5258c072-acf7-4109-aaf1-9c7b01ca773d",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Mis%20Images%20Page%2Fprogra.jpeg?alt=media&token=37ed35a3-877e-4984-ada1-79c339dec106",
     repro: "https://github.com/theerudito/Reloj",
     tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Frelojjs.svg?alt=media&token=3cdd5433-0a8e-4439-8efa-a2b35b1a37f9",
     git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
@@ -41,7 +41,7 @@ export const PostProyects = [
     id: 4,
     title: "MENU HAMBUERGEZA",
     url: "https://codesandbox.io/s/menu-hambuergueza-s1uqsq?file=/src/index.js",
-    pic: "https://res.cloudinary.com/erudito/image/upload/v1650727891/Mypage/menubueger_yzn8ts.jpg",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Mis%20Images%20Page%2Fprogra.jpeg?alt=media&token=37ed35a3-877e-4984-ada1-79c339dec106",
     repro: "https://github.com/theerudito/MenuHambuergezaJS",
     tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Frelojjs.svg?alt=media&token=3cdd5433-0a8e-4439-8efa-a2b35b1a37f9",
     git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
@@ -53,27 +53,27 @@ export const MisCursos = [
     id: 0,
     title: "HTML",
     url: "https://www.freecodecamp.org/certification/theerudito/responsive-web-design",
-    pic: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/miscursos%2Fcursohtml.svg?alt=media&token=31f2ac2c-8509-453c-bdd1-9959cad85791",
   },
   {
     id: 1,
     title: "CSS",
     url: "https://www.freecodecamp.org/certification/theerudito/responsive-web-design",
-    pic: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/miscursos%2Fcursocss.svg?alt=media&token=b54cce66-6a49-46cf-8986-59e6455228c4",
   },
 
   {
     id: 2,
     title: "JAVASCRIPT",
     url: "https://www.freecodecamp.org/certification/theerudito/javascript-algorithms-and-data-structures",
-    pic: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/miscursos%2Fcursojs.svg?alt=media&token=d62fa951-0229-4f30-b3c2-6bb274d66b98",
   },
 
   {
     id: 3,
     title: "REACT",
     url: "https://ed.team/@iamerudito/curso/reactjs",
-    pic: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/miscursos%2Fcursoreact.svg?alt=media&token=b9f0fc27-234e-4aae-a72b-dcdec0bbe6a2",
   },
 ];
 
@@ -160,6 +160,57 @@ export const Tecnologias2 = [
     id: 15,
     title: "GitHub",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
+  },
+];
+
+export const SocialMedia = [
+  {
+    id: 0,
+    title: "Website",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Redes%20Sociales%2Fbrowser.png?alt=media&token=1bf4f68b-e0a9-4567-a6b9-73083a854be3",
+    url: "https://byerudito.web.app/",
+  },
+  {
+    id: 1,
+    title: "GitHub",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
+    url: "https://github.com/theerudito?tab=repositories",
+  },
+  {
+    id: 2,
+    title: "Linkedin",
+    pic: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
+    url: "https://www.linkedin.com/in/theerudito/",
+  },
+  {
+    id: 3,
+    title: "Facebook",
+    pic: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+    url: "https://www.facebook.com/theerudito1",
+  },
+  {
+    id: 4,
+    title: "Instagram",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Redes%20Sociales%2Finstagram.png?alt=media&token=a3111e90-7471-4cc0-b993-cd3bdab65b52",
+    url: "https://www.instagram.com/theerudito/",
+  },
+  {
+    id: 5,
+    title: "Tiktok",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Redes%20Sociales%2Ftiktok.png?alt=media&token=d1fbc111-db3a-495d-ab60-33e1c174933b",
+    url: "https://www.tiktok.com/@theerudito",
+  },
+  {
+    id: 6,
+    title: "Twitter",
+    pic: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg",
+    url: "https://twitter.com/theerudito",
+  },
+  {
+    id: 7,
+    title: "Contact",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Redes%20Sociales%2Fgmail.png?alt=media&token=f5dde377-4c8c-499a-b769-2f0fd0b7f71e",
+    url: "mailto:erudito.tv@gmail.com",
   },
 ];
 
