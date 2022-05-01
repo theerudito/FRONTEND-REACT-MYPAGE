@@ -46,7 +46,7 @@ export const Titulo2 = styled(Titulo1)`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 8px;
+  margin-top: 10px;
 `;
 
 export const Titulo3 = styled(Titulo1)`
