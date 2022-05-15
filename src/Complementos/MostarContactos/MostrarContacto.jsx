@@ -1,17 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
 import { Icons } from "../Footer/Icons";
-import { MostrarTodosLosContactos } from "../Helpers/ApiRest";
-import {
-  ContenedorHeader,
-  ContenedorIconos,
-  ContenedorMenu,
-} from "../Home/styles/Styles";
+import { TablaApp } from "./Tabla";
 import { useModalContactApp } from "../Hooks/useModalContact";
-import { inicialState } from "../InicialValues/InicialValue";
 import { NavBarMenu } from "../Menu/NavBarMenu";
-
+import contactContext from "../Provider/ContactsProvider";
 import { FormularioContactoCrear } from "./Formulario";
 import { Modal } from "./Modal";
 import {
@@ -25,25 +19,23 @@ import {
   Titulo,
   TR,
 } from "./Styles/Styles";
-import { TablaApp } from "./Tabla";
+import {
+  ContenedorHeader,
+  ContenedorIconos,
+  ContenedorMenu,
+} from "../Home/styles/Styles";
 
 export const MostrarContactoApp = () => {
-  const [contact, setContact] = useState(inicialState);
   const [isOpenModal, openModal, closeModal] = useModalContactApp(false);
   const navigate = useNavigate();
-
-  const updateContact = async () => {
-    const data = await MostrarTodosLosContactos();
-    setContact(data);
-    //console.log(data);
-  };
+  const { contact, getAllUsers } = useContext(contactContext);
 
   const Account = () => {
     navigate("/account");
   };
 
   useEffect(() => {
-    updateContact();
+    getAllUsers();
   }, []);
 
   return (
@@ -80,7 +72,7 @@ export const MostrarContactoApp = () => {
             </Thead>
 
             {contact.map((item) => (
-              <TablaApp item={item} />
+              <TablaApp item={item} key={item._id} />
             ))}
           </Tabla>
         </ContenedorTabla>

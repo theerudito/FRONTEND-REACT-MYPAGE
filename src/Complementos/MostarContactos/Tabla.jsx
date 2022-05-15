@@ -1,20 +1,20 @@
-import axios from "axios";
-
+import { useContext } from "react";
 import { useModalContactApp } from "../Hooks/useModalContact";
-
-
+import contactContext from "../Provider/ContactsProvider";
 import { FormularioContactoEditar } from "./Formulario";
 import { Modal } from "./Modal";
 import { BotonEditar, BotonEliminar, TBody, TD, TR } from "./Styles/Styles";
-
-export const TablaApp = ({ item, id }) => {
+export const TablaApp = ({ item }) => {
   const [isOpenModal, openModal, closeModal] = useModalContactApp(false);
+  const { getAllUsers, deleteUser } = useContext(contactContext);
 
-  const url = "https://erudito-dev.herokuapp.com/api/contactos";
+
 
   const Delete = async (id) => {
-    await axios.delete(`${url}/${id}`);
+    await deleteUser(id);
+    getAllUsers();
   };
+  
 
   return (
     <>
