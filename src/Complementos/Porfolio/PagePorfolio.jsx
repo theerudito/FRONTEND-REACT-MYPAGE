@@ -24,13 +24,12 @@ import {
   TituloPorfolio1,
   TituloPorfolio2,
 } from "./Styles/Styles";
-import { Skills } from "../Home/Skills";
-import { PostProyects, Tecnologias2 } from "./PostPorfolio";
+import { PostProyects } from "./PostPorfolio";
 import { Footer } from "../Footer/Footer";
 import { useState } from "react";
 
 export const PagePorfolio = () => {
-  const [post, setPost] = useState(PostProyects);
+  const [post] = useState(PostProyects);
 
   return (
     <>

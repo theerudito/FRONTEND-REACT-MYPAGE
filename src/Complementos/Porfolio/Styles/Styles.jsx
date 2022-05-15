@@ -271,33 +271,28 @@ export const ImgGitPorfolio = styled.img`
     width: 30px;
     height: 30px;
     margin-left: -25px;
-    cursor: pointer;
   }
   @media ${Dispositivos.mobileM} {
     width: 30px;
     height: 30px;
     margin-left: -10px;
-    cursor: pointer;
   }
   @media ${Dispositivos.mobileL} {
     width: 30px;
     height: 30px;
     margin-left: -20px;
-    cursor: pointer;
   }
 
   @media ${Dispositivos.tablet} {
     width: 30px;
     height: 30px;
     margin-left: 70px;
-    cursor: pointer;
   }
 
   @media ${Dispositivos.laptop} {
     width: 30px;
     height: 30px;
     margin-left: 60px;
-    cursor: pointer;
   }
 `;
 
@@ -330,6 +325,7 @@ export const ButtonProfolio = styled.button`
   }
 
   @media ${Dispositivos.mobileL} {
+    font-size: 18px;
     width: 140px;
     height: 30px;
     display: flex;
@@ -350,6 +346,7 @@ export const ButtonProfolio = styled.button`
 
   @media ${Dispositivos.laptop} {
     width: 160px;
+    font-size: 20px;
     height: 30px;
     display: flex;
     align-items: center;
