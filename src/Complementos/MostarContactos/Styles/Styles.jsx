@@ -36,49 +36,55 @@ export const BotonCrear = styled.button`
 
 export const BotonEliminar = styled.button`
   background-color: red;
-  color: white;
+  color: black;
   border-radius: 10px;
   border: none;
   margin: 0 5px;
   &:hover {
-    background-color: royalblue;
+    background-color: #C6002B;
     color: white;
   }
 `;
 
 export const BotonEditar = styled.button`
-  background-color: orange;
-  color: white;
+  background-color: greenyellow;
+  color: black;
   border-radius: 10px;
   border: none;
 
   &:hover {
-    background-color: tomato;
+    background-color: #00B708;
     color: white;
   }
 `;
 
 export const BotonCerrarModal = styled.button`
-  background-color: orange;
-  color: white;
-  border-radius: 10px;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: greenyellow;
+  color: black;
   border: none;
 
   &:hover {
-    background-color: tomato;
+    background-color: #00B708;
     color: white;
   }
 `;
 
 export const BotonGuardar = styled.button`
-  background-color: orange;
-  color: white;
+  background-color: greenyellow;
+  color: black;
   border-radius: 10px;
-  border: solid 1px gray;
+  border: none;
   margin: auto;
   display: flex;
   &:hover {
-    background-color: tomato;
+    background-color: #00B708;
     color: white;
   }
 `;

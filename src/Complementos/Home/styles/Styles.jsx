@@ -613,8 +613,8 @@ export const CardButton = styled.button`
   border-radius: 10px;
   width: 140px;
   :hover {
-    background-color: green;
-    color: white;
+    background-color: #00B708;
+    color: black;
   }
   @media ${Dispositivos.mobileL} {
     width: 140px;
@@ -646,7 +646,8 @@ export const ContenedorFormularioPrincipal = styled.div`
   align-items: center;
   justify-content: center;
   width: 300px;
-  height: 350px;
+  min-height: 350px;
+  max-height: 450px;
   border-radius: 10px;
   border: 1px solid white;
   margin-bottom: 20px;
@@ -669,8 +670,8 @@ export const ContenedorBoton = styled.button`
   justify-content: center;
   padding: auto;
   :hover {
-    background-color: orange;
-    color: black;
+    background-color: #00B708;
+    color: white;
   }
 `;
 
@@ -682,7 +683,7 @@ export const AlertaFormulario = styled.div`
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  border: solid 1px white;
+  
   font-size: 18px;
 `;
 //=====================FORMULARIO=================================

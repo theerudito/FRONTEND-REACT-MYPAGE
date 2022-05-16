@@ -1,27 +1,48 @@
+import { useEffect } from "react";
 import { createContext, useState } from "react";
-import { EliminarContacto, MostrarTodosLosContactos } from "../Helpers/ApiRest";
-
+import {
+  EditarContacto,
+  EliminarContacto,
+  MostrarTodosLosContactos,
+  MostrarUnContactos,
+} from "../Helpers/ApiRest";
 
 const contactContext = createContext();
 
 const ContantacProvider = ({ children }) => {
   const [contact, setContact] = useState([]);
 
+
   const getAllUsers = async () => {
     const user = await MostrarTodosLosContactos();
     setContact(user);
   };
 
-  const getOneUser = async () => {};
-
-  const upateUser = async () => {};
-
-  const deleteUser = async (id) => {
-    await EliminarContacto(id)
-    console.log("Eliminado")
+ 
+  const getOneUser = async (id) => {
+    await MostrarUnContactos(id);
+    console.log("Obtenido");
   };
 
-  const data = { contact, getAllUsers, getOneUser, upateUser, deleteUser };
+  
+  const upateUser = async (id, formData) => {
+    await EditarContacto(id, formData)
+    console.log("Editado")
+  };
+
+  const deleteUser = async (id) => {
+    await EliminarContacto(id);
+    console.log("Eliminado");
+  };
+
+  const data = {
+    contact,
+    setContact,
+    getAllUsers,
+    getOneUser,
+    upateUser,
+    deleteUser,
+  };
 
   return (
     <contactContext.Provider value={data}>{children} </contactContext.Provider>

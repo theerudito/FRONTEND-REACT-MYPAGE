@@ -9,6 +9,7 @@ import {
 
 import { CrearContacto } from "../Helpers/ApiRest";
 
+
 export const FormularioHome = () => {
   const [enviado, setEnviado] = useState(false);
 
@@ -51,8 +52,8 @@ export const FormularioHome = () => {
             {...register("nombre", {
               required: {
                 value: true,
-                message: "Tienes que ingresar un nombre",
-                maxLength: 20,
+                maxLength: 6,
+                message: "You have to enter a name"
               },
             })}
             name="nombre"
@@ -74,11 +75,11 @@ export const FormularioHome = () => {
             {...register("email", {
               required: {
                 value: true,
-                message: "Tienes que ingresar un email",
+                message: "You have to enter a email",
               },
               pattern: {
                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
-                message: "El formato de email no es correcto",
+                message: "The email format is not correct"
               },
             })}
             type="email"
@@ -99,8 +100,8 @@ export const FormularioHome = () => {
             {...register("telefono", {
               required: {
                 value: true,
-                message: "Tienes que ingresar un numero",
                 maxLength: 20,
+                message: "You have to enter a phone"
               },
             })}
             type="number"
@@ -121,7 +122,7 @@ export const FormularioHome = () => {
             {...register("mensaje", {
               required: {
                 value: true,
-                message: "Tienes que ingresar un texto",
+                message: "You have to enter a text"
               },
             })}
             type="text"
@@ -132,7 +133,7 @@ export const FormularioHome = () => {
 
           <ContenedorBoton type="submit">Send</ContenedorBoton>
 
-          {enviado ? <AlertaFormulario>!Message Send</AlertaFormulario> : null}
+          {enviado && <AlertaFormulario>!Message Send</AlertaFormulario> }
         </form>
       </ContenedorFormularioPrincipal>
     </>

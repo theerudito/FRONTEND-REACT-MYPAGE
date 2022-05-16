@@ -301,7 +301,8 @@ export const ButtonProfolio = styled.button`
   border: none;
   border-radius: 10px;
   :hover {
-    background-color: orange;
+    background-color: #00B708;
+    
   }
 
   @media ${Dispositivos.mobileS} {

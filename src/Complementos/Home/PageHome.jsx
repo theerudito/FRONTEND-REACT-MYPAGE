@@ -42,10 +42,10 @@ import {
 } from "./styles/Styles";
 
 import { RelojApp } from "./RelojApp";
-import { Skills } from "./Skills";
 
 //import { LenguajeBarra, LenguajeEn, LenguajeEs } from "./Lenguaje";
 //import { ModoDark } from "./Modos";
+
 import { NavBarMenu } from "../Menu/NavBarMenu";
 import { Icons } from "../Footer/Icons";
 import { Footer } from "../Footer/Footer";
@@ -56,9 +56,9 @@ import {
 } from "../Porfolio/PostPorfolio";
 
 export const PageHome = () => {
-  const [cursos, setCursos] = useState(MisCursos);
-  const [tecnology1, setTecnology1] = useState(Tecnologias1);
-  const [tecnology2, setTecnology2] = useState(Tecnologias2);
+  const [cursos] = useState(MisCursos);
+  const [tecnology1] = useState(Tecnologias1);
+  const [tecnology2] = useState(Tecnologias2);
 
   return (
     <>

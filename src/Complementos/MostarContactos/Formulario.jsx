@@ -16,13 +16,7 @@ export const FormularioContactoCrear = () => {
   } = useForm();
 
   const guardarContacto = async (data) => {
-    const formmData = {
-      nombre: data.nombre,
-      email: data.email,
-      telefono: data.telefono,
-      mensaje: data.mensaje,
-    };
-    await CrearContacto(formmData);
+    await CrearContacto(data);
     reset();
     getAllUsers();
     setGuardado(true);
@@ -34,7 +28,7 @@ export const FormularioContactoCrear = () => {
   return (
     <ContenedorFormulario>
       <form onSubmit={handleSubmit(guardarContacto)}>
-        <h4>Contact Me...</h4>
+        <h4>Crear Contacto</h4>
         <div>
           {errors.nombre && (
             <span style={{ color: "red", fontSize: "12px" }}>
@@ -129,79 +123,164 @@ export const FormularioContactoCrear = () => {
         <BotonGuardar type="submit" className="mt-5">
           Guardar
         </BotonGuardar>
-        {guardado ? (
+        {guardado && (
           <div className="alert alert-info mt-2">
             <h6 className="d-flex m-2 justify-content-center">
               !Guardado Correctamente¡
             </h6>
           </div>
-        ) : null}
+        )}
       </form>
     </ContenedorFormulario>
   );
 };
 
-export const FormularioContactoEditar = ({ title }) => {
-  const [nombre, setNombre] = useState("");
-  const [email, setEmail] = useState("");
-  const [telefono, setTelefono] = useState("");
-  const [mensaje, setMensaje] = useState("");
+export const FormularioContactoEditar = ({ Userid, item }) => {
+  //let id = Userid;
   const [guardado, setGuardado] = useState(false);
-  //const navigate = useNavigate();
+  const { getAllUsers, upateUser, getOneUser } = useContext(contactContext);
+
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+
+  let userData = {
+    id: item._id,
+    nombre: item.nombre,
+    email: item.email,
+    telefono: item.telefono,
+    mensaje: item.mensaje,
+  };
+
+  const obtenerUnaContact = async(item, userData) => {
+      await getOneUser()
+  }
+
+
+
+  const guardarContacto = async(data) => {
+    await upateUser(Userid, data, userData);
+    reset();
+    getAllUsers();
+    setGuardado(true);
+    setTimeout(() => {
+      setGuardado(null);
+    }, 3000);
+  };
+
 
   return (
     <ContenedorFormulario>
-      <form>
-        <h4>Editar Contacto{title} </h4>
-        <input
-          className="form-control mt-5"
-          type="text"
-          placeholder="Nombre"
-          value={nombre}
-          required
-          onChange={(e) => setNombre(e.target.value)}
-        />
+      <form onSubmit={handleSubmit(guardarContacto)}>
+        <h4>Editar Contacto</h4>
+        <div>
+          {errors.nombre && (
+            <span style={{ color: "red", fontSize: "12px" }}>
+              {errors.nombre.message},
+            </span>
+          )}
+        </div>
 
         <input
-          className="form-control mt-1"
-          type="email"
-          placeholder="Email"
-          value={email}
-          required
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <input
-          className="form-control mt-1"
-          type="number"
-          placeholder="Telefono"
-          value={telefono}
-          required
-          onChange={(e) => setTelefono(e.target.value)}
-        />
-        <textarea
-          className="form-control mt-1"
+          {...register("nombre", {
+            required: {
+              value: true,
+              message: "Tienes que ingresar un nombre",
+              maxLength: 20,
+            },
+          })}
+          name="nombre"
+          autoComplete="off"
           type="text"
-          placeholder="Mensaje"
-          required
-          value={mensaje}
-          onChange={(e) => setMensaje(e.target.value)}
+          className="form-control mb-2"
+          placeholder="Name"
         />
+
+        <div>
+          {errors.email && (
+            <span style={{ color: "red", fontSize: "12px" }}>
+              {errors.email.message}
+            </span>
+          )}
+        </div>
+
+        <input
+          {...register("email", {
+            required: {
+              value: true,
+              message: "Tienes que ingresar un email",
+            },
+            pattern: {
+              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
+              message: "El formato de email no es correcto",
+            },
+          })}
+          type="email"
+          name="email"
+          className="form-control mb-2"
+          placeholder="Email"
+        />
+
+        <div>
+          {errors.telefono && (
+            <span style={{ color: "red", fontSize: "12px" }}>
+              {errors.telefono.message},
+            </span>
+          )}
+        </div>
+
+        <input
+          {...register("telefono", {
+            required: {
+              value: true,
+              message: "Tienes que ingresar un numero",
+              maxLength: 20,
+            },
+          })}
+          type="number"
+          name="telefono"
+          className="form-control mb-2"
+          placeholder="Phone"
+        />
+
+        <div>
+          {errors.mensaje && (
+            <span style={{ color: "red", fontSize: "12px" }}>
+              {errors.mensaje.message},
+            </span>
+          )}
+        </div>
+
+        <textarea
+          {...register("mensaje", {
+            required: {
+              value: true,
+              message: "Tienes que ingresar un texto",
+            },
+          })}
+          type="text"
+          name="mensaje"
+          className="form-control mb-2"
+          placeholder="Message"
+        />
+
         <BotonGuardar type="submit" className="mt-5">
           Guardar
         </BotonGuardar>
-        {guardado ? (
+        {guardado && (
           <div className="alert alert-info mt-2">
             <h6 className="d-flex m-2 justify-content-center">
-              !Guardado Correctamente¡
+              !Editado Correctamente¡
             </h6>
           </div>
-        ) : null}
+        )}
       </form>
     </ContenedorFormulario>
   );
 };
-
-
 
 export const FormularioLogin = ({ title }) => {
   const [email, setEmail] = useState("");
@@ -237,7 +316,7 @@ export const FormularioLogin = ({ title }) => {
         {guardado ? (
           <div className="alert alert-info mt-2">
             <h6 className="d-flex m-2 justify-content-center">
-              !Guardado Correctamente¡
+              !Logiado Correctamente¡
             </h6>
           </div>
         ) : null}
