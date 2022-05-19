@@ -46,6 +46,15 @@ export const PostProyects = [
     tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Frelojjs.svg?alt=media&token=3cdd5433-0a8e-4439-8efa-a2b35b1a37f9",
     git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
   },
+  {
+    id: 5,
+    title: "AVATARES",
+    url: "https://codesandbox.io/embed/github/theerudito/Avatares/tree/main/?fontsize=14&hidenavigation=1&theme=dark&view=preview",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Favatars.png?alt=media&token=f416c878-ec7b-443c-89c1-6422aafdfb3b",
+    repro: "https://github.com/theerudito/Avatares",
+    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Fapireact.svg?alt=media&token=4a52d2ca-e629-4816-93fd-fa92f2f9f894",
+    git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
+  },
 ];
 
 export const MisCursos = [
@@ -213,4 +222,3 @@ export const SocialMedia = [
     url: "mailto:erudito.tv@gmail.com",
   },
 ];
-

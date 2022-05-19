@@ -15,8 +15,18 @@ export const FormularioContactoCrear = () => {
     formState: { errors },
   } = useForm();
 
+  let nombre = "nombre"
   const guardarContacto = async (data) => {
-    await CrearContacto(data);
+    let name = data.nombre
+    let formData = {
+      id: data._id,
+      nombre: data.nombre,
+      email: data.email,
+      telefono: data.telefono,
+      mensaje: data.mensaje,
+      pic: `https://avatars.dicebear.com/api/micah/${name}.svg`
+    };
+    await CrearContacto(formData);
     reset();
     getAllUsers();
     setGuardado(true);
@@ -38,14 +48,14 @@ export const FormularioContactoCrear = () => {
         </div>
 
         <input
-          {...register("nombre", {
+          {...register(nombre, {
             required: {
               value: true,
               message: "Tienes que ingresar un nombre",
               maxLength: 20,
             },
           })}
-          name="nombre"
+          name={nombre}
           autoComplete="off"
           type="text"
           className="form-control mb-2"
@@ -154,11 +164,6 @@ export const FormularioContactoEditar = ({ Userid, item }) => {
     telefono: item.telefono,
     mensaje: item.mensaje,
   };
-
-  const obtenerUnaContact = async(item, userData) => {
-      await getOneUser()
-  }
-
 
 
   const guardarContacto = async(data) => {

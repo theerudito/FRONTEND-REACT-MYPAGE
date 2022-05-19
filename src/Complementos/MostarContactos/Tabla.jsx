@@ -21,6 +21,7 @@ export const TablaApp = ({ item }) => {
     <>
       <TBody>
         <TR>
+          <img src={item.pic} alt="pic" />
           <td id="td">{item.nombre} </td>
           <TD id="hide">{item.email} </TD>
           <td id="td">{item.telefono} </td>

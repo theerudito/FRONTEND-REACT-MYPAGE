@@ -13,7 +13,7 @@ export const MostrarTodosLosContactos = async () => {
 };
 
 export const MostrarUnContactos = async (id, userData) => {
-  console.log(id)
+  //console.log(id)
   try {
     const res = await axios.get(`${url}/${id}`);
     return res;
@@ -25,7 +25,7 @@ export const MostrarUnContactos = async (id, userData) => {
 export const CrearContacto = async (formData) => {
   try {
     const res = await axios.post(url, formData);
-    console.log(res);
+    //console.log(res);
     return res;
   } catch (error) {
     console.log(error);
@@ -35,8 +35,8 @@ export const CrearContacto = async (formData) => {
 export const EditarContacto = async (id, formData) => {   
   try {
     const res = await axios.put(`${url}/${id}`, formData);
-    const data = await res.data
-    console.log(data)
+    //const data = await res.data
+    //console.log(data)
     return res;
   } catch (error) {
     console.log(error);

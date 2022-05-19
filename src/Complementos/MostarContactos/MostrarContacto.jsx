@@ -63,6 +63,7 @@ export const MostrarContactoApp = () => {
           <Tabla className="table" style={{ color: "white" }}>
             <Thead>
               <TR>
+                <th >Avatar</th>
                 <th id="th">Nombre</th>
                 <TH id="hide">Email</TH>
                 <td id="th">Telefono</td>
