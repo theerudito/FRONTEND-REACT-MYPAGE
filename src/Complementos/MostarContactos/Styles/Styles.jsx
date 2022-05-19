@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Dispositivos } from "../../Medias/Medidas";
 
-
 export const Titulo = styled.h1`
   display: flex;
   align-items: center;
@@ -41,7 +40,7 @@ export const BotonEliminar = styled.button`
   border: none;
   margin: 0 5px;
   &:hover {
-    background-color: #C6002B;
+    background-color: #c6002b;
     color: white;
   }
 `;
@@ -53,7 +52,7 @@ export const BotonEditar = styled.button`
   border: none;
 
   &:hover {
-    background-color: #00B708;
+    background-color: #00b708;
     color: white;
   }
 `;
@@ -71,7 +70,7 @@ export const BotonCerrarModal = styled.button`
   border: none;
 
   &:hover {
-    background-color: #00B708;
+    background-color: #00b708;
     color: white;
   }
 `;
@@ -84,7 +83,7 @@ export const BotonGuardar = styled.button`
   margin: auto;
   display: flex;
   &:hover {
-    background-color: #00B708;
+    background-color: #00b708;
     color: white;
   }
 `;
@@ -158,6 +157,12 @@ export const ContenedorTabla = styled.div`
       overflow: hidden;
     }
   }
+`;
+
+export const Profile = styled.img`
+  background-color: aquamarine;
+  width: 50px;
+  border-radius: 10px;
 `;
 
 export const Tabla = styled.table`

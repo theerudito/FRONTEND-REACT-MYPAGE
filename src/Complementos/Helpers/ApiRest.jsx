@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const url = "https://erudito-dev.herokuapp.com/api/contactos";
+const url = "https://erudito-backend.herokuapp.com/api/contactos";
 
 export const MostrarTodosLosContactos = async () => {
   try {
@@ -12,7 +12,7 @@ export const MostrarTodosLosContactos = async () => {
   }
 };
 
-export const MostrarUnContactos = async (id, userData) => {
+export const MostrarUnContactos = async (id) => {
   //console.log(id)
   try {
     const res = await axios.get(`${url}/${id}`);
@@ -32,7 +32,7 @@ export const CrearContacto = async (formData) => {
   }
 };
 
-export const EditarContacto = async (id, formData) => {   
+export const EditarContacto = async (id, formData) => {
   try {
     const res = await axios.put(`${url}/${id}`, formData);
     //const data = await res.data
@@ -42,7 +42,6 @@ export const EditarContacto = async (id, formData) => {
     console.log(error);
   }
 };
-
 
 export const EliminarContacto = async (id) => {
   try {

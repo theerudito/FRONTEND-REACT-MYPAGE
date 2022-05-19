@@ -3,7 +3,7 @@ import { useModalContactApp } from "../Hooks/useModalContact";
 import contactContext from "../Provider/ContactsProvider";
 import { FormularioContactoEditar } from "./Formulario";
 import { Modal } from "./Modal";
-import { BotonEditar, BotonEliminar, TBody, TD, TR } from "./Styles/Styles";
+import { BotonEditar, BotonEliminar, Profile, TBody, TD, TR } from "./Styles/Styles";
 export const TablaApp = ({ item }) => {
   const [isOpenModal, openModal, closeModal] = useModalContactApp(false);
   const { getAllUsers, deleteUser, getOneUser } = useContext(contactContext);
@@ -21,7 +21,7 @@ export const TablaApp = ({ item }) => {
     <>
       <TBody>
         <TR>
-          <img src={item.pic} alt="pic" />
+          <Profile src={item.pic} alt="pic" />
           <td id="td">{item.nombre} </td>
           <TD id="hide">{item.email} </TD>
           <td id="td">{item.telefono} </td>
