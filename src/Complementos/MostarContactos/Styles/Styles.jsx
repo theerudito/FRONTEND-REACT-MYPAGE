@@ -26,8 +26,7 @@ export const BotonCrear = styled.button`
   display: flex;
   transition: 0.5 ease-out;
   margin-bottom: 20px;
-
-  &:hover {
+  :hover {
     background-color: blueviolet;
     color: white;
   }
@@ -50,7 +49,6 @@ export const BotonEditar = styled.button`
   color: black;
   border-radius: 10px;
   border: none;
-
   &:hover {
     background-color: #00b708;
     color: white;
@@ -102,98 +100,169 @@ export const ContenedorPrincipal = styled.div`
   overflow: hidden;
 `;
 
-export const ContenedorTabla = styled.div`
-  width: auto;
-  margin: auto;
-  font-size: 20px;
-
-  @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-    font-size: 10px;
-    width: 320px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    #hide {
-      display: none;
-    }
-    #td,
-    #th {
-      width: 1px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-  }
-
-  @media ${Dispositivos.mobileL} {
-    max-width: 425px;
-    font-size: 18px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    #hide {
-      display: none;
-    }
-    #td,
-    #th {
-      width: 230px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-  }
-  @media ${Dispositivos.laptop} {
-    max-width: 1024px;
-    #hide {
-      display: block;
-      text-decoration: none;
-      list-style: none;
-      width: 230px;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-    }
-  }
-`;
-
 export const Profile = styled.img`
   background-color: aquamarine;
-  width: 50px;
   border-radius: 10px;
 `;
 
-export const Tabla = styled.table`
-  /* background-color: #282c34; */
+export const ContainerTitles = styled.div`
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: orange;
+  color: black;
+  width: 885px;
   border: solid 1px orangered;
+  border-right: solid 1px orangered;
+  border-top: solid 1px orangered;
 `;
 
-export const Thead = styled.thead`
-  color: red;
-`;
-
-export const TR = styled.tr`
+export const ContainerUsers = styled.div`
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
+  width: 800px;
+  border-left: solid 1px orangered;
+  border-right: solid 1px orangered;
 `;
 
-export const TH = styled.td`
-  @media ${Dispositivos.mobileL} {
-    max-width: 425px;
+export const ULTitles = styled.ul`
+  font-size: 20px;
+  margin: auto;
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+
+  .name {
+    width: 80px;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-content: center;
   }
-  @media ${Dispositivos.laptop} {
-    max-width: 1024px;
+  .pic {
+    width: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .email {
+    width: 160px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .phone {
+    width: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .messages {
+    width: 250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .actiones {
+    width: 180px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
-export const TBody = styled.tbody``;
-
-export const TD = styled.td`
-  @media ${Dispositivos.mobileL} {
-    max-width: 425px;
+export const ULUsers = styled.ul`
+  font-size: 16px;
+  margin: auto;
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  background-color: gray;
+  color: white;
+  border-bottom: solid 1px;
+  cursor: pointer;
+  :hover {
+    background-color: #597dfb;
+    color: black;
+    border-bottom: solid 1px;
   }
-  @media ${Dispositivos.laptopL} {
-    max-width: 1200px;
+  .pic {
+    width: 32px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .name {
+    width: 80px;
+    margin: auto;
+    display: grid;
+    align-items: center;
+    justify-content: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .email {
+    width: 160px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .phone {
+    width: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .messages {
+    width: 250px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .actiones {
+    width: 180px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `;
+
+export const ImgProfile = styled.img`
+  margin: auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  background-color: aquamarine;
+  width: 30px;
+  border-radius: 50%;
+`;
+
+export const LITitles = styled.li``;
+
+export const LIUsers = styled.li``;

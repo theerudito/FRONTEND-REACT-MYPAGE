@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+
 import { createContext, useState } from "react";
 import {
   EditarContacto,
@@ -26,12 +26,14 @@ const ContantacProvider = ({ children }) => {
 
   
   const upateUser = async (id, formData) => {
+    getAllUsers()
     await EditarContacto(id, formData)
     console.log("Editado")
   };
 
   const deleteUser = async (id) => {
     await EliminarContacto(id);
+    getAllUsers()
     console.log("Eliminado");
   };
 
