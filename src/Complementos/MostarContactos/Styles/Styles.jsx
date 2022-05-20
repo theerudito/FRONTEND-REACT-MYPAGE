@@ -266,3 +266,18 @@ export const ImgProfile = styled.img`
 export const LITitles = styled.li``;
 
 export const LIUsers = styled.li``;
+
+export const ContainnerSearch = styled.div`
+  width: 150px;
+  margin-left: 955px;
+  margin-top: -20px;
+`;
+
+export const InputSeach = styled.input`
+  width: 150px;
+  border-radius: 10px;
+  border: none;
+  height: 30px;
+  font-size: 16px;
+  margin: 5px;
+`;

@@ -18,9 +18,11 @@ import {
   ButtonAccount,
   ContainerTitles,
   ContainerUsers,
+  ContainnerSearch,
   ContenedorPrincipal,
   ContenedorTabla,
   ImgProfile,
+  InputSeach,
   LITitles,
   LIUsers,
   Tabla,
@@ -36,10 +38,12 @@ import {
   ContenedorIconos,
   ContenedorMenu,
 } from "../Home/styles/Styles";
+import { useState } from "react";
 
 export const MostrarContactoApp = () => {
   const [isOpenModalCrear, openModalCrear, closeModalCrear] = useModalContactApp(false);
   const [isOpenModalEditar, openModalEditar, closeModalEditar] = useModalContactApp(false);
+  const [search, setSeach] = useState("")
 
   const navigate = useNavigate();
   const { contact, getAllUsers, deleteUser, getOneUser } =
@@ -52,6 +56,15 @@ export const MostrarContactoApp = () => {
   useEffect(() => {
     getAllUsers();
   }, []);
+
+  let result = !contact
+  ? contact
+  : contact.filter(user =>  user.nombre.toLowerCase().includes(search.toLowerCase()))
+
+
+  let buscarDato = (e) => {
+    setSeach(e.target.value)
+  }
 
   return (
     <>
@@ -67,13 +80,27 @@ export const MostrarContactoApp = () => {
       <hr />
 
       <ContenedorPrincipal>
+        
+
         <ButtonAccount onClick={() => Account()}>Account</ButtonAccount>
         <Titulo>Consulta de Contactos</Titulo>
+        
         <BotonCrear onClick={openModalCrear}>Crear</BotonCrear>
 
         <Modal isOpen={isOpenModalCrear} closeModal={closeModalCrear}>
           <FormularioContactoCrear />
         </Modal>
+
+      <ContainnerSearch>
+        <InputSeach 
+        type="text"
+        placeholder="Search" 
+        value={search}
+        onChange={buscarDato}
+        />
+      </ContainnerSearch>
+        
+
 
         <ContainerTitles>
           <ULTitles>
@@ -86,7 +113,7 @@ export const MostrarContactoApp = () => {
           </ULTitles>
         </ContainerTitles>
 
-        {contact.map((item) => (
+        {result.map((item) => (
           <ContainerUsers key={item._id}>
             <ULUsers>
               <ImgProfile src={item.pic} alt="avatar" className="pic" />
@@ -118,21 +145,3 @@ export const MostrarContactoApp = () => {
   );
 };
 
-{
-  /* <Tabla className="table" style={{ color: "white" }}>
-<Thead>
-  <TR>
-    <th >Avatar</th>
-    <th id="th">Nombre</th>
-    <TH id="hide">Email</TH>
-    <td id="th">Telefono</td>
-    <TH id="hide">Mensaje</TH>
-    <th id="th">Acciones</th>
-  </TR>
-</Thead>
-
-{contact.map((item) => (
-  <TablaApp item={item} key={item._id} />
-))}
-</Tabla> */
-}
