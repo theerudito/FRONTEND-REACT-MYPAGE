@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.2ce11619.css",
-    "main.js": "/static/js/main.6ffa6c5b.js",
+    "main.css": "/static/css/main.46275d85.css",
+    "main.js": "/static/js/main.d701f927.js",
     "static/media/mypage.jpg": "/static/media/mypage.5bdb13fadbce461d3fff.jpg",
     "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.c1d7432ee75fa194e499.woff",
     "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.a13b815539b49de48d23.woff2",
@@ -9,11 +9,11 @@
     "static/media/404.svg": "/static/media/404.6d653eb323699421be5f5553b34ebf4a.svg",
     "static/media/ecuador.png": "/static/media/ecuador.3b07e5e40e8b71d59bd9.png",
     "index.html": "/index.html",
-    "main.2ce11619.css.map": "/static/css/main.2ce11619.css.map",
-    "main.6ffa6c5b.js.map": "/static/js/main.6ffa6c5b.js.map"
+    "main.46275d85.css.map": "/static/css/main.46275d85.css.map",
+    "main.d701f927.js.map": "/static/js/main.d701f927.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ce11619.css",
-    "static/js/main.6ffa6c5b.js"
+    "static/css/main.46275d85.css",
+    "static/js/main.d701f927.js"
   ]
 }
