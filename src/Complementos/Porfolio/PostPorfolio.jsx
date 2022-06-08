@@ -20,15 +20,25 @@ export const PostProyects = [
 
   {
     id: 2,
-    title: "CLOCK JS",
-    url: "https://reloj-by-erudito.netlify.app/",
-    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Mis%20Images%20Page%2Fprogra.jpeg?alt=media&token=37ed35a3-877e-4984-ada1-79c339dec106",
-    repro: "https://github.com/theerudito/Reloj",
-    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Frelojjs.svg?alt=media&token=3cdd5433-0a8e-4439-8efa-a2b35b1a37f9",
+    title: "ECOMMERCE REACT",
+    url: "https://ecommerce-react-nine.vercel.app/",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Fimages.png?alt=media&token=ee0af538-2bab-4f78-a02d-c625231cdaf6",
+    repro: "https://github.com/theerudito/ecommerce-react",
+    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Fapireact.svg?alt=media&token=4a52d2ca-e629-4816-93fd-fa92f2f9f894",
     git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
   },
   {
     id: 3,
+    title: "AVATARES",
+    url: "https://codesandbox.io/embed/github/theerudito/Avatares/tree/main/?fontsize=14&hidenavigation=1&theme=dark&view=preview",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Favatars.png?alt=media&token=f416c878-ec7b-443c-89c1-6422aafdfb3b",
+    repro: "https://github.com/theerudito/Avatares",
+    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Fapireact.svg?alt=media&token=4a52d2ca-e629-4816-93fd-fa92f2f9f894",
+    git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
+  },
+
+  {
+    id: 4,
     title: "API REST MONGO",
     url: "https://codesandbox.io/s/practicamongo-myfojt",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Mis%20Images%20Page%2Fmongoapi.jpg?alt=media&token=7239c43b-b188-427d-a417-3e9e448ea573",
@@ -38,7 +48,7 @@ export const PostProyects = [
   },
 
   {
-    id: 4,
+    id: 5,
     title: "MENU HAMBUERGEZA",
     url: "https://codesandbox.io/s/menu-hambuergueza-s1uqsq?file=/src/index.js",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Mis%20Images%20Page%2Fprogra.jpeg?alt=media&token=37ed35a3-877e-4984-ada1-79c339dec106",
@@ -47,12 +57,12 @@ export const PostProyects = [
     git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
   },
   {
-    id: 5,
-    title: "AVATARES",
-    url: "https://codesandbox.io/embed/github/theerudito/Avatares/tree/main/?fontsize=14&hidenavigation=1&theme=dark&view=preview",
-    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Favatars.png?alt=media&token=f416c878-ec7b-443c-89c1-6422aafdfb3b",
-    repro: "https://github.com/theerudito/Avatares",
-    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Fapireact.svg?alt=media&token=4a52d2ca-e629-4816-93fd-fa92f2f9f894",
+    id: 6,
+    title: "CLOCK JS",
+    url: "https://reloj-by-erudito.netlify.app/",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Mis%20Images%20Page%2Fprogra.jpeg?alt=media&token=37ed35a3-877e-4984-ada1-79c339dec106",
+    repro: "https://github.com/theerudito/Reloj",
+    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Frelojjs.svg?alt=media&token=3cdd5433-0a8e-4439-8efa-a2b35b1a37f9",
     git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
   },
 ];
