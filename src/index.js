@@ -1,12 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import 'bootstrap/dist/css/bootstrap.min.css'
-// Importar Icono de Bootstrap
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import React, { StrictMode } from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+import { Provider } from "react-redux";
+import { store } from "./store";
 
 ReactDOM.render(
-    <App />,
-  document.getElementById('root')
-);
+  <StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </StrictMode>,
 
+  document.getElementById("root")
+);

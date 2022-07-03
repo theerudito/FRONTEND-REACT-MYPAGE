@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FormularioHome } from "./Formularios";
 import Yo from "./img/yo.jpg";
 import Ubicacion from "./img/ubicacion.png";
@@ -54,11 +54,32 @@ import {
   Tecnologias1,
   Tecnologias2,
 } from "../Porfolio/PostPorfolio";
+import { useDispatch, useSelector } from "react-redux";
+import { getCourse, getTec1, getTec2 } from "../../store/slices/courses";
 
 export const PageHome = () => {
-  const [cursos] = useState(MisCursos);
-  const [tecnology1] = useState(Tecnologias1);
-  const [tecnology2] = useState(Tecnologias2);
+  const dispach = useDispatch();
+
+  const {
+    courses = [],
+    tecnology1 = [],
+    tecnology2 = [],
+  } = useSelector((state) => state.courses);
+
+  const data = useSelector((state) => state.courses);
+  console.log(data);
+
+  useEffect(() => {
+    dispach(getCourse(MisCursos));
+  }, [dispach]);
+
+  useEffect(() => {
+    dispach(getTec1(Tecnologias1));
+  }, [dispach]);
+
+  useEffect(() => {
+    dispach(getTec2(Tecnologias2));
+  }, [dispach]);
 
   return (
     <>
@@ -136,7 +157,7 @@ export const PageHome = () => {
       <MisCursosTitulo>My Courses</MisCursosTitulo>
 
       <ContenedorMisCursos>
-        {cursos.map((item) => (
+        {courses.map((item) => (
           <CardMisCursos className="curso" key={item.id}>
             <ImgMisCursos src={item.pic} alt="miscursos" />
             <CardTitulo>
