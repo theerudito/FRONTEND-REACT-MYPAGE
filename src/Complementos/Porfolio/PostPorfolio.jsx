@@ -24,7 +24,7 @@ export const PostProyects = [
     url: "https://ecommerce-react-nine.vercel.app/",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Fimages.png?alt=media&token=ee0af538-2bab-4f78-a02d-c625231cdaf6",
     repro: "https://github.com/theerudito/ecommerce-react",
-    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Fapireact.svg?alt=media&token=4a52d2ca-e629-4816-93fd-fa92f2f9f894",
+    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Fecomer.svg?alt=media&token=d1608b15-ee20-41c9-aaef-3f7159516532",
     git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
   },
   {
