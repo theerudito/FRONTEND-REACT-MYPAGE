@@ -6,7 +6,7 @@ export const PorfolioPage = () => {
   return (
     <>
       <MainPorfolio />
-      <p>FFF</p>
+     
     </>
   );
 };
