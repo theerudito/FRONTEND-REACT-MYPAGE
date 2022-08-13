@@ -1,133 +1,99 @@
 import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
-import { CrearContacto } from "../Helpers/ApiRest";
+import {
+  CrearContacto,
+  EditarContacto,
+  incialValueUser,
+} from "../Helpers/ApiRest";
 import contactContext from "../Provider/ContactsProvider";
 import { BotonGuardar, ContenedorFormulario } from "./Styles/Styles";
+import { useSelector, useDispatch } from "react-redux";
+import { useEffect } from "react";
+import {
+  createContact,
+  editContatct,
+  getContacts,
+} from "../../store/slices/edudito/erudito";
 
 export const FormularioContactoCrear = () => {
   const [guardado, setGuardado] = useState(false);
-  const { getAllUsers } = useContext(contactContext);
+  const [dataUser, setDataUser] = useState(incialValueUser);
+  const dispatch = useDispatch();
+  const date = new Date().getMilliseconds();
+  const pic = `https://avatars.dicebear.com/api/micah/${date}.svg`;
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
+  useEffect(() => {
+    dispatch(getContacts());
+  }, [dispatch]);
 
-  let nombre = "nombre"
-  const guardarContacto = async (data) => {
-    let name = data.nombre
-    let formData = {
-      id: data._id,
-      nombre: data.nombre,
-      email: data.email,
-      telefono: data.telefono,
-      mensaje: data.mensaje,
-      pic: `https://avatars.dicebear.com/api/micah/${name}.svg`
-    };
-    await CrearContacto(formData);
-    reset();
-    getAllUsers();
+  const handleSubmit = async (e) => {
     setGuardado(true);
+    e.preventDefault();
+    const newUser = {
+      name: dataUser.name,
+      email: dataUser.email,
+      phone: dataUser.phone,
+      message: dataUser.message,
+      pic,
+    };
+    const data = await CrearContacto(newUser);
+    dispatch(createContact(data));
     setTimeout(() => {
-      setGuardado(null);
-    }, 3000);
+      setGuardado(false);
+      setDataUser(incialValueUser);
+    }, 2000);
+    console.log("enviando");
+  };
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setDataUser({
+      ...dataUser,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
     <ContenedorFormulario>
-      <form onSubmit={handleSubmit(guardarContacto)}>
+      <form onSubmit={handleSubmit}>
         <h4>Crear Contacto</h4>
-        <div>
-          {errors.nombre && (
-            <span style={{ color: "red", fontSize: "12px" }}>
-              {errors.nombre.message},
-            </span>
-          )}
-        </div>
 
         <input
-          {...register(nombre, {
-            required: {
-              value: true,
-              message: "Tienes que ingresar un nombre",
-              maxLength: 20,
-            },
-          })}
-          name={nombre}
+          name="name"
+          value={dataUser.name}
+          onChange={handleChange}
           autoComplete="off"
           type="text"
           className="form-control mb-2"
           placeholder="Name"
         />
 
-        <div>
-          {errors.email && (
-            <span style={{ color: "red", fontSize: "12px" }}>
-              {errors.email.message}
-            </span>
-          )}
-        </div>
-
         <input
-          {...register("email", {
-            required: {
-              value: true,
-              message: "Tienes que ingresar un email",
-            },
-            pattern: {
-              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
-              message: "El formato de email no es correcto",
-            },
-          })}
+          value={dataUser.email}
+          onChange={handleChange}
           type="email"
           name="email"
           className="form-control mb-2"
           placeholder="Email"
         />
 
-        <div>
-          {errors.telefono && (
-            <span style={{ color: "red", fontSize: "12px" }}>
-              {errors.telefono.message},
-            </span>
-          )}
-        </div>
-
         <input
-          {...register("telefono", {
-            required: {
-              value: true,
-              message: "Tienes que ingresar un numero",
-              maxLength: 20,
-            },
-          })}
+          value={dataUser.phone}
+          onChange={handleChange}
           type="number"
-          name="telefono"
+          name="phone"
           className="form-control mb-2"
           placeholder="Phone"
         />
 
-        <div>
-          {errors.mensaje && (
-            <span style={{ color: "red", fontSize: "12px" }}>
-              {errors.mensaje.message},
-            </span>
-          )}
-        </div>
-
         <textarea
-          {...register("mensaje", {
-            required: {
-              value: true,
-              message: "Tienes que ingresar un texto",
-            },
-          })}
+          value={dataUser.message}
+          onChange={handleChange}
           type="text"
-          name="mensaje"
+          name="message"
           className="form-control mb-2"
           placeholder="Message"
+          required
         />
 
         <BotonGuardar type="submit" className="mt-5">
@@ -145,129 +111,72 @@ export const FormularioContactoCrear = () => {
   );
 };
 
-export const FormularioContactoEditar = ({ Userid, item }) => {
-  //let id = Userid;
+export const FormularioContactoEditar = () => {
   const [guardado, setGuardado] = useState(false);
-  const { getAllUsers, upateUser, getOneUser } = useContext(contactContext);
+  const { user } = useSelector((store) => store.erudito);
+  const [dataUser, setDataUser] = useState(incialValueUser);
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm();
-
-  let userData = {
-    id: item._id,
-    nombre: item.nombre,
-    email: item.email,
-    telefono: item.telefono,
-    mensaje: item.mensaje,
-  };
-
-
-  const guardarContacto = async(data) => {
-    await upateUser(Userid, data, userData);
-    reset();
-    getAllUsers();
+  const guardarContacto = async (e) => {
     setGuardado(true);
+    e.preventDefault();
+    const id = user._id;
+    await EditarContacto(id, dataUser);
     setTimeout(() => {
-      setGuardado(null);
-    }, 3000);
+      setGuardado(false);
+      setDataUser(incialValueUser);
+    }, 2000);
   };
 
+  useEffect(() => {
+   
+  }, [user]);
+
+  const handleChange = (e) => {
+    setDataUser({
+      ...dataUser,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <ContenedorFormulario>
-      <form onSubmit={handleSubmit(guardarContacto)}>
+      <form onSubmit={guardarContacto}>
         <h4>Editar Contacto</h4>
-        <div>
-          {errors.nombre && (
-            <span style={{ color: "red", fontSize: "12px" }}>
-              {errors.nombre.message},
-            </span>
-          )}
-        </div>
 
         <input
-          {...register("nombre", {
-            required: {
-              value: true,
-              message: "Tienes que ingresar un nombre",
-              maxLength: 20,
-            },
-          })}
-          name="nombre"
+          name="name"
           autoComplete="off"
           type="text"
+          value={dataUser.name}
+          onChange={handleChange}
           className="form-control mb-2"
           placeholder="Name"
         />
 
-        <div>
-          {errors.email && (
-            <span style={{ color: "red", fontSize: "12px" }}>
-              {errors.email.message}
-            </span>
-          )}
-        </div>
-
         <input
-          {...register("email", {
-            required: {
-              value: true,
-              message: "Tienes que ingresar un email",
-            },
-            pattern: {
-              value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
-              message: "El formato de email no es correcto",
-            },
-          })}
           type="email"
           name="email"
+          value={dataUser.email}
+          onChange={handleChange}
           className="form-control mb-2"
           placeholder="Email"
+          required
         />
 
-        <div>
-          {errors.telefono && (
-            <span style={{ color: "red", fontSize: "12px" }}>
-              {errors.telefono.message},
-            </span>
-          )}
-        </div>
-
         <input
-          {...register("telefono", {
-            required: {
-              value: true,
-              message: "Tienes que ingresar un numero",
-              maxLength: 20,
-            },
-          })}
           type="number"
-          name="telefono"
+          name="phone"
+          value={dataUser.phone}
+          onChange={handleChange}
           className="form-control mb-2"
           placeholder="Phone"
         />
 
-        <div>
-          {errors.mensaje && (
-            <span style={{ color: "red", fontSize: "12px" }}>
-              {errors.mensaje.message},
-            </span>
-          )}
-        </div>
-
         <textarea
-          {...register("mensaje", {
-            required: {
-              value: true,
-              message: "Tienes que ingresar un texto",
-            },
-          })}
           type="text"
-          name="mensaje"
+          name="message"
+          value={dataUser.message}
+          onChange={handleChange}
           className="form-control mb-2"
           placeholder="Message"
         />

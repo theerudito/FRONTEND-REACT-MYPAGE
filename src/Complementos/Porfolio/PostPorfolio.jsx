@@ -39,21 +39,21 @@ export const PostProyects = [
 
   {
     id: 4,
-    title: "API REST MONGO",
-    url: "https://codesandbox.io/s/practicamongo-myfojt",
-    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Mis%20Images%20Page%2Fmongoapi.jpg?alt=media&token=7239c43b-b188-427d-a417-3e9e448ea573",
-    repro: "https://github.com/theerudito/API-Resfull---Node-Express-MongoDB",
-    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Fapirest.svg?alt=media&token=325ca4db-227e-4150-be51-62a7d4433655",
+    title: "API REST DJANGO",
+    url: "https://github.com/theerudito/API-REST-PYTHON-DJANGO-MYSQL",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Fpost-django.png?alt=media&token=3d2558e8-91a9-4377-818b-29e7fc8360ce",
+    repro: "https://github.com/theerudito/API-REST-PYTHON-DJANGO-MYSQL",
+    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Ftec-pyton.svg?alt=media&token=eb0367d7-2edd-4984-9178-02b1cdc290f4",
     git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
   },
 
   {
     id: 5,
-    title: "MENU HAMBUERGEZA",
-    url: "https://codesandbox.io/s/menu-hambuergueza-s1uqsq?file=/src/index.js",
-    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Mis%20Images%20Page%2Fprogra.jpeg?alt=media&token=37ed35a3-877e-4984-ada1-79c339dec106",
-    repro: "https://github.com/theerudito/MenuHambuergezaJS",
-    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Frelojjs.svg?alt=media&token=3cdd5433-0a8e-4439-8efa-a2b35b1a37f9",
+    title: "API REST FLASK",
+    url: "https://github.com/theerudito/API-REST-PYTHON-FLASK-MONGO",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Fpost-flask.png?alt=media&token=a4e6e073-6862-4247-be80-6289e9b8eed5",
+    repro: "https://github.com/theerudito/API-REST-PYTHON-FLASK-MONGO",
+    tec: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Post%2Ftec-pyton1.svg?alt=media&token=07b0f9f1-01e8-4efc-a312-121af484f8f8",
     git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
   },
   {

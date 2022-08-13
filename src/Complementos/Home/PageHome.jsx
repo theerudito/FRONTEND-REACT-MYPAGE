@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { FormularioHome } from "./Formularios";
 import Yo from "./img/yo.jpg";
 import Ubicacion from "./img/ubicacion.png";
@@ -55,7 +55,11 @@ import {
   Tecnologias2,
 } from "../Porfolio/PostPorfolio";
 import { useDispatch, useSelector } from "react-redux";
-import { getCourse, getTec1, getTec2 } from "../../store/slices/courses";
+import {
+  getCourse,
+  getTec1,
+  getTec2,
+} from "../../store/slices/edudito/erudito";
 
 export const PageHome = () => {
   const dispach = useDispatch();
@@ -64,20 +68,11 @@ export const PageHome = () => {
     courses = [],
     tecnology1 = [],
     tecnology2 = [],
-  } = useSelector((state) => state.courses);
-
-  const data = useSelector((state) => state.courses);
-  console.log(data);
+  } = useSelector((state) => state.erudito);
 
   useEffect(() => {
     dispach(getCourse(MisCursos));
-  }, [dispach]);
-
-  useEffect(() => {
     dispach(getTec1(Tecnologias1));
-  }, [dispach]);
-
-  useEffect(() => {
     dispach(getTec2(Tecnologias2));
   }, [dispach]);
 

@@ -9,9 +9,10 @@ import {
 
 import { CrearContacto } from "../Helpers/ApiRest";
 
-
 export const FormularioHome = () => {
   const [enviado, setEnviado] = useState(false);
+  const date = new Date().getMilliseconds();
+  const pic = `https://avatars.dicebear.com/api/micah/${date}.svg`;
 
   const {
     register,
@@ -22,10 +23,11 @@ export const FormularioHome = () => {
 
   const guardarContacto = async (data) => {
     const formmData = {
-      nombre: data.nombre,
+      name: data.name,
       email: data.email,
-      telefono: data.telefono,
-      mensaje: data.mensaje,
+      phone: data.phone,
+      message: data.message,
+      pic,
     };
     await CrearContacto(formmData);
     reset();
@@ -41,22 +43,22 @@ export const FormularioHome = () => {
         <form onSubmit={handleSubmit(guardarContacto)}>
           <h4>Contact Me...</h4>
           <div>
-            {errors.nombre && (
+            {errors.name && (
               <span style={{ color: "red", fontSize: "12px" }}>
-                {errors.nombre.message},
+                {errors.name.message},
               </span>
             )}
           </div>
 
           <input
-            {...register("nombre", {
+            {...register("name", {
               required: {
                 value: true,
                 maxLength: 6,
-                message: "You have to enter a name"
+                message: "You have to enter a name",
               },
             })}
-            name="nombre"
+            name="name"
             autoComplete="off"
             type="text"
             className="form-control mb-2"
@@ -79,7 +81,7 @@ export const FormularioHome = () => {
               },
               pattern: {
                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
-                message: "The email format is not correct"
+                message: "The email format is not correct",
               },
             })}
             type="email"
@@ -89,51 +91,51 @@ export const FormularioHome = () => {
           />
 
           <div>
-            {errors.telefono && (
+            {errors.phone && (
               <span style={{ color: "red", fontSize: "12px" }}>
-                {errors.telefono.message},
+                {errors.phone.message},
               </span>
             )}
           </div>
 
           <input
-            {...register("telefono", {
+            {...register("phone", {
               required: {
                 value: true,
                 maxLength: 20,
-                message: "You have to enter a phone"
+                message: "You have to enter a phone",
               },
             })}
             type="number"
-            name="telefono"
+            name="phone"
             className="form-control mb-2"
             placeholder="Phone"
           />
 
           <div>
-            {errors.mensaje && (
+            {errors.message && (
               <span style={{ color: "red", fontSize: "12px" }}>
-                {errors.mensaje.message},
+                {errors.message.message},
               </span>
             )}
           </div>
 
           <textarea
-            {...register("mensaje", {
+            {...register("message", {
               required: {
                 value: true,
-                message: "You have to enter a text"
+                message: "You have to enter a text",
               },
             })}
             type="text"
-            name="mensaje"
+            name="message"
             className="form-control mb-2"
             placeholder="Message"
           />
 
           <ContenedorBoton type="submit">Send</ContenedorBoton>
 
-          {enviado && <AlertaFormulario>!Message Send</AlertaFormulario> }
+          {enviado && <AlertaFormulario>!Message Send</AlertaFormulario>}
         </form>
       </ContenedorFormularioPrincipal>
     </>

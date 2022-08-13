@@ -26,10 +26,18 @@ import {
 } from "./Styles/Styles";
 import { PostProyects } from "./PostPorfolio";
 import { Footer } from "../Footer/Footer";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getPorfolio } from "../../store/slices/edudito/erudito";
 
 export const PagePorfolio = () => {
-  const [post] = useState(PostProyects);
+  const dispach = useDispatch();
+
+  const { porfolio = [] } = useSelector((state) => state.erudito);
+
+  useEffect(() => {
+    dispach(getPorfolio(PostProyects));
+  }, [dispach]);
 
   return (
     <>
@@ -53,7 +61,7 @@ export const PagePorfolio = () => {
       <ContenedorPrincipalPorfolio>
         {/*  */}
 
-        {post.map((posteo) => (
+        {porfolio.map((posteo) => (
           <ContenedorPrincipalCardPorfolio key={posteo.id}>
             <CardPorfolio>
               <ContenedorNombreImagenProfolio>

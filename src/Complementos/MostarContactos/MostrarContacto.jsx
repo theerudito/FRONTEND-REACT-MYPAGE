@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
 import { Icons } from "../Footer/Icons";
-
+import { useDispatch, useSelector } from "react-redux";
 import { useModalContactApp } from "../Hooks/useModalContact";
 import { NavBarMenu } from "../Menu/NavBarMenu";
 import contactContext from "../Provider/ContactsProvider";
@@ -39,32 +39,68 @@ import {
   ContenedorMenu,
 } from "../Home/styles/Styles";
 import { useState } from "react";
+import {
+  incialValueUser,
+  MostrarTodosLosContactos,
+  MostrarUnContactos,
+} from "../Helpers/ApiRest";
+import {
+  deleteContact,
+  editContatct,
+  getContacts,
+} from "../../store/slices/edudito/erudito";
 
 export const MostrarContactoApp = () => {
-  const [isOpenModalCrear, openModalCrear, closeModalCrear] = useModalContactApp(false);
-  const [isOpenModalEditar, openModalEditar, closeModalEditar] = useModalContactApp(false);
-  const [search, setSeach] = useState("")
-
-  const navigate = useNavigate();
-  const { contact, getAllUsers, deleteUser, getOneUser } =
-    useContext(contactContext);
+  const [isOpenModalCrear, openModalCrear, closeModalCrear] =
+    useModalContactApp(false);
+  const [isOpenModalEditar, openModalEditar, closeModalEditar] =
+    useModalContactApp(false);
 
   const Account = () => {
     navigate("/account");
   };
 
+  const [search, setSeach] = useState("");
+
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
+  const { contacts = [] } = useSelector((store) => store.erudito);
+
+  const GET_ALL_CONTACT = async () => {
+    const data = await MostrarTodosLosContactos();
+    dispatch(getContacts(data));
+  };
+
+  const GET_ONE_CONTACT = async (id) => {
+    const user = await MostrarUnContactos(id);
+    dispatch(editContatct(user));
+  };
+
+  const DELETE_CONTACT = (id) => {
+    dispatch(deleteContact(id));
+    GET_ALL_CONTACT();
+  };
+
+  const EDIT_CONTACT = (id) => {
+    dispatch(editContatct(id));
+    GET_ALL_CONTACT();
+  };
+
   useEffect(() => {
-    getAllUsers();
+    GET_ALL_CONTACT();
   }, []);
 
-  let result = !contact
-  ? contact
-  : contact.filter(user =>  user.nombre.toLowerCase().includes(search.toLowerCase()))
+  // let result = !contact
+  //   ? contact
+  //   : contact.filter((user) =>
+  //       user.nombre.toLowerCase().includes(search.toLowerCase())
+  //     );
 
-
-  let buscarDato = (e) => {
-    setSeach(e.target.value)
-  }
+  // let buscarDato = (e) => {
+  //   setSeach(e.target.value);
+  // };
 
   return (
     <>
@@ -80,27 +116,23 @@ export const MostrarContactoApp = () => {
       <hr />
 
       <ContenedorPrincipal>
-        
-
         <ButtonAccount onClick={() => Account()}>Account</ButtonAccount>
         <Titulo>Consulta de Contactos</Titulo>
-        
+
         <BotonCrear onClick={openModalCrear}>Crear</BotonCrear>
 
         <Modal isOpen={isOpenModalCrear} closeModal={closeModalCrear}>
           <FormularioContactoCrear />
         </Modal>
 
-      <ContainnerSearch>
-        <InputSeach 
-        type="text"
-        placeholder="Search" 
-        value={search}
-        onChange={buscarDato}
-        />
-      </ContainnerSearch>
-        
-
+        {/* <ContainnerSearch>
+          <InputSeach
+            type="text"
+            placeholder="Search"
+            value={search}
+            onChange={buscarDato}
+          />
+        </ContainnerSearch> */}
 
         <ContainerTitles>
           <ULTitles>
@@ -113,26 +145,26 @@ export const MostrarContactoApp = () => {
           </ULTitles>
         </ContainerTitles>
 
-        {result.map((item) => (
+        {contacts.map((item) => (
           <ContainerUsers key={item._id}>
             <ULUsers>
               <ImgProfile src={item.pic} alt="avatar" className="pic" />
-              <LIUsers className="name">{item.nombre}</LIUsers>
+              <LIUsers className="name">{item.name}</LIUsers>
               <LIUsers className="email">{item.email}</LIUsers>
-              <LIUsers className="phone">{item.telefono} </LIUsers>
-              <LIUsers className="messages">{item.mensaje} </LIUsers>
+              <LIUsers className="phone">{item.phone} </LIUsers>
+              <LIUsers className="messages">{item.message} </LIUsers>
               <LIUsers className="actiones">
                 <BotonEditar
-                  onClick={(e) => openModalEditar(getOneUser(item._id, item))}
+                  onClick={(e) => openModalEditar(GET_ONE_CONTACT(item._id))}
                 >
                   Editar
                 </BotonEditar>
 
                 <Modal isOpen={isOpenModalEditar} closeModal={closeModalEditar}>
-                  <FormularioContactoEditar item={item} Userid={item._id} />
+                  <FormularioContactoEditar />
                 </Modal>
 
-                <BotonEliminar onClick={() => deleteUser(item._id)}>
+                <BotonEliminar onClick={() => DELETE_CONTACT(item._id)}>
                   Eliminar
                 </BotonEliminar>
               </LIUsers>
@@ -144,4 +176,3 @@ export const MostrarContactoApp = () => {
     </>
   );
 };
-

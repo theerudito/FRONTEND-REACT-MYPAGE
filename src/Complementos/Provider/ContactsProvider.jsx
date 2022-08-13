@@ -1,4 +1,3 @@
-
 import { createContext, useState } from "react";
 import {
   EditarContacto,
@@ -11,29 +10,33 @@ const contactContext = createContext();
 
 const ContantacProvider = ({ children }) => {
   const [contact, setContact] = useState([]);
-
+  const [user, setUser] = useState({
+    nombre: "",
+    email: "",
+    telefono: "",
+    mensaje: "",
+    pic: "",
+  });
 
   const getAllUsers = async () => {
     const user = await MostrarTodosLosContactos();
     setContact(user);
   };
 
- 
   const getOneUser = async (id) => {
     await MostrarUnContactos(id);
     console.log("Obtenido");
   };
 
-  
   const upateUser = async (id, formData) => {
-    getAllUsers()
-    await EditarContacto(id, formData)
-    console.log("Editado")
+    getAllUsers();
+    await EditarContacto(id, formData);
+    console.log("Editado");
   };
 
   const deleteUser = async (id) => {
     await EliminarContacto(id);
-    getAllUsers()
+    getAllUsers();
     console.log("Eliminado");
   };
 
