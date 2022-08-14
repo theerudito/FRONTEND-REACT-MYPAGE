@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
 import { Icons } from "../Footer/Icons";
 import { RutasApp } from "../Helpers/Rutas";
-import { ContenedorHeader, ContenedorIconos, ContenedorMenu } from "../Home/styles/Styles";
+import {
+  ContenedorHeader,
+  ContenedorIconos,
+  ContenedorMenu,
+} from "../Home/styles/Styles";
 import { NavBarMenu } from "../Menu/NavBarMenu";
 
 import {
@@ -19,10 +23,16 @@ import {
 } from "./Styles";
 
 export const AccountPage = () => {
+  const dataUser = JSON.parse(localStorage.getItem("accessToken"));
+
+  const logout = () => {
+    localStorage.clear("accessToken");
+    window.location.href = "/";
+  };
+
   return (
     <>
-    
-    <ContenedorHeader>
+      <ContenedorHeader>
         <ContenedorMenu>
           <NavBarMenu />
         </ContenedorMenu>
@@ -33,7 +43,6 @@ export const AccountPage = () => {
       </ContenedorHeader>
 
       <hr />
-
 
       <h1
         style={{
@@ -78,19 +87,16 @@ export const AccountPage = () => {
         <ContenedorAccount>
           <ContenedorTitulo>Account</ContenedorTitulo>
           <ContenedorA>
-            <ContenedorPerfil
-              src="https://www.pngall.com/wp-content/uploads/5/Profile-Male-PNG.png"
-              alt="perfil"
-            />
-            <ContenedorName>Jorge Loor</ContenedorName>
-            <ContenedorRol>Admin</ContenedorRol>
+            <ContenedorPerfil src={dataUser.pic} alt="perfil" />
+            <ContenedorName>{dataUser.name} </ContenedorName>
+            <ContenedorRol>{dataUser.email} </ContenedorRol>
           </ContenedorA>
           <div>
-            <Botones>Logout</Botones>
+            <Botones onClick={() => logout()}>Logout</Botones>
           </div>
         </ContenedorAccount>
       </ContenedorPrincipal>
-      <Footer/>
+      <Footer />
     </>
   );
 };

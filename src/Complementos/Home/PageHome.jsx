@@ -104,10 +104,10 @@ export const PageHome = () => {
 
       <ContendorSobreME>
         <YoImagen src={Yo} alt="yo" />
-        <div style={{margin: "auto"}}>
+        <div style={{ margin: "auto" }}>
           <Eslogan>!Never Give Up¡</Eslogan>
         </div>
-        
+
         <ContendorUbiYPais>
           <Ecuador src={Ubicacion} alt="ubicacion" />
 

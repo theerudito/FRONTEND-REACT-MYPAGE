@@ -38,7 +38,6 @@ const StyledBurger = styled.div`
 `;
 
 
-
 export const BurgerMenu = () => {
   const [open, setOpen] = useState(false)
   

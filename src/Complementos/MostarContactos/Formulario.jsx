@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
-import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import {
   CrearContacto,
   EditarContacto,
   incialValueUser,
+  loginUser,
 } from "../Helpers/ApiRest";
 import contactContext from "../Provider/ContactsProvider";
 import { BotonGuardar, ContenedorFormulario } from "./Styles/Styles";
@@ -127,9 +128,7 @@ export const FormularioContactoEditar = () => {
     }, 2000);
   };
 
-  useEffect(() => {
-   
-  }, [user]);
+  useEffect(() => {}, [user]);
 
   const handleChange = (e) => {
     setDataUser({
@@ -197,31 +196,51 @@ export const FormularioContactoEditar = () => {
 };
 
 export const FormularioLogin = ({ title }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
+  const [cretentials, setCretentials] = useState({ email: "", password: "" });
   const [guardado, setGuardado] = useState(false);
+  const navigate = useNavigate();
+
+  const loginData = async (e) => {
+    e.preventDefault();
+    const credederntialsDB = await loginUser(cretentials);
+
+    if (credederntialsDB.accessToken) {
+      console.log("credenciales correctas");
+      localStorage.setItem("accessToken", JSON.stringify(credederntialsDB));
+      navigate("/account");
+    } else {
+      console.log("Error al iniciar sesion");
+    }
+  };
+  const onChange = (e) => {
+    setCretentials({
+      ...cretentials,
+      [e.target.name]: e.target.value,
+    });
+  };
 
   return (
     <ContenedorFormulario>
-      <form>
+      <form onSubmit={loginData}>
         <h4>Login{title} </h4>
         <input
           className="form-control mt-5"
           type="email"
           placeholder="Email"
-          value={email}
           required
-          onChange={(e) => setEmail(e.target.value)}
+          name="email"
+          value={cretentials.email}
+          onChange={onChange}
         />
 
         <input
           className="form-control mt-1"
           type="password"
           placeholder="Password"
-          value={password}
           required
-          onChange={(e) => setPassword(e.target.value)}
+          name="password"
+          value={cretentials.password}
+          onChange={onChange}
         />
 
         <BotonGuardar type="submit" className="mt-5">

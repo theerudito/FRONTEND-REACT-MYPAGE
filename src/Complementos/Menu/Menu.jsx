@@ -2,6 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { RutasApp } from "../Helpers/Rutas";
+import { useModalMenu } from "../Hooks/ModalMenu";
+import { Modal } from "../MostarContactos/Modal";
+import { FormularioLogin } from "../MostarContactos/Formulario";
 
 const Ul = styled.ul`
   list-style: none;
@@ -59,6 +62,12 @@ const LI = styled.li`
 `;
 
 export const MenuBurger = ({ open }) => {
+  const [isOpenModalM, openModalM, closeModalM] = useModalMenu(false);
+
+  const handleModalClick = (e) => {
+    openModalM();
+  };
+
   return (
     <>
       <Ul open={open}>
@@ -73,11 +82,12 @@ export const MenuBurger = ({ open }) => {
         </LI>
         {/* <LI as={Link} to={RutasApp.home}>
           Blog
-        </LI>
-        <LI as={Link} to={RutasApp.home}>
-          Login
         </LI> */}
+        <button onClick={handleModalClick}>Login</button>
       </Ul>
+      <Modal isOpen={isOpenModalM} closeModal={closeModalM}>
+        <FormularioLogin />
+      </Modal>
     </>
   );
 };

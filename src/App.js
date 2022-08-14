@@ -34,10 +34,3 @@ function App() {
 }
 
 export default App;
-
-const numeros = [1, 2, 3];
-const sumando = numeros.reduce((accumulador, valorActual) => {
-  return accumulador + valorActual;
-}, 0);
-
-console.log(sumando);
