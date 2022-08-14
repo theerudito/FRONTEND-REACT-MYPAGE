@@ -28,6 +28,7 @@ import {
   CursosTitulo,
   Ec,
   Ecuador,
+  Eslogan,
   Frase,
   ImgMisCursos,
   Liks,
@@ -103,7 +104,10 @@ export const PageHome = () => {
 
       <ContendorSobreME>
         <YoImagen src={Yo} alt="yo" />
-        <Red>!Never Give Up¡</Red>
+        <div style={{margin: "auto"}}>
+          <Eslogan>!Never Give Up¡</Eslogan>
+        </div>
+        
         <ContendorUbiYPais>
           <Ecuador src={Ubicacion} alt="ubicacion" />
 

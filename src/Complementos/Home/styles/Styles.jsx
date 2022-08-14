@@ -127,8 +127,7 @@ export const ContendorUbiYPais = styled.div`
   width: 160px;
   align-items: center;
   justify-content: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
 `;
 
 export const YoImagen = styled.img`
@@ -143,6 +142,10 @@ export const YoImagen = styled.img`
     box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
     border: solid 3px black;
   }
+`;
+
+export const Eslogan = styled.p`
+  color: aquamarine;
 `;
 
 export const Ecuador = styled.img`
@@ -234,9 +237,6 @@ export const Frase = styled.h4`
     font-size: 18px;
   }
 `;
-export const Red = styled.span`
-  color: aquamarine;
-`;
 
 //==============================FRASE=============================
 
@@ -247,6 +247,10 @@ export const ContenedorTituloSkills = styled.div`
   align-items: center;
   justify-content: center;
   margin-top: 40px;
+`;
+
+export const Red = styled.span`
+  color: aquamarine;
 `;
 
 export const TituloSkills = styled.h4`
@@ -390,7 +394,7 @@ export const SkillsImg = styled.img`
   }
 `;
 
-export const CardSkills = styled.p`
+export const CardSkills = styled.div`
   color: white;
   margin: auto;
   align-items: center;
@@ -613,7 +617,7 @@ export const CardButton = styled.button`
   border-radius: 10px;
   width: 140px;
   :hover {
-    background-color: #00B708;
+    background-color: #00b708;
     color: black;
   }
   @media ${Dispositivos.mobileL} {
@@ -670,7 +674,7 @@ export const ContenedorBoton = styled.button`
   justify-content: center;
   padding: auto;
   :hover {
-    background-color: #00B708;
+    background-color: #00b708;
     color: white;
   }
 `;
@@ -683,7 +687,7 @@ export const AlertaFormulario = styled.div`
   border-radius: 10px;
   justify-content: center;
   align-items: center;
-  
+
   font-size: 18px;
 `;
 //=====================FORMULARIO=================================
