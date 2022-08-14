@@ -103,7 +103,7 @@ export const PageHome = () => {
 
       <ContendorSobreME>
         <YoImagen src={Yo} alt="yo" />
-        <Red>!Never Say Never¡</Red>
+        <Red>!Never Give Up¡</Red>
         <ContendorUbiYPais>
           <Ecuador src={Ubicacion} alt="ubicacion" />
 
