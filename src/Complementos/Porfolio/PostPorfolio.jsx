@@ -114,7 +114,7 @@ export const Tecnologias1 = [
   },
   {
     id: 3,
-    title: "Bootsrap",
+    title: "Bootstrap",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fbootstrap-original.svg?alt=media&token=75f179f9-ec4c-4c7b-ba7b-e605d2494331",
   },
   {
@@ -134,8 +134,8 @@ export const Tecnologias1 = [
   },
   {
     id: 7,
-    title: "Illustrator",
-    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fadobe_illustrator-icon.svg?alt=media&token=731e3d2f-7f86-4051-ac66-f34b4f19cd9c",
+    title: "TypeScript",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Ftypescript-original.svg?alt=media&token=e4701010-5ed3-4934-8592-449d40cfe387",
   },
 ];
 
@@ -143,12 +143,12 @@ export const Tecnologias2 = [
   {
     id: 8,
     title: "StyledC",
-    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fstyled-components-1.svg?alt=media&token=f0127793-60d4-481d-8f31-2054aca1ada5",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fsc.png?alt=media&token=cf3f1115-db62-4810-9042-5e96003ba8d6",
   },
   {
     id: 9,
-    title: "NPM",
-    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fnpm-original-wordmark.svg?alt=media&token=ed49d0e5-df39-4eb1-8caf-83e84b4eaef3",
+    title: "Python",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Ficons8-python-48.svg?alt=media&token=c0715e43-fb89-4e5b-877e-80ab1d800d1f",
   },
   {
     id: 10,
