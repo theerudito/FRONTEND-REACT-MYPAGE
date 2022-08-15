@@ -1,10 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { RutasApp } from "../Helpers/Rutas";
 import { useModalMenu } from "../Hooks/ModalMenu";
 import { Modal } from "../MostarContactos/Modal";
 import { FormularioLogin } from "../MostarContactos/Formulario";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { setLogin } from "../../store/slices/edudito/erudito";
 
 const Ul = styled.ul`
   list-style: none;
@@ -15,7 +18,7 @@ const Ul = styled.ul`
   margin: auto;
   text-decoration: none;
   padding: 27px;
-  margin-left: 20px;
+  margin-left: 70px;
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
@@ -61,11 +64,49 @@ const LI = styled.li`
   }
 `;
 
+const ButtonLogin = styled.button`
+ border: none;
+ background-color: #050505;
+ color: white;
+ :hover {
+  background-color: greenyellow;
+  border-radius: 10px;
+  color: black;
+  @media (max-width: 768px) {
+    width: 200px;
+ 
+ color: white;
+    :hover {
+      background-color: greenyellow;
+      border-radius: 10px;
+      color: black;
+      width: 200px;
+      
+    }
+  }
+`;
+
 export const MenuBurger = ({ open }) => {
   const [isOpenModalM, openModalM, closeModalM] = useModalMenu(false);
+  const navigate = useNavigate();
+  const { login } = useSelector((store) => store.erudito);
+  const dispatch = useDispatch();
+  let handleLogin = JSON.parse(localStorage.getItem("accessToken"));
 
   const handleModalClick = (e) => {
     openModalM();
+  };
+
+  useEffect(() => {
+    if (handleLogin) {
+      dispatch(setLogin(true));
+    } else {
+      dispatch(setLogin(false));
+    }
+  }, [dispatch, handleLogin]);
+
+  const handleAccount = () => {
+    navigate(RutasApp.account);
   };
 
   return (
@@ -83,7 +124,11 @@ export const MenuBurger = ({ open }) => {
         {/* <LI as={Link} to={RutasApp.home}>
           Blog
         </LI> */}
-        <button onClick={handleModalClick}>Login</button>
+        {login ? (
+          <ButtonLogin onClick={() => handleAccount()}>Account</ButtonLogin>
+        ) : (
+          <ButtonLogin onClick={handleModalClick}>Login</ButtonLogin>
+        )}
       </Ul>
       <Modal isOpen={isOpenModalM} closeModal={closeModalM}>
         <FormularioLogin />

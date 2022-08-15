@@ -4,9 +4,9 @@ import { EliminarContacto } from "../../../Complementos/Helpers/ApiRest";
 export const eruditoSlice = createSlice({
   name: "erudtio",
   initialState: {
-    login: false,
-    logout: false,
-    isLoading: false,
+    login: true,
+    isLoading: true,
+    languages: [],
     courses: [],
     tecnology1: [],
     tecnology2: [],
@@ -41,6 +41,9 @@ export const eruditoSlice = createSlice({
       state.contacts = state.contacts.filter((contact) => contact.id !== id);
       EliminarContacto(id);
     },
+    setLogin: (state, actions) => {
+      state.login = actions.payload;
+    },
   },
 });
 
@@ -54,4 +57,6 @@ export const {
   createContact,
   editContatct,
   deleteContact,
+  setLogout,
+  setLogin,
 } = eruditoSlice.actions;

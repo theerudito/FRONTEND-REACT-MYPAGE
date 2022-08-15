@@ -24,7 +24,6 @@ import {
 
 export const AccountPage = () => {
   const dataUser = JSON.parse(localStorage.getItem("accessToken"));
-
   const logout = () => {
     localStorage.clear("accessToken");
     window.location.href = "/";

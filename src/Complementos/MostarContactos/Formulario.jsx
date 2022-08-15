@@ -1,19 +1,18 @@
-import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
+
 import {
   CrearContacto,
   EditarContacto,
   incialValueUser,
   loginUser,
 } from "../Helpers/ApiRest";
-import contactContext from "../Provider/ContactsProvider";
+
 import { BotonGuardar, ContenedorFormulario } from "./Styles/Styles";
 import { useSelector, useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import {
   createContact,
-  editContatct,
   getContacts,
+  setLogin,
 } from "../../store/slices/edudito/erudito";
 
 export const FormularioContactoCrear = () => {
@@ -195,23 +194,29 @@ export const FormularioContactoEditar = () => {
   );
 };
 
-export const FormularioLogin = ({ title }) => {
+export const FormularioLogin = () => {
   const [cretentials, setCretentials] = useState({ email: "", password: "" });
-  const [guardado, setGuardado] = useState(false);
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [error, setError] = useState("");
 
   const loginData = async (e) => {
     e.preventDefault();
-    const credederntialsDB = await loginUser(cretentials);
+    try {
+      const credederntialsDB = await loginUser(cretentials);
 
-    if (credederntialsDB.accessToken) {
-      console.log("credenciales correctas");
-      localStorage.setItem("accessToken", JSON.stringify(credederntialsDB));
-      navigate("/account");
-    } else {
-      console.log("Error al iniciar sesion");
+      if (credederntialsDB) {
+        console.log("credenciales correctas");
+        dispatch(setLogin(false));
+        localStorage.setItem("accessToken", JSON.stringify(credederntialsDB));
+        window.location.href = "/account";
+      } else {
+        console.log("Error al iniciar sesion");
+      }
+    } catch (error) {
+      setError("password or email is incorrect");
     }
   };
+
   const onChange = (e) => {
     setCretentials({
       ...cretentials,
@@ -222,7 +227,7 @@ export const FormularioLogin = ({ title }) => {
   return (
     <ContenedorFormulario>
       <form onSubmit={loginData}>
-        <h4>Login{title} </h4>
+        <h4>Login </h4>
         <input
           className="form-control mt-5"
           type="email"
@@ -246,14 +251,21 @@ export const FormularioLogin = ({ title }) => {
         <BotonGuardar type="submit" className="mt-5">
           Login
         </BotonGuardar>
-        {guardado ? (
-          <div className="alert alert-info mt-2">
-            <h6 className="d-flex m-2 justify-content-center">
-              !Logiado Correctamente¡
-            </h6>
-          </div>
-        ) : null}
       </form>
+      {
+        <p
+          style={{
+            color: "red",
+            fontSize: "12px",
+            margim: "auto",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          {error}{" "}
+        </p>
+      }
     </ContenedorFormulario>
   );
 };
