@@ -66,7 +66,7 @@ import { ENGLISH } from "../Languages/EN";
 
 export const PageHome = () => {
   const dispach = useDispatch();
-  const { languages } = useSelector((store) => store.erudito);
+  const languages = localStorage.getItem("language");
 
   const {
     courses = [],
@@ -108,10 +108,10 @@ export const PageHome = () => {
       <ContendorSobreME>
         <YoImagen src={Yo} alt="yo" />
         <div style={{ margin: "auto" }}>
-          {languages ? (
-            <Eslogan>{ENGLISH.slogan} </Eslogan>
-          ) : (
+          {languages === "ES" ? (
             <Eslogan>{SPANISH.slogan} </Eslogan>
+          ) : (
+            <Eslogan>{ENGLISH.slogan} </Eslogan>
           )}
         </div>
 
@@ -129,23 +129,23 @@ export const PageHome = () => {
       <ContenedorFrase>
         <ProgramdorStyled src={Programador} alt="programador" />
 
-        {languages ? (
+        {languages === "ES" ? (
           <Frase>
-            {ENGLISH.frase}
+            {SPANISH.frase}
             <Red>@theerudito</Red>
           </Frase>
         ) : (
           <Frase>
-            {SPANISH.frase} <Red>@theerudito</Red>{" "}
+            {ENGLISH.frase} <Red>@theerudito</Red>{" "}
           </Frase>
         )}
       </ContenedorFrase>
 
       <ContenedorTituloSkills>
-        {languages ? (
-          <TituloSkills>{ENGLISH.skill} </TituloSkills>
-        ) : (
+        {languages === "ES" ? (
           <TituloSkills>{SPANISH.skill} </TituloSkills>
+        ) : (
+          <TituloSkills>{ENGLISH.skill} </TituloSkills>
         )}
       </ContenedorTituloSkills>
 
@@ -170,10 +170,10 @@ export const PageHome = () => {
         </ContenedorSkill2>
       </ContenedorSkill>
 
-      {languages ? (
-        <MisCursosTitulo>{ENGLISH.myCourses} </MisCursosTitulo>
-      ) : (
+      {languages === "ES" ? (
         <MisCursosTitulo>{SPANISH.myCourses} </MisCursosTitulo>
+      ) : (
+        <MisCursosTitulo>{ENGLISH.myCourses} </MisCursosTitulo>
       )}
 
       <ContenedorMisCursos>
@@ -183,13 +183,13 @@ export const PageHome = () => {
             <CardTitulo>
               <CursosTitulo>{item.title} </CursosTitulo>
               <CardButton>
-                {languages ? (
+                {languages === "ES" ? (
                   <Liks href={item.url} target="_blanck">
-                    {ENGLISH.goCourse}
+                    {SPANISH.goCourse}
                   </Liks>
                 ) : (
                   <Liks href={item.url} target="_blanck">
-                    {SPANISH.goCourse}
+                    {ENGLISH.goCourse}
                   </Liks>
                 )}
               </CardButton>

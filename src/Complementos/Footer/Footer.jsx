@@ -12,20 +12,20 @@ import {
 } from "./Styles/StylesFooter";
 
 export const Footer = () => {
-  const { languages } = useSelector((store) => store.erudito);
+  const languages = localStorage.getItem("language");
   return (
     <>
       <hr />
 
       <ContendorFooter className="footer">
         <ContenedorErudito>Erudito Dev &copy;</ContenedorErudito>
-        {languages ? (
+        {languages === "ES" ? (
           <ContenedorDerechos className="derechos">
-            {ENGLISH.Author}
+            {SPANISH.Author}
           </ContenedorDerechos>
         ) : (
           <ContenedorDerechos className="derechos">
-            {SPANISH.Author}
+            {ENGLISH.Author}
           </ContenedorDerechos>
         )}
         <ContenedorRedesSoliales>

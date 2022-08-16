@@ -8,7 +8,6 @@ import {
 } from "./styles/Styles";
 
 import { CrearContacto } from "../Helpers/ApiRest";
-import { useSelector } from "react-redux";
 import { ENGLISH } from "../Languages/EN";
 import { SPANISH } from "../Languages/ES";
 
@@ -16,7 +15,7 @@ export const FormularioHome = () => {
   const [enviado, setEnviado] = useState(false);
   const date = new Date().getMilliseconds();
   const pic = `https://avatars.dicebear.com/api/micah/${date}.svg`;
-  const { languages } = useSelector((store) => store.erudito);
+  const languages = localStorage.getItem("language");
   const {
     register,
     handleSubmit,
@@ -44,10 +43,10 @@ export const FormularioHome = () => {
     <>
       <ContenedorFormularioPrincipal>
         <form onSubmit={handleSubmit(guardarContacto)}>
-          {languages ? (
-            <h4>{ENGLISH.form.contactMe} </h4>
-          ) : (
+          {languages === "ES" ? (
             <h4>{SPANISH.form.contactMe} </h4>
+          ) : (
+            <h4>{ENGLISH.form.contactMe} </h4>
           )}
 
           <div>
@@ -70,7 +69,9 @@ export const FormularioHome = () => {
             autoComplete="off"
             type="text"
             className="form-control mb-2"
-            placeholder="Name"
+            placeholder={
+              languages === "ES" ? SPANISH.form.name : ENGLISH.form.name
+            }
           />
 
           <div>
@@ -95,7 +96,9 @@ export const FormularioHome = () => {
             type="email"
             name="email"
             className="form-control mb-2"
-            placeholder="Email"
+            placeholder={
+              languages === "ES" ? SPANISH.form.email : ENGLISH.form.email
+            }
           />
 
           <div>
@@ -117,7 +120,9 @@ export const FormularioHome = () => {
             type="number"
             name="phone"
             className="form-control mb-2"
-            placeholder="Phone"
+            placeholder={
+              languages === "ES" ? SPANISH.form.phone : ENGLISH.form.phome
+            }
           />
 
           <div>
@@ -138,20 +143,26 @@ export const FormularioHome = () => {
             type="text"
             name="message"
             className="form-control mb-2"
-            placeholder="Message"
+            placeholder={
+              languages === "ES" ? SPANISH.form.message : ENGLISH.form.message
+            }
           />
 
-          {languages ? (
-            <ContenedorBoton type="submit">
-              {ENGLISH.form.send}{" "}
-            </ContenedorBoton>
-          ) : (
+          {languages === "ES" ? (
             <ContenedorBoton type="submit">
               {SPANISH.form.send}{" "}
             </ContenedorBoton>
+          ) : (
+            <ContenedorBoton type="submit">
+              {ENGLISH.form.send}{" "}
+            </ContenedorBoton>
           )}
 
-          {enviado && <AlertaFormulario>!Message Send</AlertaFormulario>}
+          {enviado && (
+            <AlertaFormulario>
+              {languages === "ES" ? SPANISH.form.info : ENGLISH.form.info}{" "}
+            </AlertaFormulario>
+          )}
         </form>
       </ContenedorFormularioPrincipal>
     </>

@@ -1,5 +1,4 @@
 import { IconosApp } from "../Home/Iconos";
-import MyPage from "./img/mypage.jpg";
 import {
   ContenedorHeader,
   ContenedorIconos,
@@ -8,32 +7,36 @@ import {
 } from "../Home/styles/Styles";
 import { NavBarMenu } from "../Menu/NavBarMenu";
 import {
-  AplicacionesPorfolio,
-  ButtonProfolio,
-  CardPorfolio,
-  ContendorBodyProfolio,
-  ContendorTecnologias,
-  ContenedorNombreImagenProfolio,
+  ContenedorBodyPortafolio,
+  ContenedorImagenPortafolio,
   ContenedorPrincipalCardPorfolio,
   ContenedorPrincipalPorfolio,
   ContenedorTituloPorfolio,
-  ImgGitPorfolio,
-  ImgPorfolio,
-  LiksPorfolio,
-  TecnologiasProfolio,
-  TituloPorfolio1,
-  TituloPorfolio2,
+  ImagenPortafolio,
+  TitlePortafolio,
+  ImageGitGub,
+  ContenedorTitleYGitHub,
+  ContenedorInfoPortafolio,
+  TitleBodyPortafolio,
+  ButtonBodyPortafolio,
+  ImageBodyPortafolio,
+  ContenedorBodyTechologies,
+  LiksProyects,
+  ContenedorCardPortafolio,
 } from "./Styles/Styles";
 import { PostProyects } from "./PostPorfolio";
 import { Footer } from "../Footer/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getPorfolio } from "../../store/slices/edudito/erudito";
+import { SPANISH } from "../Languages/ES";
+import { ENGLISH } from "../Languages/EN";
 
 export const PagePorfolio = () => {
   const dispach = useDispatch();
 
   const { porfolio = [] } = useSelector((state) => state.erudito);
+  const languages = localStorage.getItem("language");
 
   useEffect(() => {
     dispach(getPorfolio(PostProyects));
@@ -53,46 +56,55 @@ export const PagePorfolio = () => {
       <hr />
 
       <ContenedorTituloPorfolio>
-        <TituloPorfolio1>My Proyects</TituloPorfolio1>
+        {languages === "ES" ? (
+          <p>{SPANISH.portfolio.title} </p>
+        ) : (
+          <p>{ENGLISH.portfolio.title} </p>
+        )}
       </ContenedorTituloPorfolio>
-
-      {/*  */}
-
       <ContenedorPrincipalPorfolio>
-        {/*  */}
+        {porfolio.map((item) => (
+          <ContenedorCardPortafolio key={item.id}>
+            <ContenedorPrincipalCardPorfolio>
+              <ContenedorImagenPortafolio>
+                <LiksProyects href={item.url} target="_blank">
+                  <ImagenPortafolio src={item.pic} alt="pic" />
+                </LiksProyects>
+              </ContenedorImagenPortafolio>
+            </ContenedorPrincipalCardPorfolio>
 
-        {porfolio.map((posteo) => (
-          <ContenedorPrincipalCardPorfolio key={posteo.id}>
-            <CardPorfolio>
-              <ContenedorNombreImagenProfolio>
-                <TituloPorfolio2>{posteo.title}</TituloPorfolio2>
-                <LiksPorfolio href={posteo.repro} target="_blanck">
-                  <ImgGitPorfolio src={posteo.git} alt="github" />
-                </LiksPorfolio>
-              </ContenedorNombreImagenProfolio>
-              <ContendorBodyProfolio>
-                <LiksPorfolio href={posteo.url} target="_blanck">
-                  <ImgPorfolio src={posteo.pic} alt="proyect" />
-                </LiksPorfolio>
+            <ContenedorBodyPortafolio>
+              <ContenedorTitleYGitHub style={{ display: "flex" }}>
+                <TitlePortafolio>{item.title} </TitlePortafolio>
+                <LiksProyects href={item.repro} target="_blank">
+                  <ImageGitGub
+                    src="https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=3e01a60a-7b89-40ff-aa84-1d1af4e704c7"
+                    alt="nombre"
+                  />
+                </LiksProyects>
+              </ContenedorTitleYGitHub>
+              <ContenedorInfoPortafolio>
+                <LiksProyects href={item.url} target="_blank">
+                  <ButtonBodyPortafolio>
+                    {languages === "ES"
+                      ? SPANISH.portfolio.go
+                      : ENGLISH.portfolio.go}{" "}
+                  </ButtonBodyPortafolio>
+                </LiksProyects>
 
-                <ContendorTecnologias>
-                  <ButtonProfolio>
-                    <LiksPorfolio href={posteo.url} target="_blanck">
-                      Go to Proyect
-                    </LiksPorfolio>
-                  </ButtonProfolio>
-                  <AplicacionesPorfolio>
-                    <TecnologiasProfolio src={posteo.tec} alt="tec" />
-                  </AplicacionesPorfolio>
-                </ContendorTecnologias>
-              </ContendorBodyProfolio>
-            </CardPorfolio>
-          </ContenedorPrincipalCardPorfolio>
+                <TitleBodyPortafolio>
+                  {languages === "ES"
+                    ? SPANISH.portfolio.tec
+                    : ENGLISH.portfolio.tec}{" "}
+                </TitleBodyPortafolio>
+              </ContenedorInfoPortafolio>
+              <ContenedorBodyTechologies>
+                <ImageBodyPortafolio src={item.tec} alt="nombre" />
+              </ContenedorBodyTechologies>
+            </ContenedorBodyPortafolio>
+          </ContenedorCardPortafolio>
         ))}
-
-        {/*  */}
       </ContenedorPrincipalPorfolio>
-
       <Footer />
     </>
   );

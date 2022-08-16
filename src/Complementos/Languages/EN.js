@@ -14,7 +14,7 @@ export const ENGLISH = {
     email: "Email",
     message: "Message",
     phome: "Phone",
-    
+    info: "!Message Sent",
   },
   menu: {
     home: "Home",
@@ -22,5 +22,10 @@ export const ENGLISH = {
     portafolio: "Portfolio",
     login: "Login",
     account: "Account",
+  },
+  portfolio: {
+    title: "My Projects",
+    go: "Go to Project",
+    tec: "Technologies Applied",
   },
 };

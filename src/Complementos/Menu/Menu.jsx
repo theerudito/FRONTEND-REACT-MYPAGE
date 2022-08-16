@@ -91,10 +91,10 @@ const ButtonLogin = styled.button`
 export const MenuBurger = ({ open }) => {
   const [isOpenModalM, openModalM, closeModalM] = useModalMenu(false);
   const navigate = useNavigate();
-  const { login, languages } = useSelector((store) => store.erudito);
+  const { login } = useSelector((store) => store.erudito);
   const dispatch = useDispatch();
   let handleLogin = JSON.parse(localStorage.getItem("accessToken"));
-
+  const languages = localStorage.getItem("language");
   const handleModalClick = (e) => {
     openModalM();
   };
@@ -114,33 +114,33 @@ export const MenuBurger = ({ open }) => {
   return (
     <>
       <Ul open={open}>
-        {languages ? (
-          <LI as={Link} to={RutasApp.home}>
-            {ENGLISH.menu.home}
-          </LI>
-        ) : (
+        {languages === "ES" ? (
           <LI as={Link} to={RutasApp.home}>
             {SPANISH.menu.home}
           </LI>
+        ) : (
+          <LI as={Link} to={RutasApp.home}>
+            {ENGLISH.menu.home}
+          </LI>
         )}
 
-        {languages ? (
-          <LI as={Link} to={RutasApp.curriculum}>
-            {ENGLISH.menu.cv}
-          </LI>
-        ) : (
+        {languages === "ES" ? (
           <LI as={Link} to={RutasApp.curriculum}>
             {SPANISH.menu.cv}
           </LI>
+        ) : (
+          <LI as={Link} to={RutasApp.curriculum}>
+            {ENGLISH.menu.cv}
+          </LI>
         )}
 
-        {languages ? (
+        {languages === "ES" ? (
           <LI as={Link} to={RutasApp.portfolio}>
-            {ENGLISH.menu.portafolio}
+            {SPANISH.menu.portafolio}
           </LI>
         ) : (
           <LI as={Link} to={RutasApp.portfolio}>
-            {SPANISH.menu.portafolio}
+            {ENGLISH.menu.portafolio}
           </LI>
         )}
 
@@ -149,11 +149,11 @@ export const MenuBurger = ({ open }) => {
         </LI> */}
         {login ? (
           <ButtonLogin onClick={() => handleAccount()}>
-            {languages ? ENGLISH.menu.account : SPANISH.menu.account}{" "}
+            {languages === "ES" ? SPANISH.menu.account : ENGLISH.menu.account}{" "}
           </ButtonLogin>
         ) : (
           <ButtonLogin onClick={handleModalClick}>
-            {languages ? ENGLISH.menu.login : SPANISH.menu.login}{" "}
+            {languages === "ES" ? SPANISH.menu.login : ENGLISH.menu.login}{" "}
           </ButtonLogin>
         )}
       </Ul>
