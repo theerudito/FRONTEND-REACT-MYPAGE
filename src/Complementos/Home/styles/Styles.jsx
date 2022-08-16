@@ -35,10 +35,12 @@ export const ImagenModos = styled.img`
 export const ContenedorLenguaje = styled.div`
   margin: auto;
   margin-left: 10px;
+  
 `;
 export const Lenguaje = styled.span`
   margin: auto;
   font-size: 14px;
+  
 `;
 
 export const ContenedorIconos = styled.div`

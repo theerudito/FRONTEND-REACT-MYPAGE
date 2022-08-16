@@ -8,12 +8,15 @@ import {
 } from "./styles/Styles";
 
 import { CrearContacto } from "../Helpers/ApiRest";
+import { useSelector } from "react-redux";
+import { ENGLISH } from "../Languages/EN";
+import { SPANISH } from "../Languages/ES";
 
 export const FormularioHome = () => {
   const [enviado, setEnviado] = useState(false);
   const date = new Date().getMilliseconds();
   const pic = `https://avatars.dicebear.com/api/micah/${date}.svg`;
-
+  const { languages } = useSelector((store) => store.erudito);
   const {
     register,
     handleSubmit,
@@ -41,7 +44,12 @@ export const FormularioHome = () => {
     <>
       <ContenedorFormularioPrincipal>
         <form onSubmit={handleSubmit(guardarContacto)}>
-          <h4>Contact Me...</h4>
+          {languages ? (
+            <h4>{ENGLISH.form.contactMe} </h4>
+          ) : (
+            <h4>{SPANISH.form.contactMe} </h4>
+          )}
+
           <div>
             {errors.name && (
               <span style={{ color: "red", fontSize: "12px" }}>
@@ -133,7 +141,15 @@ export const FormularioHome = () => {
             placeholder="Message"
           />
 
-          <ContenedorBoton type="submit">Send</ContenedorBoton>
+          {languages ? (
+            <ContenedorBoton type="submit">
+              {ENGLISH.form.send}{" "}
+            </ContenedorBoton>
+          ) : (
+            <ContenedorBoton type="submit">
+              {SPANISH.form.send}{" "}
+            </ContenedorBoton>
+          )}
 
           {enviado && <AlertaFormulario>!Message Send</AlertaFormulario>}
         </form>

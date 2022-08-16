@@ -44,8 +44,8 @@ import {
 
 import { RelojApp } from "./RelojApp";
 
-//import { LenguajeBarra, LenguajeEn, LenguajeEs } from "./Lenguaje";
-//import { ModoDark } from "./Modos";
+import { LenguajeBarra, LenguajeEn, LenguajeEs } from "./Lenguaje";
+import { ModoDark } from "./Modos";
 
 import { NavBarMenu } from "../Menu/NavBarMenu";
 import { Icons } from "../Footer/Icons";
@@ -61,9 +61,12 @@ import {
   getTec1,
   getTec2,
 } from "../../store/slices/edudito/erudito";
+import { SPANISH } from "../Languages/ES";
+import { ENGLISH } from "../Languages/EN";
 
 export const PageHome = () => {
   const dispach = useDispatch();
+  const { languages } = useSelector((store) => store.erudito);
 
   const {
     courses = [],
@@ -90,7 +93,7 @@ export const PageHome = () => {
       </ContenedorHeader>
 
       <hr />
-      {/* <ContenedorModos>
+      <ContenedorModos>
         <ContenedorLenguaje>
           <LenguajeEs />
           <LenguajeBarra />
@@ -100,12 +103,16 @@ export const PageHome = () => {
         <ContenedorThemes>
           <ModoDark />
         </ContenedorThemes>
-      </ContenedorModos> */}
+      </ContenedorModos>
 
       <ContendorSobreME>
         <YoImagen src={Yo} alt="yo" />
         <div style={{ margin: "auto" }}>
-          <Eslogan>!Never Give Up¡</Eslogan>
+          {languages ? (
+            <Eslogan>{ENGLISH.slogan} </Eslogan>
+          ) : (
+            <Eslogan>{SPANISH.slogan} </Eslogan>
+          )}
         </div>
 
         <ContendorUbiYPais>
@@ -121,15 +128,25 @@ export const PageHome = () => {
       </ContenedorReloj>
       <ContenedorFrase>
         <ProgramdorStyled src={Programador} alt="programador" />
-        <Frase>
-          A self-taught developer who loves programming and video games every
-          day a new goal to meet, you can find me on the networks as{" "}
-          <Red>@theerudito</Red>
-        </Frase>
+
+        {languages ? (
+          <Frase>
+            {ENGLISH.frase}
+            <Red>@theerudito</Red>
+          </Frase>
+        ) : (
+          <Frase>
+            {SPANISH.frase} <Red>@theerudito</Red>{" "}
+          </Frase>
+        )}
       </ContenedorFrase>
 
       <ContenedorTituloSkills>
-        <TituloSkills>My Skills</TituloSkills>
+        {languages ? (
+          <TituloSkills>{ENGLISH.skill} </TituloSkills>
+        ) : (
+          <TituloSkills>{SPANISH.skill} </TituloSkills>
+        )}
       </ContenedorTituloSkills>
 
       <ContenedorSkill>
@@ -153,7 +170,11 @@ export const PageHome = () => {
         </ContenedorSkill2>
       </ContenedorSkill>
 
-      <MisCursosTitulo>My Courses</MisCursosTitulo>
+      {languages ? (
+        <MisCursosTitulo>{ENGLISH.myCourses} </MisCursosTitulo>
+      ) : (
+        <MisCursosTitulo>{SPANISH.myCourses} </MisCursosTitulo>
+      )}
 
       <ContenedorMisCursos>
         {courses.map((item) => (
@@ -162,9 +183,15 @@ export const PageHome = () => {
             <CardTitulo>
               <CursosTitulo>{item.title} </CursosTitulo>
               <CardButton>
-                <Liks href={item.url} target="_blanck">
-                  Go to Course
-                </Liks>
+                {languages ? (
+                  <Liks href={item.url} target="_blanck">
+                    {ENGLISH.goCourse}
+                  </Liks>
+                ) : (
+                  <Liks href={item.url} target="_blanck">
+                    {SPANISH.goCourse}
+                  </Liks>
+                )}
               </CardButton>
             </CardTitulo>
           </CardMisCursos>

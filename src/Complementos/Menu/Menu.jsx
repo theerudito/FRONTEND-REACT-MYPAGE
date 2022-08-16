@@ -8,6 +8,8 @@ import { FormularioLogin } from "../MostarContactos/Formulario";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { setLogin } from "../../store/slices/edudito/erudito";
+import { ENGLISH } from "../Languages/EN";
+import { SPANISH } from "../Languages/ES";
 
 const Ul = styled.ul`
   list-style: none;
@@ -89,7 +91,7 @@ const ButtonLogin = styled.button`
 export const MenuBurger = ({ open }) => {
   const [isOpenModalM, openModalM, closeModalM] = useModalMenu(false);
   const navigate = useNavigate();
-  const { login } = useSelector((store) => store.erudito);
+  const { login, languages } = useSelector((store) => store.erudito);
   const dispatch = useDispatch();
   let handleLogin = JSON.parse(localStorage.getItem("accessToken"));
 
@@ -112,22 +114,47 @@ export const MenuBurger = ({ open }) => {
   return (
     <>
       <Ul open={open}>
-        <LI as={Link} to={RutasApp.home}>
-          Home
-        </LI>
-        <LI as={Link} to={RutasApp.curriculum}>
-          Curriculum
-        </LI>
-        <LI as={Link} to={RutasApp.portfolio}>
-          Portfolio
-        </LI>
+        {languages ? (
+          <LI as={Link} to={RutasApp.home}>
+            {ENGLISH.menu.home}
+          </LI>
+        ) : (
+          <LI as={Link} to={RutasApp.home}>
+            {SPANISH.menu.home}
+          </LI>
+        )}
+
+        {languages ? (
+          <LI as={Link} to={RutasApp.curriculum}>
+            {ENGLISH.menu.cv}
+          </LI>
+        ) : (
+          <LI as={Link} to={RutasApp.curriculum}>
+            {SPANISH.menu.cv}
+          </LI>
+        )}
+
+        {languages ? (
+          <LI as={Link} to={RutasApp.portfolio}>
+            {ENGLISH.menu.portafolio}
+          </LI>
+        ) : (
+          <LI as={Link} to={RutasApp.portfolio}>
+            {SPANISH.menu.portafolio}
+          </LI>
+        )}
+
         {/* <LI as={Link} to={RutasApp.home}>
           Blog
         </LI> */}
         {login ? (
-          <ButtonLogin onClick={() => handleAccount()}>Account</ButtonLogin>
+          <ButtonLogin onClick={() => handleAccount()}>
+            {languages ? ENGLISH.menu.account : SPANISH.menu.account}{" "}
+          </ButtonLogin>
         ) : (
-          <ButtonLogin onClick={handleModalClick}>Login</ButtonLogin>
+          <ButtonLogin onClick={handleModalClick}>
+            {languages ? ENGLISH.menu.login : SPANISH.menu.login}{" "}
+          </ButtonLogin>
         )}
       </Ul>
       <Modal isOpen={isOpenModalM} closeModal={closeModalM}>
