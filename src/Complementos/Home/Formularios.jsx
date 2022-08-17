@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-
+import { useSelector } from "react-redux";
 import {
   ContenedorFormularioPrincipal,
   AlertaFormulario,
@@ -15,6 +15,7 @@ export const FormularioHome = () => {
   const [enviado, setEnviado] = useState(false);
   const date = new Date().getMilliseconds();
   const pic = `https://avatars.dicebear.com/api/micah/${date}.svg`;
+  const { theme } = useSelector((state) => state.erudito);
   const languages = localStorage.getItem("language");
   const {
     register,
@@ -41,7 +42,7 @@ export const FormularioHome = () => {
 
   return (
     <>
-      <ContenedorFormularioPrincipal>
+      <ContenedorFormularioPrincipal theme={theme}>
         <form onSubmit={handleSubmit(guardarContacto)}>
           {languages === "ES" ? (
             <h4>{SPANISH.form.contactMe} </h4>

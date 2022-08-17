@@ -45,7 +45,7 @@ import {
 import { RelojApp } from "./RelojApp";
 
 import { LenguajeBarra, LenguajeEn, LenguajeEs } from "./Lenguaje";
-import { ModoDark } from "./Modos";
+import { ModoDark, ModoLight } from "./Modos";
 
 import { NavBarMenu } from "../Menu/NavBarMenu";
 
@@ -72,6 +72,7 @@ export const PageHome = () => {
     courses = [],
     tecnology1 = [],
     tecnology2 = [],
+    theme,
   } = useSelector((state) => state.erudito);
 
   useEffect(() => {
@@ -97,7 +98,7 @@ export const PageHome = () => {
         </ContenedorLenguaje>
 
         <ContenedorThemes>
-          <ModoDark />
+          <ModoDark /> | <ModoLight />
         </ContenedorThemes>
       </ContenedorModos>
 
@@ -105,7 +106,7 @@ export const PageHome = () => {
         <YoImagen src={Yo} alt="yo" />
         <div style={{ margin: "auto" }}>
           {languages === "ES" ? (
-            <Eslogan>{SPANISH.slogan} </Eslogan>
+            <Eslogan theme={theme}>{SPANISH.slogan} </Eslogan>
           ) : (
             <Eslogan>{ENGLISH.slogan} </Eslogan>
           )}
@@ -114,24 +115,24 @@ export const PageHome = () => {
         <ContendorUbiYPais>
           <Ecuador src={Ubicacion} alt="ubicacion" />
 
-          <Ec> Ecuador</Ec>
+          <Ec theme={theme}> Ecuador</Ec>
 
           <Localitation src={Pais} alt="Ecuador" />
         </ContendorUbiYPais>
       </ContendorSobreME>
-      <ContenedorReloj>
+      <ContenedorReloj theme={theme}>
         <RelojApp />
       </ContenedorReloj>
       <ContenedorFrase>
         <ProgramdorStyled src={Programador} alt="programador" />
 
         {languages === "ES" ? (
-          <Frase>
+          <Frase theme={theme}>
             {SPANISH.frase}
-            <Red>@theerudito</Red>
+            <Red theme={theme}>@theerudito</Red>
           </Frase>
         ) : (
-          <Frase>
+          <Frase >
             {ENGLISH.frase} <Red>@theerudito</Red>{" "}
           </Frase>
         )}
@@ -139,18 +140,18 @@ export const PageHome = () => {
 
       <ContenedorTituloSkills>
         {languages === "ES" ? (
-          <TituloSkills>{SPANISH.skill} </TituloSkills>
+          <TituloSkills theme={theme}>{SPANISH.skill} </TituloSkills>
         ) : (
           <TituloSkills>{ENGLISH.skill} </TituloSkills>
         )}
       </ContenedorTituloSkills>
 
-      <ContenedorSkill>
+      <ContenedorSkill theme={theme}>
         <ContenedorSkill1>
           {tecnology1.map((tec1) => (
             <CardSkills key={tec1.id}>
               <SkillsImg src={tec1.pic} alt="html" />
-              <Titulos>{tec1.title} </Titulos>
+              <Titulos theme={theme}>{tec1.title} </Titulos>
             </CardSkills>
           ))}
         </ContenedorSkill1>
@@ -160,14 +161,14 @@ export const PageHome = () => {
           {tecnology2.map((tec2) => (
             <CardSkills key={tec2.id}>
               <SkillsImg src={tec2.pic} alt="html" />
-              <Titulos>{tec2.title} </Titulos>
+              <Titulos theme={theme}>{tec2.title} </Titulos>
             </CardSkills>
           ))}
         </ContenedorSkill2>
       </ContenedorSkill>
 
       {languages === "ES" ? (
-        <MisCursosTitulo>{SPANISH.myCourses} </MisCursosTitulo>
+        <MisCursosTitulo theme={theme}>{SPANISH.myCourses} </MisCursosTitulo>
       ) : (
         <MisCursosTitulo>{ENGLISH.myCourses} </MisCursosTitulo>
       )}
@@ -177,7 +178,7 @@ export const PageHome = () => {
           <CardMisCursos className="curso" key={item.id}>
             <ImgMisCursos src={item.pic} alt="miscursos" />
             <CardTitulo>
-              <CursosTitulo>{item.title} </CursosTitulo>
+              <CursosTitulo theme={theme}>{item.title} </CursosTitulo>
               <CardButton>
                 {languages === "ES" ? (
                   <Liks href={item.url} target="_blanck">

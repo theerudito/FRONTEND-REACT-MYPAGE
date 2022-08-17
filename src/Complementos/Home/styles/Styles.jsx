@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Dispositivos } from "../../Medias/Medidas";
+import { ThemeDark, ThemeLight } from "../../Themes/Theme";
 
 //==============================MENU==============================
 export const ContenedorHeader = styled.div`
@@ -40,6 +41,8 @@ export const Lenguaje = styled.span`
   margin: auto;
   font-size: 14px;
   cursor: pointer;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
 `;
 
 export const ContenedorIconos = styled.div`
@@ -56,8 +59,6 @@ export const ContenedorIconos = styled.div`
     margin-left: 1000px;
   }
 `;
-
-
 
 //==============================MENU==============================
 
@@ -92,7 +93,8 @@ export const YoImagen = styled.img`
 `;
 
 export const Eslogan = styled.p`
-  color: aquamarine;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.slogan : ThemeLight.slogan};
 `;
 
 export const Ecuador = styled.img`
@@ -112,6 +114,8 @@ export const Ec = styled.h4`
   object-fit: cover;
   margin: auto;
   margin-right: 10px;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
 `;
 //==============================YO================================
 
@@ -124,6 +128,8 @@ export const ContenedorReloj = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
 `;
 //==============================RELOJ=============================
 
@@ -137,6 +143,8 @@ export const ContenedorFrase = styled.div`
     align-items: center;
     justify-content: center;
     width: 300px;
+    color: ${(props) =>
+      props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
   }
   @media ${Dispositivos.mobileM} {
     max-width: 375px;
@@ -177,6 +185,8 @@ export const ProgramdorStyled = styled.img`
 
 export const Frase = styled.h4`
   margin: auto;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
   @media ${Dispositivos.mobileM} {
     font-size: 14px;
   }
@@ -197,18 +207,24 @@ export const ContenedorTituloSkills = styled.div`
 `;
 
 export const Red = styled.span`
-  color: aquamarine;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.slogan : ThemeLight.slogan};
 `;
 
 export const TituloSkills = styled.h4`
-  color: white;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
   border-bottom: 2px solid;
 `;
 
 export const ContenedorSkill = styled.div`
   width: 1200px;
+  background-color: ${(props) =>
+    props.theme === "dark"
+      ? ThemeDark.contenedorSkill
+      : ThemeLight.contenedorSkill};
   :hover {
-    background-color: #181a2b;
+    background-color: silver;
   }
 
   @media ${Dispositivos.mobileS} {
@@ -375,7 +391,8 @@ export const CardSkills = styled.div`
 `;
 
 export const Titulos = styled.p`
-  color: white;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
 
   @media ${Dispositivos.mobileL} {
     font-size: 14px;
@@ -393,7 +410,6 @@ export const ContenedorMisCursos = styled.div`
   @media ${Dispositivos.mobileM} {
     .curso {
       width: 360px;
-
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       margin: 10px auto;
@@ -451,6 +467,8 @@ export const MisCursosTitulo = styled(TituloSkills)`
 `;
 
 export const CursosTitulo = styled.h4`
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
   margin: 10px auto;
   width: 130px;
   display: grid;
@@ -597,6 +615,8 @@ export const ContenedorFormularioPrincipal = styled.div`
   display: grid;
   align-items: center;
   justify-content: center;
+  background-color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.formulario : ThemeLight.formulario};
   width: 300px;
   min-height: 350px;
   max-height: 450px;

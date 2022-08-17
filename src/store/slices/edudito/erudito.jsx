@@ -7,6 +7,7 @@ export const eruditoSlice = createSlice({
     login: true,
     isLoading: true,
     language: null,
+    theme: "dark",
     courses: [],
     tecnology1: [],
     tecnology2: [],
@@ -50,6 +51,12 @@ export const eruditoSlice = createSlice({
     setSpanish: (state, actions) => {
       state.language = actions.payload;
     },
+    setLight: (state, actions) => {
+      state.theme = actions.payload;
+    },
+    setDark: (state, actions) => {
+      state.theme = actions.payload;
+    },
   },
 });
 
@@ -67,4 +74,6 @@ export const {
   setLogin,
   setSpanish,
   setEnglish,
+  setLight,
+  setDark,
 } = eruditoSlice.actions;

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 const date = new Date();
 
@@ -8,6 +9,8 @@ export const RelojApp = () => {
     minutes: date.getMinutes(),
     seconds: date.getSeconds(),
   });
+
+  const { theme } = useSelector((state) => state.erudito);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -23,7 +26,7 @@ export const RelojApp = () => {
 
   return (
     <div className="Reloj">
-      <div>
+      <div >
         {dateTime.hours}:{dateTime.minutes}:{dateTime.seconds}
       </div>
     </div>

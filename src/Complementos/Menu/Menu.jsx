@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import { setLogin } from "../../store/slices/edudito/erudito";
 import { ENGLISH } from "../Languages/EN";
 import { SPANISH } from "../Languages/ES";
+import { ThemeDark, ThemeLight } from "../Themes/Theme";
 
 const Ul = styled.ul`
   list-style: none;
@@ -24,7 +25,8 @@ const Ul = styled.ul`
 
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #181a2b;
+    background-color: ${(props) =>
+      props.theme === "dark" ? ThemeDark.menu : ThemeLight.menu};
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
@@ -39,6 +41,8 @@ const Ul = styled.ul`
   }
 `;
 
+//background-color: #181a2b;
+
 const LI = styled.li`
   display: flex;
   align-items: center;
@@ -48,11 +52,13 @@ const LI = styled.li`
   margin: auto 10px;
   list-style: none;
   text-decoration: none;
-  color: white;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
   :hover {
     background-color: greenyellow;
     border-radius: 10px;
-    color: black;
+    color: ${(props) =>
+      props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
   }
   @media (max-width: 768px) {
     :hover {
@@ -95,6 +101,7 @@ export const MenuBurger = ({ open }) => {
   const dispatch = useDispatch();
   let handleLogin = JSON.parse(localStorage.getItem("accessToken"));
   const languages = localStorage.getItem("language");
+  const { theme } = useSelector((state) => state.erudito);
   const handleModalClick = (e) => {
     openModalM();
   };
@@ -115,7 +122,7 @@ export const MenuBurger = ({ open }) => {
     <>
       <Ul open={open}>
         {languages === "ES" ? (
-          <LI as={Link} to={RutasApp.home}>
+          <LI as={Link} to={RutasApp.home} theme={theme}>
             {SPANISH.menu.home}
           </LI>
         ) : (
@@ -125,7 +132,7 @@ export const MenuBurger = ({ open }) => {
         )}
 
         {languages === "ES" ? (
-          <LI as={Link} to={RutasApp.curriculum}>
+          <LI as={Link} to={RutasApp.curriculum} theme={theme}>
             {SPANISH.menu.cv}
           </LI>
         ) : (
@@ -135,11 +142,11 @@ export const MenuBurger = ({ open }) => {
         )}
 
         {languages === "ES" ? (
-          <LI as={Link} to={RutasApp.portfolio}>
+          <LI as={Link} to={RutasApp.portfolio} theme={theme}>
             {SPANISH.menu.portafolio}
           </LI>
         ) : (
-          <LI as={Link} to={RutasApp.portfolio}>
+          <LI as={Link} to={RutasApp.portfolio} theme={theme}>
             {ENGLISH.menu.portafolio}
           </LI>
         )}

@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useSelector } from "react-redux";
 import { ENGLISH } from "../Languages/EN";
 import { SPANISH } from "../Languages/ES";
 
@@ -12,24 +12,23 @@ import {
 
 export const Footer = () => {
   const languages = localStorage.getItem("language");
+
+  const { theme } = useSelector((state) => state.erudito);
+
   return (
     <>
       <hr />
 
-      <ContendorFooter className="footer">
-        <ContenedorErudito>Erudito Dev &copy;</ContenedorErudito>
+      <ContendorFooter theme={theme}>
+        <ContenedorErudito theme={theme}>Erudito Dev &copy;</ContenedorErudito>
         {languages === "ES" ? (
-          <ContenedorDerechos className="derechos">
+          <ContenedorDerechos theme={theme}>
             {SPANISH.Author}
           </ContenedorDerechos>
         ) : (
-          <ContenedorDerechos className="derechos">
-            {ENGLISH.Author}
-          </ContenedorDerechos>
+          <ContenedorDerechos>{ENGLISH.Author}</ContenedorDerechos>
         )}
-        <ContenedorRedesSoliales>
-         
-        </ContenedorRedesSoliales>
+        
       </ContendorFooter>
     </>
   );

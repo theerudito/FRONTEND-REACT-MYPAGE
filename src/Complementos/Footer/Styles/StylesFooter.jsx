@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Dispositivos } from "../../Medias/Medidas";
-
+import { ThemeDark, ThemeLight } from "../../Themes/Theme";
 
 export const ContendorFooter = styled.div`
   width: 100%;
@@ -8,8 +8,8 @@ export const ContendorFooter = styled.div`
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  background-color: #050505;
-  color: aliceblue;
+  background-color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.footer : ThemeLight.footer};
   font-size: calc(10px + 2vmin);
   clear: both;
   overflow: hidden;
@@ -65,6 +65,8 @@ export const ContendorFooter = styled.div`
 export const ContenedorErudito = styled.div`
   margin: auto;
   display: flex;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
   align-items: center;
   justify-content: center;
 `;
@@ -74,12 +76,6 @@ export const ContenedorDerechos = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-export const ContenedorRedesSoliales = styled.div`
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1px;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
 `;
