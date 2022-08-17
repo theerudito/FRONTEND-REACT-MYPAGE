@@ -3,33 +3,50 @@ import { Dispositivos } from "../../Medias/Medidas";
 
 export const ContenedorPrincipalPorfolio = styled.div`
   @media ${Dispositivos.mobileS} {
-    background-color: red;
   }
   @media ${Dispositivos.mobileM} {
-    background-color: violet;
-  }
-  @media ${Dispositivos.mobileL} {
-    background-color: green;
     margin: auto;
     display: grid;
     gap: 10px;
-    width: 400px;
+    width: auto;
+    margin: auto;
     margin: auto;
     align-items: center;
     justify-content: center;
     height: auto;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media ${Dispositivos.mobileL} {
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    width: auto;
+    margin: auto;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: repeat(1, 1fr);
   }
   @media ${Dispositivos.tablet} {
-    background-color: purple;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    width: auto;
+    margin: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: repeat(1, 1fr);
   }
   @media ${Dispositivos.laptop} {
-    background-color: gray;
     margin: auto;
     display: grid;
     gap: 10px;
     width: 800px;
     margin: auto;
+    height: auto;
     align-items: center;
     justify-content: center;
     height: auto;
@@ -45,47 +62,67 @@ export const ContenedorPrincipalPorfolio = styled.div`
 
 export const ContenedorCardPortafolio = styled.div`
   @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-    background-color: red;
   }
   @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-    background-color: violet;
+    background-color: #181a2b;
+    border-radius: 5px;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    width: 280px;
+    height: 160px;
+    grid-template-columns: repeat(2, 1fr);
+    :hover {
+      background-color: #181a2b;
+      box-shadow: 0px 0px 5px aqua;
+    }
   }
   @media ${Dispositivos.mobileL} {
-    max-width: 425px;
-    background-color: green;
     background-color: #181a2b;
     border-radius: 5px;
     margin: auto;
     display: grid;
     gap: 10px;
-    width: 400px;
-    height: 250px;
+    width: 380px;
+    height: 200px;
     grid-template-columns: repeat(2, 1fr);
+    :hover {
+      background-color: #181a2b;
+      box-shadow: 0px 0px 5px aqua;
+    }
   }
   @media ${Dispositivos.tablet} {
-    max-width: 768px;
-    background-color: purple;
-  }
-  @media ${Dispositivos.laptop} {
-    max-width: 1024px;
-
     background-color: #181a2b;
     border-radius: 5px;
     margin: auto;
     display: grid;
     gap: 10px;
-    width: 590px;
-    height: 350px;
+    width: 500px;
+    height: 250px;
     grid-template-columns: repeat(2, 4fr);
+    :hover {
+      background-color: #181a2b;
+      box-shadow: 0px 0px 5px aqua;
+    }
+  }
+  @media ${Dispositivos.laptop} {
+    background-color: #181a1b;
+    border-radius: 5px;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    width: 560px;
+    height: 300px;
+    grid-template-columns: repeat(2, 4fr);
+    :hover {
+      background-color: #181a2b;
+      box-shadow: 0px 0px 5px aqua;
+    }
   }
   @media ${Dispositivos.laptopL} {
-    max-width: 1440px;
     background-color: blue;
   }
   @media ${Dispositivos.desktop} {
-    max-width: 2560px;
     background-color: orange;
   }
 `;
@@ -104,112 +141,197 @@ export const ContenedorImagenPortafolio = styled.div``;
 
 export const ImagenPortafolio = styled.img`
   @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-    background-color: red;
   }
   @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-    background-color: violet;
-  }
-  @media ${Dispositivos.mobileL} {
-    max-width: 425px;
-    background-color: green;
-    width: 180px;
-    height: 337px;
+    width: 80px;
+    height: 145px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 5px;
+    margin-top: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  @media ${Dispositivos.mobileL} {
+    width: 138px;
+    height: 182px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 8px;
     border-radius: 5px;
     cursor: pointer;
   }
   @media ${Dispositivos.tablet} {
-    max-width: 768px;
-    background-color: purple;
-  }
-  @media ${Dispositivos.laptop} {
-    max-width: 1024px;
-    background-color: gray;
-    width: 248px;
-    height: 337px;
+    width: 215px;
+    height: 230px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
-    margin-top: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  @media ${Dispositivos.laptop} {
+    width: 245px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
   }
   @media ${Dispositivos.laptopL} {
-    max-width: 1440px;
     background-color: blue;
   }
   @media ${Dispositivos.desktop} {
-    max-width: 2560px;
     background-color: orange;
   }
 `;
 
 export const ContenedorBodyPortafolio = styled.div`
-  height: 300px;
-  width: 319px;
-  margin-top: 25px;
-
   @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-    background-color: red;
+    b
   }
   @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-    background-color: violet;
+    
+    height: 130px;
+    width: 180px;
+    margin-top: 25px;
   }
   @media ${Dispositivos.mobileL} {
-    background-color: green;
-    height: 100px;
-    width: 200px;
-    margin-top: 25px;
+    
+    width: 220px;
+    height: 60px;
+    margin-top: 15px;
   }
   @media ${Dispositivos.tablet} {
-    max-width: 768px;
-    background-color: purple;
+  
+    width: 260px;
+    height: 230px;
+    margin-top: 5px;
   }
   @media ${Dispositivos.laptop} {
-    max-width: 1024px;
-    background-color: gray;
-    height: 300px;
-    width: 319px;
-    margin-top: 25px;
+    width: 280px;
+    height: 288px;
+    margin-top: 5px;
   }
   @media ${Dispositivos.laptopL} {
-    max-width: 1440px;
     background-color: blue;
   }
   @media ${Dispositivos.desktop} {
-    max-width: 2560px;
     background-color: orange;
   }
 `;
 
 export const ContenedorTitleYGitHub = styled.div`
-  display: grid;
-  margin-left: -15px;
-  border-bottom: 1px solid white;
+  @media ${Dispositivos.mobileS} {
+  }
+  @media ${Dispositivos.mobileM} {
+    display: grid;
+    margin-left: -10px;
+    margin-top: -15px;
+    border-bottom: 1px solid white;
+    font-size: 12px;
+  }
+  @media ${Dispositivos.mobileL} {
+    display: grid;
+    margin-left: -17px;
+    margin-top: 2px;
+    border-bottom: 1px solid white;
+    font-size: 16px;
+  }
+  @media ${Dispositivos.tablet} {
+    display: grid;
+    margin-left: -17px;
+    margin-top: 15px;
+    border-bottom: 1px solid white;
+    font-size: 16px;
+  }
+  @media ${Dispositivos.laptop} {
+    display: grid;
+    margin-left: -22px;
+    border-bottom: 1px solid white;
+    font-size: 20px;
+  }
+  @media ${Dispositivos.laptopL} {
+    background-color: blue;
+  }
+  @media ${Dispositivos.desktop} {
+    background-color: orange;
+  }
 `;
 
 export const TitlePortafolio = styled.p`
-  color: white;
-  margin-top: 10px;
-  margin-left: 10px;
-  width: 280px;
+  @media ${Dispositivos.mobileS} {
+  }
+  @media ${Dispositivos.mobileM} {
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 150px;
+    fornt-size: 12px;
+  }
+  @media ${Dispositivos.mobileL} {
+    color: white;
+    margin-top: -10px;
+    margin-left: 10px;
+    width: 300px;
+  }
+  @media ${Dispositivos.tablet} {
+  }
+  @media ${Dispositivos.laptop} {
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 280px;
+    fornt-size: 20px;
+  }
+  @media ${Dispositivos.laptopL} {
+    background-color: blue;
+  }
+  @media ${Dispositivos.desktop} {
+    background-color: orange;
+  }
 `;
 
 export const ImageGitGub = styled.img`
-  width: 40px;
-  margin-left: auto;
-  margin-right: 5px;
-  margin-top: -20px;
-  cursor: pointer;
+  @media ${Dispositivos.mobileS} {
+  }
+  @media ${Dispositivos.mobileM} {
+    width: 25px;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-top: -30px;
+    cursor: pointer;
+  }
+  @media ${Dispositivos.mobileL} {
+    width: 25px;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-top: -30px;
+    cursor: pointer;
+  }
+  @media ${Dispositivos.tablet} {
+  }
+  @media ${Dispositivos.laptop} {
+    width: 40px;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-top: -20px;
+    cursor: pointer;
+  }
+  @media ${Dispositivos.laptopL} {
+    background-color: blue;
+  }
+  @media ${Dispositivos.desktop} {
+    background-color: orange;
+  }
 `;
 
 export const ContenedorInfoPortafolio = styled.div`
@@ -220,37 +342,62 @@ export const ContenedorInfoPortafolio = styled.div`
 `;
 
 export const TitleBodyPortafolio = styled.p`
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  margin-top: 10px;
-  font-size: 18px;
+  @media ${Dispositivos.mobileS} {
+  }
+  @media ${Dispositivos.mobileM} {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+  @media ${Dispositivos.mobileL} {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  @media ${Dispositivos.tablet} {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 25px;
+    font-size: 18px;
+  }
+  @media ${Dispositivos.laptop} {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  @media ${Dispositivos.laptopL} {
+    background-color: blue;
+  }
+  @media ${Dispositivos.desktop} {
+    background-color: orange;
+  }
 `;
 
 export const ButtonBodyPortafolio = styled.button`
-  border: none;
-  color: black;
-  background-color: greenyellow;
-  border-radius: 5px;
-  display: flex;
-  margin-top: 40px;
-  align-items: center;
-  justify-content: center;
-  :hover {
-    background-color: green;
-    color: white;
-  }
-
   @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-    background-color: red;
   }
   @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-    background-color: violet;
+    border: none;
+    color: black;
+    background-color: greenyellow;
+    border-radius: 5px;
+    display: flex;
+    margin-top: -20px;
+    align-items: center;
+    justify-content: center;
+    :hover {
+      background-color: green;
+      color: white;
+    }
   }
   @media ${Dispositivos.mobileL} {
-    background-color: green;
     border: none;
     color: black;
     background-color: greenyellow;
@@ -265,12 +412,8 @@ export const ButtonBodyPortafolio = styled.button`
     }
   }
   @media ${Dispositivos.tablet} {
-    max-width: 768px;
-    background-color: purple;
   }
   @media ${Dispositivos.laptop} {
-    max-width: 1024px;
-    background-color: gray;
     border: none;
     color: black;
     background-color: greenyellow;
@@ -285,11 +428,9 @@ export const ButtonBodyPortafolio = styled.button`
     }
   }
   @media ${Dispositivos.laptopL} {
-    max-width: 1440px;
     background-color: blue;
   }
   @media ${Dispositivos.desktop} {
-    max-width: 2560px;
     background-color: orange;
   }
 `;
@@ -302,73 +443,63 @@ export const LiksProyects = styled.a`
 `;
 
 export const ContenedorBodyTechologies = styled.div`
-  margin-top: 10px;
+  @media ${Dispositivos.mobileS} {
+  }
+  @media ${Dispositivos.mobileM} {
+  }
+  @media ${Dispositivos.mobileL} {
+    margin-top: -1px;
+  }
+  @media ${Dispositivos.tablet} {
+    margin-top: 10px;
+  }
+  @media ${Dispositivos.laptop} {
+    margin-top: 10px;
+    margin-left: -15px;
+  }
+  @media ${Dispositivos.laptopL} {
+    background-color: blue;
+  }
+  @media ${Dispositivos.desktop} {
+    background-color: orange;
+  }
 `;
 
 export const ImageBodyPortafolio = styled.img`
   @media ${Dispositivos.mobileS} {
-    max-width: 320px;
-    background-color: red;
   }
   @media ${Dispositivos.mobileM} {
-    max-width: 375px;
-    background-color: violet;
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
   }
   @media ${Dispositivos.mobileL} {
-    background-color: green;
-    width: 200px;
+    width: 180px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
   }
   @media ${Dispositivos.tablet} {
-    max-width: 768px;
-    background-color: purple;
+    width: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
   }
   @media ${Dispositivos.laptop} {
-    background-color: gray;
-    width: 300px;
+    width: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: auto;
   }
   @media ${Dispositivos.laptopL} {
-    max-width: 1440px;
     background-color: blue;
   }
   @media ${Dispositivos.desktop} {
-    max-width: 2560px;
     background-color: orange;
   }
 `;
-
-// @media ${Dispositivos.mobileS} {
-//   max-width: 320px;
-//   background-color: red;
-// }
-// @media ${Dispositivos.mobileM} {
-//   max-width: 375px;
-//   background-color: violet;
-// }
-// @media ${Dispositivos.mobileL} {
-//   max-width: 425px;
-//   background-color: green;
-// }
-// @media ${Dispositivos.tablet} {
-//   max-width: 768px;
-//   background-color: purple;
-// }
-// @media ${Dispositivos.laptop} {
-//   max-width: 1024px;
-//   background-color: gray;
-// }
-// @media ${Dispositivos.laptopL} {
-//   max-width: 1440px;
-//   background-color: blue;
-// }
-// @media ${Dispositivos.desktop} {
-//   max-width: 2560px;
-//   background-color: orange;
-// }

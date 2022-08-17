@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
-import { Icons } from "../Footer/Icons";
+
 import { RutasApp } from "../Helpers/Rutas";
 import {
   ContenedorHeader,
@@ -9,6 +9,9 @@ import {
   ContenedorMenu,
 } from "../Home/styles/Styles";
 import { NavBarMenu } from "../Menu/NavBarMenu";
+import Blog from "../Account/blog.png";
+import Contact from "../Account/contact.png";
+import Post from "../Account/post.png";
 
 import {
   ContenedorAccount,
@@ -36,9 +39,7 @@ export const AccountPage = () => {
           <NavBarMenu />
         </ContenedorMenu>
 
-        <ContenedorIconos>
-          <Icons />
-        </ContenedorIconos>
+       
       </ContenedorHeader>
 
       <hr />
@@ -52,16 +53,13 @@ export const AccountPage = () => {
           justifyContent: "center",
         }}
       >
-        !Hi Welcome Erudito
+        !Hi Welcome {dataUser.name}
       </h1>
       <ContenedorPrincipal>
         <ContenedorContactos>
           <ContenedorTitulo>Contacts</ContenedorTitulo>
           <ContenedorA>
-            <ContenedorPerfil
-              src="https://cdn.pixabay.com/photo/2017/06/22/10/11/icon-2430270_960_720.png"
-              alt="perfil"
-            />
+            <ContenedorPerfil src={Contact} alt="perfil" />
           </ContenedorA>
           <div>
             <Botones as={Link} to={RutasApp.contact}>
@@ -73,10 +71,7 @@ export const AccountPage = () => {
         <ContenedorContactos>
           <ContenedorTitulo>Post</ContenedorTitulo>
           <ContenedorA>
-            <ContenedorPerfil
-              src="https://www.seekpng.com/png/full/326-3269585_digital-marketing-services-for-smes-bicycle-icon-circle.png"
-              alt="perfil"
-            />
+            <ContenedorPerfil src={Post} alt="perfil" />
           </ContenedorA>
           <div>
             <Botones>Post</Botones>
@@ -94,6 +89,18 @@ export const AccountPage = () => {
             <Botones onClick={() => logout()}>Logout</Botones>
           </div>
         </ContenedorAccount>
+
+        <ContenedorContactos>
+          <ContenedorTitulo>BLOG</ContenedorTitulo>
+          <ContenedorA>
+            <ContenedorPerfil src={Blog} alt="perfil" />
+          </ContenedorA>
+          <div>
+            <Botones as={Link} to="">
+              Blog
+            </Botones>
+          </div>
+        </ContenedorContactos>
       </ContenedorPrincipal>
       <Footer />
     </>

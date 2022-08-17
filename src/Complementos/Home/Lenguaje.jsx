@@ -1,5 +1,5 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setEnglish, setSpanish } from "../../store/slices/edudito/erudito";
 
 import { Lenguaje } from "./styles/Styles";

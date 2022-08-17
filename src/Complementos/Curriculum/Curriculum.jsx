@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Dispositivos } from "../Medias/Medidas";
 import { ContenedorHeader, ContenedorIconos, ContenedorMenu } from "../Home/styles/Styles";
 import { NavBarMenu } from "../Menu/NavBarMenu";
-import { Icons } from "../Footer/Icons";
+
 import { Footer } from "../Footer/Footer";
 
 const Contenedor = styled.div`
@@ -101,9 +101,7 @@ export const Curriculum = () => {
           <NavBarMenu />
         </ContenedorMenu>
 
-        <ContenedorIconos>
-          <Icons />
-        </ContenedorIconos>
+        
       </ContenedorHeader>
 
       <hr />

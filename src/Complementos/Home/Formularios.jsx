@@ -62,7 +62,10 @@ export const FormularioHome = () => {
               required: {
                 value: true,
                 maxLength: 6,
-                message: "You have to enter a name",
+                message:
+                  languages === "ES"
+                    ? SPANISH.form.validation.name
+                    : ENGLISH.form.validation.name,
               },
             })}
             name="name"
@@ -86,11 +89,17 @@ export const FormularioHome = () => {
             {...register("email", {
               required: {
                 value: true,
-                message: "You have to enter a email",
+                message:
+                  languages === "ES"
+                    ? SPANISH.form.validation.email
+                    : ENGLISH.form.validation.email,
               },
               pattern: {
                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/i,
-                message: "The email format is not correct",
+                message:
+                  languages === "ES"
+                    ? SPANISH.form.validation.errorEmail
+                    : ENGLISH.form.validation.errorEmail,
               },
             })}
             type="email"
@@ -114,7 +123,10 @@ export const FormularioHome = () => {
               required: {
                 value: true,
                 maxLength: 20,
-                message: "You have to enter a phone",
+                message:
+                  languages === "ES"
+                    ? SPANISH.form.validation.phone
+                    : ENGLISH.form.validation.phone,
               },
             })}
             type="number"
@@ -137,7 +149,10 @@ export const FormularioHome = () => {
             {...register("message", {
               required: {
                 value: true,
-                message: "You have to enter a text",
+                message:
+                  languages === "ES"
+                    ? SPANISH.form.validation.message
+                    : ENGLISH.form.validation.message,
               },
             })}
             type="text"

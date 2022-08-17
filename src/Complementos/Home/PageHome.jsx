@@ -48,7 +48,7 @@ import { LenguajeBarra, LenguajeEn, LenguajeEs } from "./Lenguaje";
 import { ModoDark } from "./Modos";
 
 import { NavBarMenu } from "../Menu/NavBarMenu";
-import { Icons } from "../Footer/Icons";
+
 import { Footer } from "../Footer/Footer";
 import {
   MisCursos,
@@ -86,10 +86,6 @@ export const PageHome = () => {
         <ContenedorMenu>
           <NavBarMenu />
         </ContenedorMenu>
-
-        <ContenedorIconos>
-          <Icons />
-        </ContenedorIconos>
       </ContenedorHeader>
 
       <hr />

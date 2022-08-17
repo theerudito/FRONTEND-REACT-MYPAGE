@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Dispositivos } from "../../Medias/Medidas";
+
 
 export const Titulo = styled.h1`
   display: flex;

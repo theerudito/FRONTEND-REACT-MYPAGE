@@ -15,6 +15,13 @@ export const ENGLISH = {
     message: "Message",
     phome: "Phone",
     info: "!Message Sent",
+    validation: {
+      name: "Name is required",
+      email: "Email is required",
+      message: "Message is required",
+      phone: "Phone is required",
+      errorEmail: "Email is not valid",
+    }
   },
   menu: {
     home: "Home",

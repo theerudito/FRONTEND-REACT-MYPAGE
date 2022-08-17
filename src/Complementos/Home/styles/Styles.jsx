@@ -35,12 +35,11 @@ export const ImagenModos = styled.img`
 export const ContenedorLenguaje = styled.div`
   margin: auto;
   margin-left: 10px;
-  
 `;
 export const Lenguaje = styled.span`
   margin: auto;
   font-size: 14px;
-  
+  cursor: pointer;
 `;
 
 export const ContenedorIconos = styled.div`
@@ -58,61 +57,7 @@ export const ContenedorIconos = styled.div`
   }
 `;
 
-export const Instagram = styled.i`
-  color: white;
-  margin: 0 5px;
-  :hover {
-    color: #405de6;
-  }
-`;
 
-export const Facebook = styled.i`
-  margin: 0 5px;
-  color: white;
-  :hover {
-    color: #3b5998;
-  }
-`;
-
-export const GitHub = styled.i`
-  margin: 0 5px;
-  color: white;
-  :hover {
-    color: #171515;
-  }
-`;
-
-export const Whatssap = styled.i`
-  margin: 0 5px;
-  color: white;
-  :hover {
-    color: #00bb2d;
-  }
-`;
-
-export const Linkedin = styled.i`
-  margin: 0 5px;
-  color: white;
-  :hover {
-    color: #0e76a8;
-  }
-`;
-
-export const Gmail = styled.i`
-  margin: 0 5px;
-  color: white;
-  :hover {
-    color: red;
-  }
-`;
-
-export const Twitter = styled.i`
-  margin: 0 5px;
-  color: white;
-  :hover {
-    color: aqua;
-  }
-`;
 
 //==============================MENU==============================
 
@@ -518,6 +463,7 @@ export const CardMisCursos = styled.div`
   border-radius: 5px;
   :hover {
     background-color: #181a2b;
+    box-shadow: 0px 0px 5px aqua;
   }
 
   @media ${Dispositivos.mobileM} {

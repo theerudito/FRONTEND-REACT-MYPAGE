@@ -1,11 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
-import { Icons } from "../Footer/Icons";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useModalContactApp } from "../Hooks/useModalContact";
 import { NavBarMenu } from "../Menu/NavBarMenu";
-import contactContext from "../Provider/ContactsProvider";
+
 import {
   FormularioContactoCrear,
   FormularioContactoEditar,
@@ -109,9 +109,7 @@ export const MostrarContactoApp = () => {
           <NavBarMenu />
         </ContenedorMenu>
 
-        <ContenedorIconos>
-          <Icons />
-        </ContenedorIconos>
+       
       </ContenedorHeader>
       <hr />
 

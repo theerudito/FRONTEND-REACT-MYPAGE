@@ -4,7 +4,6 @@ import { Router } from "./Complementos/Router/Router";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
-import { ContantacProvider } from "./Complementos/Provider/ContactsProvider";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -22,13 +21,11 @@ const Contenedor = styled.div`
 function App() {
   return (
     <Contenedor>
-      <ContantacProvider>
-        <BrowserRouter>
-          <Layout>
-            <Router />
-          </Layout>
-        </BrowserRouter>
-      </ContantacProvider>
+      <BrowserRouter>
+        <Layout>
+          <Router />
+        </Layout>
+      </BrowserRouter>
     </Contenedor>
   );
 }

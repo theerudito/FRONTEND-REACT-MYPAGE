@@ -15,13 +15,20 @@ export const SPANISH = {
     message: "Mensaje",
     phone: "Telefono",
     info: "!Mensaje Enviado",
+    validation: {
+      name: "Nombre es requerido",
+      email: "Correo Electronico es requerido",
+      message: "Mensaje es requerido",
+      phone: "Telefono es requerido",
+      errorEmail: "Correo Electronico no es valido",
+    }
   },
   menu: {
     home: "Inicio",
     cv: "Curriculum",
     portafolio: "Portafolio",
     account: "Cuenta",
-    login: "Iniciar Sesión",
+    login: "Login",
   },
   portfolio: {
     title: "Mis Proyectos",

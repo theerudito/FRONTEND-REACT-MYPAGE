@@ -1,10 +1,4 @@
-import { IconosApp } from "../Home/Iconos";
-import {
-  ContenedorHeader,
-  ContenedorIconos,
-  ContenedorMenu,
-  Liks,
-} from "../Home/styles/Styles";
+import { ContenedorHeader, ContenedorMenu } from "../Home/styles/Styles";
 import { NavBarMenu } from "../Menu/NavBarMenu";
 import {
   ContenedorBodyPortafolio,
@@ -48,10 +42,6 @@ export const PagePorfolio = () => {
         <ContenedorMenu>
           <NavBarMenu />
         </ContenedorMenu>
-
-        <ContenedorIconos>
-          <IconosApp />
-        </ContenedorIconos>
       </ContenedorHeader>
       <hr />
 

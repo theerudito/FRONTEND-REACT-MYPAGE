@@ -45,11 +45,9 @@ export const eruditoSlice = createSlice({
       state.login = actions.payload;
     },
     setEnglish: (state, actions) => {
-      console.log(actions.payload);
       state.language = actions.payload;
     },
     setSpanish: (state, actions) => {
-      console.log(actions.payload);
       state.language = actions.payload;
     },
   },

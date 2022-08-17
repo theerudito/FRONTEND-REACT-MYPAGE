@@ -1,4 +1,3 @@
-
 import {
   CrearContacto,
   EditarContacto,
@@ -198,6 +197,7 @@ export const FormularioLogin = () => {
   const [cretentials, setCretentials] = useState({ email: "", password: "" });
   const dispatch = useDispatch();
   const [error, setError] = useState("");
+  const [message, setMessage] = useState(false);
 
   const loginData = async (e) => {
     e.preventDefault();
@@ -211,6 +211,8 @@ export const FormularioLogin = () => {
         window.location.href = "/account";
       } else {
         console.log("Error al iniciar sesion");
+        //setMessage(true);
+        //setError("password or email is incorrect");
       }
     } catch (error) {
       setError("password or email is incorrect");
@@ -263,7 +265,7 @@ export const FormularioLogin = () => {
             justifyContent: "center",
           }}
         >
-          {error}{" "}
+          {message && <span>{error} </span>}
         </p>
       }
     </ContenedorFormulario>
