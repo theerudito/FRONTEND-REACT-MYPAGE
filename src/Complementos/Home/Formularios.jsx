@@ -5,6 +5,7 @@ import {
   ContenedorFormularioPrincipal,
   AlertaFormulario,
   ContenedorBoton,
+  Formulario,
 } from "./styles/Styles";
 
 import { CrearContacto } from "../Helpers/ApiRest";
@@ -15,7 +16,7 @@ export const FormularioHome = () => {
   const [enviado, setEnviado] = useState(false);
   const date = new Date().getMilliseconds();
   const pic = `https://avatars.dicebear.com/api/micah/${date}.svg`;
-  const { theme } = useSelector((state) => state.erudito);
+  const theme = localStorage.getItem("theme");
   const languages = localStorage.getItem("language");
   const {
     register,
@@ -43,7 +44,7 @@ export const FormularioHome = () => {
   return (
     <>
       <ContenedorFormularioPrincipal theme={theme}>
-        <form onSubmit={handleSubmit(guardarContacto)}>
+        <Formulario onSubmit={handleSubmit(guardarContacto)} >
           {languages === "ES" ? (
             <h4>{SPANISH.form.contactMe} </h4>
           ) : (
@@ -179,7 +180,7 @@ export const FormularioHome = () => {
               {languages === "ES" ? SPANISH.form.info : ENGLISH.form.info}{" "}
             </AlertaFormulario>
           )}
-        </form>
+        </Formulario>
       </ContenedorFormularioPrincipal>
     </>
   );

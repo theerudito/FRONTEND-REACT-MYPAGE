@@ -1,12 +1,11 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { setEnglish, setSpanish } from "../../store/slices/edudito/erudito";
-import { useSelector } from "react-redux";
 import { Lenguaje } from "./styles/Styles";
 
 export const LenguajeEn = () => {
   const dispatch = useDispatch();
-  const { theme } = useSelector((state) => state.erudito);
+  const theme = localStorage.getItem("theme");
   const LanguajeEN = () => {
     localStorage.setItem("language", "EN");
     const language = localStorage.getItem("language");
@@ -21,7 +20,8 @@ export const LenguajeEn = () => {
 
 export const LenguajeEs = () => {
   const dispatch = useDispatch();
-  const { theme } = useSelector((state) => state.erudito);
+  const theme = localStorage.getItem("theme");
+
   const LanguajeES = () => {
     localStorage.setItem("language", "ES");
     const language = localStorage.getItem("language");
@@ -36,6 +36,6 @@ export const LenguajeEs = () => {
 };
 
 export const LenguajeBarra = () => {
-  const { theme } = useSelector((state) => state.erudito);
+  const theme = localStorage.getItem("theme");
   return <Lenguaje theme={theme}>|</Lenguaje>;
 };

@@ -9,6 +9,7 @@ export const ModoLight = () => {
 
   const handleClickLight = () => {
     dispatch(setLight("light"));
+    localStorage.setItem("theme", "light");
   };
 
   return (
@@ -18,8 +19,10 @@ export const ModoLight = () => {
 
 export const ModoDark = () => {
   const dispatch = useDispatch();
+
   const handleClickDark = () => {
     dispatch(setDark("dark"));
+    localStorage.setItem("theme", "dark");
   };
 
   return (

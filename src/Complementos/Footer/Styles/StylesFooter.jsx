@@ -9,7 +9,7 @@ export const ContendorFooter = styled.div`
   padding: 0px;
   box-sizing: border-box;
   background-color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.footer : ThemeLight.footer};
+    props.theme === "light" ? ThemeLight.footer : ThemeDark.footer};
   font-size: calc(10px + 2vmin);
   clear: both;
   overflow: hidden;
@@ -66,7 +66,7 @@ export const ContenedorErudito = styled.div`
   margin: auto;
   display: flex;
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
   align-items: center;
   justify-content: center;
 `;
@@ -77,5 +77,5 @@ export const ContenedorDerechos = styled.div`
   align-items: center;
   justify-content: center;
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
 `;

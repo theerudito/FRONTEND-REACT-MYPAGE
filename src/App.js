@@ -2,14 +2,21 @@ import { BrowserRouter } from "react-router-dom";
 import { Layout } from "./Complementos/Layout/Layout";
 import { Router } from "./Complementos/Router/Router";
 import { useSelector } from "react-redux";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import styled from "styled-components";
-import { ThemeLight } from "./Complementos/Themes/Theme";
+import { ThemeDark, ThemeLight } from "./Complementos/Themes/Theme";
+import { useEffect } from "react";
 
 function App() {
-  const { theme } = useSelector((store) => store.erudito);
-  console.log(theme);
+  const { themeState } = useSelector((store) => store.erudito);
+  const theme = localStorage.getItem("theme");
+
+  useEffect(() => {
+    if (themeState === null) {
+      localStorage.setItem("theme", themeState);
+    }
+  }, [themeState]);
+  
   return (
     <Contenedor theme={theme}>
       <BrowserRouter>
@@ -25,7 +32,7 @@ export default App;
 
 const Contenedor = styled.div`
   background-color: ${(props) =>
-    props.theme === "light" ? ThemeLight.fondo : ThemeLight.color};
+    props.theme === "light" ? ThemeLight.fondo : ThemeDark.fondo};
   width: 100%;
   min-height: 100vh;
   margin: 0px;
@@ -36,5 +43,3 @@ const Contenedor = styled.div`
   clear: both;
   overflow: hidden;
 `;
-
-

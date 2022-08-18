@@ -40,6 +40,7 @@ import {
   Titulos,
   TituloSkills,
   YoImagen,
+  HR,
 } from "./styles/Styles";
 
 import { RelojApp } from "./RelojApp";
@@ -67,12 +68,12 @@ import { ENGLISH } from "../Languages/EN";
 export const PageHome = () => {
   const dispach = useDispatch();
   const languages = localStorage.getItem("language");
+  const theme = localStorage.getItem("theme");
 
   const {
     courses = [],
     tecnology1 = [],
     tecnology2 = [],
-    theme,
   } = useSelector((state) => state.erudito);
 
   useEffect(() => {
@@ -89,7 +90,7 @@ export const PageHome = () => {
         </ContenedorMenu>
       </ContenedorHeader>
 
-      <hr />
+      <HR theme={theme} />
       <ContenedorModos>
         <ContenedorLenguaje>
           <LenguajeEs />
@@ -98,17 +99,17 @@ export const PageHome = () => {
         </ContenedorLenguaje>
 
         <ContenedorThemes>
-          <ModoDark /> | <ModoLight />
+          {theme === "light" ? <ModoDark /> : <ModoLight />}
         </ContenedorThemes>
       </ContenedorModos>
 
       <ContendorSobreME>
-        <YoImagen src={Yo} alt="yo" />
+        <YoImagen src={Yo} alt="yo" theme={theme} />
         <div style={{ margin: "auto" }}>
           {languages === "ES" ? (
             <Eslogan theme={theme}>{SPANISH.slogan} </Eslogan>
           ) : (
-            <Eslogan>{ENGLISH.slogan} </Eslogan>
+            <Eslogan theme={theme}>{ENGLISH.slogan} </Eslogan>
           )}
         </div>
 
@@ -132,8 +133,8 @@ export const PageHome = () => {
             <Red theme={theme}>@theerudito</Red>
           </Frase>
         ) : (
-          <Frase >
-            {ENGLISH.frase} <Red>@theerudito</Red>{" "}
+          <Frase theme={theme}>
+            {ENGLISH.frase} <Red theme={theme}>@theerudito</Red>{" "}
           </Frase>
         )}
       </ContenedorFrase>
@@ -142,7 +143,7 @@ export const PageHome = () => {
         {languages === "ES" ? (
           <TituloSkills theme={theme}>{SPANISH.skill} </TituloSkills>
         ) : (
-          <TituloSkills>{ENGLISH.skill} </TituloSkills>
+          <TituloSkills theme={theme}>{ENGLISH.skill} </TituloSkills>
         )}
       </ContenedorTituloSkills>
 
@@ -170,12 +171,12 @@ export const PageHome = () => {
       {languages === "ES" ? (
         <MisCursosTitulo theme={theme}>{SPANISH.myCourses} </MisCursosTitulo>
       ) : (
-        <MisCursosTitulo>{ENGLISH.myCourses} </MisCursosTitulo>
+        <MisCursosTitulo theme={theme}>{ENGLISH.myCourses} </MisCursosTitulo>
       )}
 
       <ContenedorMisCursos>
         {courses.map((item) => (
-          <CardMisCursos className="curso" key={item.id}>
+          <CardMisCursos className="curso" key={item.id} theme={theme}>
             <ImgMisCursos src={item.pic} alt="miscursos" />
             <CardTitulo>
               <CursosTitulo theme={theme}>{item.title} </CursosTitulo>

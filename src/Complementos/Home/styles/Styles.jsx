@@ -21,28 +21,33 @@ export const ContenedorModos = styled.div`
   width: 80px;
   margin-left: auto;
   margin-right: 15px;
+  user-select: none;
 `;
 
 export const ContenedorThemes = styled.div`
-  color: white;
+  cursor: pointer;
+  user-select: none;
 `;
 
 export const ImagenModos = styled.img`
   width: 20px;
   object-fit: cover;
   margin-left: 10px;
+  user-select: none;
 `;
 
 export const ContenedorLenguaje = styled.div`
   margin: auto;
   margin-left: 10px;
+  user-select: none;
 `;
 export const Lenguaje = styled.span`
   margin: auto;
   font-size: 14px;
   cursor: pointer;
+  user-select: none;
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
 `;
 
 export const ContenedorIconos = styled.div`
@@ -82,19 +87,23 @@ export const YoImagen = styled.img`
   width: 150px;
   height: 150px;
   object-fit: cover;
-  background-color: greenyellow;
   border-radius: 50%;
-  border: solid 3px white;
+  
   margin: 10px auto;
   :hover {
-    box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
-    border: solid 3px black;
+    box-shadow: ${(props) =>
+      props.theme === "light" ? ThemeLight.yoBox : ThemeDark.yoBox};
+    border: ${(props) =>
+      props.theme === "light" ? ThemeLight.yo : ThemeDark.yo};
   }
 `;
 
+//0px 0px 20px 5px rgba(224, 219, 219, 0.15);
+
 export const Eslogan = styled.p`
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.slogan : ThemeLight.slogan};
+    props.theme === "light" ? ThemeLight.slogan : ThemeDark.slogan};
+  font-weight: bold;
 `;
 
 export const Ecuador = styled.img`
@@ -115,13 +124,14 @@ export const Ec = styled.h4`
   margin: auto;
   margin-right: 10px;
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+    props.theme === "light" ? ThemeLight.slogan : ThemeDark.slogan};
 `;
 //==============================YO================================
 
 //==============================RELOJ=============================
 export const ContenedorReloj = styled.div`
-  border: solid 1px white;
+  border: ${(props) =>
+    props.theme === "light" ? ThemeLight.borderReloj : ThemeDark.borderReloj};
   border-radius: 10px;
   width: 100px;
   margin: auto;
@@ -129,7 +139,7 @@ export const ContenedorReloj = styled.div`
   align-items: center;
   justify-content: center;
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
 `;
 //==============================RELOJ=============================
 
@@ -143,8 +153,6 @@ export const ContenedorFrase = styled.div`
     align-items: center;
     justify-content: center;
     width: 300px;
-    color: ${(props) =>
-      props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
   }
   @media ${Dispositivos.mobileM} {
     max-width: 375px;
@@ -185,10 +193,25 @@ export const ProgramdorStyled = styled.img`
 
 export const Frase = styled.h4`
   margin: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: solid 1px silver;
+  padding: 10px;
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
+  color: @media ${Dispositivos.mobileM} {
+    font-size: 14px;
+  }
+
   @media ${Dispositivos.mobileM} {
     font-size: 14px;
+  }
+  @media ${Dispositivos.mobileL} {
+    font-size: 14px;
+  }
+
+  @media ${Dispositivos.tablet} {
+    font-size: 16px;
   }
   @media ${Dispositivos.laptop} {
     font-size: 18px;
@@ -208,12 +231,12 @@ export const ContenedorTituloSkills = styled.div`
 
 export const Red = styled.span`
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.slogan : ThemeLight.slogan};
+    props.theme === "light" ? ThemeLight.slogan : ThemeDark.slogan};
 `;
 
 export const TituloSkills = styled.h4`
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+    props.theme === "light" ? ThemeLight.slogan : ThemeDark.slogan};
   border-bottom: 2px solid;
 `;
 
@@ -224,7 +247,10 @@ export const ContenedorSkill = styled.div`
       ? ThemeDark.contenedorSkill
       : ThemeLight.contenedorSkill};
   :hover {
-    background-color: silver;
+    background-color: ${(props) =>
+      props.theme === "dark"
+        ? ThemeDark.contenedorSkillHover
+        : ThemeLight.contenedorSkillHover};
   }
 
   @media ${Dispositivos.mobileS} {
@@ -392,10 +418,11 @@ export const CardSkills = styled.div`
 
 export const Titulos = styled.p`
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
 
-  @media ${Dispositivos.mobileL} {
+  color: @media ${Dispositivos.mobileL} {
     font-size: 14px;
+    font-weight: bold;
   }
 
   @media ${Dispositivos.laptop} {
@@ -468,7 +495,7 @@ export const MisCursosTitulo = styled(TituloSkills)`
 
 export const CursosTitulo = styled.h4`
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
   margin: 10px auto;
   width: 130px;
   display: grid;
@@ -477,10 +504,14 @@ export const CursosTitulo = styled.h4`
 `;
 
 export const CardMisCursos = styled.div`
-  background-color: #181a1b;
+  background-color: ${(props) =>
+    props.theme === "light" ? ThemeLight.cardCursos : ThemeDark.cardCursos};
   border-radius: 5px;
   :hover {
-    background-color: #181a2b;
+    background-color: ${(props) =>
+      props.theme === "light"
+        ? ThemeLight.cardCursosHover
+        : ThemeDark.cardCursosHover};
     box-shadow: 0px 0px 5px aqua;
   }
 
@@ -611,12 +642,12 @@ export const Liks = styled.a`
 
 //=====================FORMULARIO=================================
 export const ContenedorFormularioPrincipal = styled.div`
+  background: ${(props) =>
+    props.theme === "light" ? ThemeLight.formulario : ThemeDark.formulario};
   margin: 10px auto;
   display: grid;
   align-items: center;
   justify-content: center;
-  background-color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.formulario : ThemeLight.formulario};
   width: 300px;
   min-height: 350px;
   max-height: 450px;
@@ -627,6 +658,8 @@ export const ContenedorFormularioPrincipal = styled.div`
     box-shadow: 0px 0px 20px 5px rgba(224, 219, 219, 0.15);
   }
 `;
+
+export const Formulario = styled.form``;
 
 export const ContenedorBoton = styled.button`
   background-color: greenyellow;
@@ -659,3 +692,7 @@ export const AlertaFormulario = styled.div`
   font-size: 18px;
 `;
 //=====================FORMULARIO=================================
+
+export const HR = styled.hr`
+  color: ${(props) => (props.theme === "light" ? ThemeLight.hr : ThemeDark.hr)};
+`;

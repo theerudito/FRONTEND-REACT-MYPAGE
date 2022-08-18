@@ -21,13 +21,15 @@ const Ul = styled.ul`
   margin: auto;
   text-decoration: none;
   padding: 27px;
-  margin-left: 70px;
-
+  color: white;
+  margin-left: 110px;
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: ${(props) =>
-      props.theme === "dark" ? ThemeDark.menu : ThemeLight.menu};
+      props.themes === "light" ? ThemeLight.barraMenu : ThemeDark.barraMenu};
     position: fixed;
+    color: ${(props) =>
+      props.theme === "light" ? ThemeLight.menuColor : ThemeDark.menuColor};
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
     right: 0;
@@ -41,8 +43,6 @@ const Ul = styled.ul`
   }
 `;
 
-//background-color: #181a2b;
-
 const LI = styled.li`
   display: flex;
   align-items: center;
@@ -51,20 +51,32 @@ const LI = styled.li`
   height: 40px;
   margin: auto 10px;
   list-style: none;
+  cursor: pointer;
   text-decoration: none;
+  padding: 10px;
   color: ${(props) =>
-    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+    props.theme === null ? ThemeLight.menuColor : ThemeDark.menuColor};
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeLight.menuColor : ThemeDark.menuColor};
+
   :hover {
-    background-color: greenyellow;
+    background-color: ${(props) =>
+      props.theme === "dark" ? ThemeLight.menuBG : ThemeDark.menuBG};
+    :hover {
+      color: black;
+    }
+
     border-radius: 10px;
-    color: ${(props) =>
-      props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
   }
   @media (max-width: 768px) {
+    margin: auto;
     :hover {
-      background-color: greenyellow;
+      background-color: ${(props) =>
+        props.theme === "light" ? ThemeLight.menuBG : ThemeDark.menuBG};
+      color: ${(props) =>
+        props.theme === "dark" ? ThemeLight.menuColor : ThemeDark.menuColor};
       border-radius: 10px;
-      color: black;
+
       width: 200px;
       height: 40px;
       margin: auto;
@@ -72,36 +84,15 @@ const LI = styled.li`
   }
 `;
 
-const ButtonLogin = styled.button`
- border: none;
- background-color: #050505;
- color: white;
- :hover {
-  background-color: greenyellow;
-  border-radius: 10px;
-  color: black;
-  @media (max-width: 768px) {
-    width: 200px;
- 
- color: white;
-    :hover {
-      background-color: greenyellow;
-      border-radius: 10px;
-      color: black;
-      width: 200px;
-      
-    }
-  }
-`;
-
 export const MenuBurger = ({ open }) => {
   const [isOpenModalM, openModalM, closeModalM] = useModalMenu(false);
   const navigate = useNavigate();
-  const { login } = useSelector((store) => store.erudito);
   const dispatch = useDispatch();
   let handleLogin = JSON.parse(localStorage.getItem("accessToken"));
   const languages = localStorage.getItem("language");
-  const { theme } = useSelector((state) => state.erudito);
+  const themes = localStorage.getItem("theme");
+  const { login, theme } = useSelector((store) => store.erudito);
+  console.log(theme);
   const handleModalClick = (e) => {
     openModalM();
   };
@@ -120,33 +111,33 @@ export const MenuBurger = ({ open }) => {
 
   return (
     <>
-      <Ul open={open}>
+      <Ul open={open} tema={themes} theme={theme}>
         {languages === "ES" ? (
-          <LI as={Link} to={RutasApp.home} theme={theme}>
+          <LI as={Link} to={RutasApp.home} tema={themes} theme={theme}>
             {SPANISH.menu.home}
           </LI>
         ) : (
-          <LI as={Link} to={RutasApp.home}>
+          <LI as={Link} to={RutasApp.home} theme={themes}>
             {ENGLISH.menu.home}
           </LI>
         )}
 
         {languages === "ES" ? (
-          <LI as={Link} to={RutasApp.curriculum} theme={theme}>
+          <LI as={Link} to={RutasApp.curriculum} theme={themes}>
             {SPANISH.menu.cv}
           </LI>
         ) : (
-          <LI as={Link} to={RutasApp.curriculum}>
+          <LI as={Link} to={RutasApp.curriculum} theme={themes}>
             {ENGLISH.menu.cv}
           </LI>
         )}
 
         {languages === "ES" ? (
-          <LI as={Link} to={RutasApp.portfolio} theme={theme}>
+          <LI as={Link} to={RutasApp.portfolio} theme={themes}>
             {SPANISH.menu.portafolio}
           </LI>
         ) : (
-          <LI as={Link} to={RutasApp.portfolio} theme={theme}>
+          <LI as={Link} to={RutasApp.portfolio} theme={themes}>
             {ENGLISH.menu.portafolio}
           </LI>
         )}
@@ -154,14 +145,15 @@ export const MenuBurger = ({ open }) => {
         {/* <LI as={Link} to={RutasApp.home}>
           Blog
         </LI> */}
+
         {login ? (
-          <ButtonLogin onClick={() => handleAccount()}>
-            {languages === "ES" ? SPANISH.menu.account : ENGLISH.menu.account}{" "}
-          </ButtonLogin>
+          <LI onClick={() => handleAccount()} theme={themes}>
+            {languages === "ES" ? SPANISH.menu.account : ENGLISH.menu.account}
+          </LI>
         ) : (
-          <ButtonLogin onClick={handleModalClick}>
-            {languages === "ES" ? SPANISH.menu.login : ENGLISH.menu.login}{" "}
-          </ButtonLogin>
+          <LI onClick={handleModalClick} theme={themes}>
+            {languages === "ES" ? SPANISH.menu.login : ENGLISH.menu.login}
+          </LI>
         )}
       </Ul>
       <Modal isOpen={isOpenModalM} closeModal={closeModalM}>

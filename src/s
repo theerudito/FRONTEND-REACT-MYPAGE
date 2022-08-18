@@ -1,3 +1,7 @@
 theme={theme}
 color: ${(props) =>
   props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+
+
+    ${(props) =>
+      props.theme === "light" ? ThemeLight.fondo : ThemeDark.fondo};

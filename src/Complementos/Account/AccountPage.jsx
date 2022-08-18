@@ -1,13 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Footer } from "../Footer/Footer";
-
 import { RutasApp } from "../Helpers/Rutas";
-import {
-  ContenedorHeader,
-  ContenedorIconos,
-  ContenedorMenu,
-} from "../Home/styles/Styles";
+import { ContenedorHeader, ContenedorMenu, HR } from "../Home/styles/Styles";
 import { NavBarMenu } from "../Menu/NavBarMenu";
 import Blog from "../Account/blog.png";
 import Contact from "../Account/contact.png";
@@ -23,10 +18,13 @@ import {
   ContenedorName,
   ContenedorRol,
   ContenedorA,
+  TitlePrincipalAccount,
+  ContenedorTitleAccount,
 } from "./Styles";
 
 export const AccountPage = () => {
   const dataUser = JSON.parse(localStorage.getItem("accessToken"));
+  const theme = localStorage.getItem("theme");
   const logout = () => {
     localStorage.clear("accessToken");
     window.location.href = "/";
@@ -38,25 +36,18 @@ export const AccountPage = () => {
         <ContenedorMenu>
           <NavBarMenu />
         </ContenedorMenu>
-
-       
       </ContenedorHeader>
 
-      <hr />
+      <HR theme={theme} />
 
-      <h1
-        style={{
-          margin: "40px auto",
-          color: "white",
-          display: "flex",
-          alignItem: "center",
-          justifyContent: "center",
-        }}
-      >
-        !Hi Welcome {dataUser.name}
-      </h1>
+      <ContenedorTitleAccount>
+        <TitlePrincipalAccount theme={theme}>
+          !Hi Welcome {dataUser.name}
+        </TitlePrincipalAccount>
+      </ContenedorTitleAccount>
+
       <ContenedorPrincipal>
-        <ContenedorContactos>
+        <ContenedorContactos theme={theme}>
           <ContenedorTitulo>Contacts</ContenedorTitulo>
           <ContenedorA>
             <ContenedorPerfil src={Contact} alt="perfil" />
@@ -68,7 +59,7 @@ export const AccountPage = () => {
           </div>
         </ContenedorContactos>
 
-        <ContenedorContactos>
+        <ContenedorContactos theme={theme}>
           <ContenedorTitulo>Post</ContenedorTitulo>
           <ContenedorA>
             <ContenedorPerfil src={Post} alt="perfil" />
@@ -78,19 +69,19 @@ export const AccountPage = () => {
           </div>
         </ContenedorContactos>
 
-        <ContenedorAccount>
+        <ContenedorAccount theme={theme}>
           <ContenedorTitulo>Account</ContenedorTitulo>
           <ContenedorA>
-            <ContenedorPerfil src={dataUser.pic} alt="perfil" />
-            <ContenedorName>{dataUser.name} </ContenedorName>
-            <ContenedorRol>{dataUser.email} </ContenedorRol>
+            <ContenedorPerfil src={dataUser.pic} alt="perfil" theme={theme} />
+            <ContenedorName theme={theme}>{dataUser.name} </ContenedorName>
+            <ContenedorRol theme={theme}>{dataUser.email} </ContenedorRol>
           </ContenedorA>
           <div>
             <Botones onClick={() => logout()}>Logout</Botones>
           </div>
         </ContenedorAccount>
 
-        <ContenedorContactos>
+        <ContenedorContactos theme={theme}>
           <ContenedorTitulo>BLOG</ContenedorTitulo>
           <ContenedorA>
             <ContenedorPerfil src={Blog} alt="perfil" />

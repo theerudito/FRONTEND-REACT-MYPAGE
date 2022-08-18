@@ -1,6 +1,6 @@
 export const SPANISH = {
   frase:
-    "Soy a desarrollador autodidacta amante de la programación y los videojuegos cada día una nueva meta por cumplir, me puedes encontrar en las redes como",
+    "Soy a desarrollador autodidacta amante de la programación y los videojuegos cada día una nueva meta por cumplir, me puedes encontrar en las redes como ",
   slogan: "!Nunca te Rindas¡",
   skill: "Mis Habilidades",
   myCourses: "Mis Cursos",
@@ -21,7 +21,7 @@ export const SPANISH = {
       message: "Mensaje es requerido",
       phone: "Telefono es requerido",
       errorEmail: "Correo Electronico no es valido",
-    }
+    },
   },
   menu: {
     home: "Inicio",
@@ -32,7 +32,7 @@ export const SPANISH = {
   },
   portfolio: {
     title: "Mis Proyectos",
-    go : "Ir al Proyecto",
+    go: "Ir al Proyecto",
     tec: "Tecnologias Aplicadas",
-  }
+  },
 };

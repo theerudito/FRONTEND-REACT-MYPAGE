@@ -2,10 +2,11 @@ import English from "./img/en.png";
 import Spanish from "./img/es.png";
 import styled from "styled-components";
 import { Dispositivos } from "../Medias/Medidas";
-import { ContenedorHeader, ContenedorIconos, ContenedorMenu } from "../Home/styles/Styles";
+import { ContenedorHeader, ContenedorMenu, HR } from "../Home/styles/Styles";
 import { NavBarMenu } from "../Menu/NavBarMenu";
 
 import { Footer } from "../Footer/Footer";
+import { ThemeDark, ThemeLight } from "../Themes/Theme";
 
 const Contenedor = styled.div`
   width: 100%;
@@ -89,25 +90,24 @@ const Titulos = styled.h4`
   justify-content: center;
   border: solid 1px;
   border-radius: 10px;
+  color: ${(props) =>
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
 `;
 
 export const Curriculum = () => {
+  const theme = localStorage.getItem("theme");
   return (
     <>
-
-
-<ContenedorHeader>
+      <ContenedorHeader>
         <ContenedorMenu>
           <NavBarMenu />
         </ContenedorMenu>
-
-        
       </ContenedorHeader>
+      <HR theme={theme} />
 
-      <hr />
-      <Contenedor>
+      <Contenedor theme={theme}>
         <FlagEnglish>
-          <Titulos>Curriculum in English</Titulos>
+          <Titulos theme={theme}>Curriculum in English</Titulos>
           <a
             href="https://drive.google.com/file/d/1iKLQ8L3A6d5dE0dIESmeFi4i6NLX2jNW/view?usp=sharing"
             target="_blanck"
@@ -116,8 +116,8 @@ export const Curriculum = () => {
           </a>
         </FlagEnglish>
 
-        <FlagSpanish>
-          <Titulos>Curriculum en Español</Titulos>
+        <FlagSpanish theme={theme}>
+          <Titulos theme={theme}>Curriculum en Español</Titulos>
           <a
             href="https://drive.google.com/file/d/1pvTpWKhotcWqk-ko0XzmgV9W2HvcGtA4/view?usp=sharing"
             target="_blanck"
@@ -127,7 +127,7 @@ export const Curriculum = () => {
           </a>
         </FlagSpanish>
       </Contenedor>
-      <Footer/>
+      <Footer />
     </>
   );
 };

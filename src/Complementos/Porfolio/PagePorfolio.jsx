@@ -1,4 +1,4 @@
-import { ContenedorHeader, ContenedorMenu } from "../Home/styles/Styles";
+import { ContenedorHeader, ContenedorMenu, HR } from "../Home/styles/Styles";
 import { NavBarMenu } from "../Menu/NavBarMenu";
 import {
   ContenedorBodyPortafolio,
@@ -17,6 +17,7 @@ import {
   ContenedorBodyTechologies,
   LiksProyects,
   ContenedorCardPortafolio,
+  TituloPortafolio,
 } from "./Styles/Styles";
 import { PostProyects } from "./PostPorfolio";
 import { Footer } from "../Footer/Footer";
@@ -31,7 +32,7 @@ export const PagePorfolio = () => {
 
   const { porfolio = [] } = useSelector((state) => state.erudito);
   const languages = localStorage.getItem("language");
-
+  const theme = localStorage.getItem("theme");
   useEffect(() => {
     dispach(getPorfolio(PostProyects));
   }, [dispach]);
@@ -43,13 +44,13 @@ export const PagePorfolio = () => {
           <NavBarMenu />
         </ContenedorMenu>
       </ContenedorHeader>
-      <hr />
+      <HR theme={theme} />
 
       <ContenedorTituloPorfolio>
         {languages === "ES" ? (
-          <p>{SPANISH.portfolio.title} </p>
+          <TituloPortafolio theme={theme}>{SPANISH.portfolio.title} </TituloPortafolio>
         ) : (
-          <p>{ENGLISH.portfolio.title} </p>
+          <TituloPortafolio theme={theme}>{ENGLISH.portfolio.title} </TituloPortafolio>
         )}
       </ContenedorTituloPorfolio>
       <ContenedorPrincipalPorfolio>

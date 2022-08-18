@@ -1,5 +1,11 @@
 import styled from "styled-components";
 import { Dispositivos } from "../../Medias/Medidas";
+import { ThemeDark, ThemeLight } from "../../Themes/Theme";
+
+export const TituloPortafolio = styled.p`
+  color: ${(props) =>
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
+`;
 
 export const ContenedorPrincipalPorfolio = styled.div`
   @media ${Dispositivos.mobileS} {
@@ -53,7 +59,16 @@ export const ContenedorPrincipalPorfolio = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
   @media ${Dispositivos.laptopL} {
-    background-color: blue;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    width: 800px;
+    margin: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
   }
   @media ${Dispositivos.desktop} {
     background-color: orange;
@@ -120,7 +135,17 @@ export const ContenedorCardPortafolio = styled.div`
     }
   }
   @media ${Dispositivos.laptopL} {
-    background-color: blue;
+    background-color: #181a1b;
+    border-radius: 5px;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    width: 560px;
+    height: 300px;
+    grid-template-columns: repeat(2, 4fr);
+    :hover {
+      background-color: #181a2b;
+      box-shadow: 0px 0px 5px aqua;
   }
   @media ${Dispositivos.desktop} {
     background-color: orange;
@@ -187,7 +212,15 @@ export const ImagenPortafolio = styled.img`
     cursor: pointer;
   }
   @media ${Dispositivos.laptopL} {
-    background-color: blue;
+    width: 245px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
   }
   @media ${Dispositivos.desktop} {
     background-color: orange;
@@ -222,7 +255,9 @@ export const ContenedorBodyPortafolio = styled.div`
     margin-top: 5px;
   }
   @media ${Dispositivos.laptopL} {
-    background-color: blue;
+    width: 280px;
+    height: 288px;
+    margin-top: 5px;
   }
   @media ${Dispositivos.desktop} {
     background-color: orange;
@@ -260,7 +295,10 @@ export const ContenedorTitleYGitHub = styled.div`
     font-size: 20px;
   }
   @media ${Dispositivos.laptopL} {
-    background-color: blue;
+    display: grid;
+    margin-left: -22px;
+    border-bottom: 1px solid white;
+    font-size: 20px;
   }
   @media ${Dispositivos.desktop} {
     background-color: orange;
@@ -293,7 +331,11 @@ export const TitlePortafolio = styled.p`
     fornt-size: 20px;
   }
   @media ${Dispositivos.laptopL} {
-    background-color: blue;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 280px;
+    fornt-size: 20px;
   }
   @media ${Dispositivos.desktop} {
     background-color: orange;
@@ -327,7 +369,11 @@ export const ImageGitGub = styled.img`
     cursor: pointer;
   }
   @media ${Dispositivos.laptopL} {
-    background-color: blue;
+    width: 40px;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-top: -20px;
+    cursor: pointer;
   }
   @media ${Dispositivos.desktop} {
     background-color: orange;
@@ -373,7 +419,11 @@ export const TitleBodyPortafolio = styled.p`
     font-size: 18px;
   }
   @media ${Dispositivos.laptopL} {
-    background-color: blue;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    font-size: 18px;
   }
   @media ${Dispositivos.desktop} {
     background-color: orange;
@@ -428,7 +478,18 @@ export const ButtonBodyPortafolio = styled.button`
     }
   }
   @media ${Dispositivos.laptopL} {
-    background-color: blue;
+    border: none;
+    color: black;
+    background-color: greenyellow;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    :hover {
+      background-color: green;
+      color: white;
+    }
   }
   @media ${Dispositivos.desktop} {
     background-color: orange;
@@ -461,7 +522,8 @@ export const ContenedorBodyTechologies = styled.div`
     background-color: blue;
   }
   @media ${Dispositivos.desktop} {
-    background-color: orange;
+    margin-top: 10px;
+    margin-left: -15px;
   }
 `;
 
@@ -497,7 +559,11 @@ export const ImageBodyPortafolio = styled.img`
     margin: auto;
   }
   @media ${Dispositivos.laptopL} {
-    background-color: blue;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
   }
   @media ${Dispositivos.desktop} {
     background-color: orange;

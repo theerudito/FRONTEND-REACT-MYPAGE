@@ -7,7 +7,7 @@ export const eruditoSlice = createSlice({
     login: true,
     isLoading: true,
     language: null,
-    theme: "dark",
+    theme: null,
     courses: [],
     tecnology1: [],
     tecnology2: [],

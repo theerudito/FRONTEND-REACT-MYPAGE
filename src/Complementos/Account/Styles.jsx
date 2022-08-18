@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Dispositivos } from "../Medias/Medidas";
+import { ThemeDark, ThemeLight } from "../Themes/Theme";
 
 export const ContenedorPrincipal = styled.div`
   width: auto;
@@ -23,6 +24,22 @@ export const ContenedorPrincipal = styled.div`
   }
 `;
 
+export const ContenedorTitleAccount = styled.div`
+  margin: 40px auto;
+  display: flex;
+  alignitem: center;
+  justifycontent: center;
+`;
+
+export const TitlePrincipalAccount = styled.h1`
+  margin: 40px auto;
+  display: flex;
+  alignitem: center;
+  justifycontent: center;
+  color: ${(props) =>
+    props.theme === "dark" ? ThemeDark.color : ThemeLight.color};
+`;
+
 export const ContenedorContactos = styled.div`
   width: 300px;
   height: 300px;
@@ -30,7 +47,8 @@ export const ContenedorContactos = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  border: solid 1px;
+  border: ${(props) =>
+    props.theme === "light" ? ThemeLight.borderReloj : ThemeDark.borderReloj};
   margin: 10px;
   @media ${Dispositivos.mobileM} {
     max-width: 320px;
@@ -66,7 +84,8 @@ export const ContenedorAccount = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  border: solid 1px;
+  border: ${(props) =>
+    props.theme === "light" ? ThemeLight.borderReloj : ThemeDark.borderReloj};
   margin: 10px;
   @media ${Dispositivos.mobileM} {
     margin: 10px auto;
@@ -94,6 +113,8 @@ export const ContenedorAccount = styled.div`
 
 export const ContenedorPost = styled.div`
   background-color: grey;
+  border: ${(props) =>
+    props.theme === "light" ? ThemeLight.borderReloj : ThemeDark.borderReloj};
 `;
 
 export const ContenedorA = styled.div`
@@ -115,6 +136,8 @@ export const ContenedorPerfil = styled.img`
 `;
 
 export const ContenedorTitulo = styled.h1`
+  color: ${(props) =>
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
   @media ${Dispositivos.mobileM} {
     width: 120px;
     margin: 30px auto;
@@ -124,7 +147,6 @@ export const ContenedorTitulo = styled.h1`
     background-color: purple;
     border: solid 1px white;
     border-radius: 10px;
-    color: white;
   }
 
   @media ${Dispositivos.mobileL} {
@@ -136,7 +158,6 @@ export const ContenedorTitulo = styled.h1`
     background-color: purple;
     border: solid 1px white;
     border-radius: 10px;
-    color: white;
   }
 
   @media ${Dispositivos.tablet} {
@@ -148,7 +169,6 @@ export const ContenedorTitulo = styled.h1`
     background-color: purple;
     border: solid 1px white;
     border-radius: 10px;
-    color: white;
   }
   @media ${Dispositivos.laptop} {
     width: 180px;
@@ -170,9 +190,13 @@ export const ContenedorName = styled.h1`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: ${(props) =>
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
 `;
 
 export const ContenedorRol = styled.h1`
+  color: ${(props) =>
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
   @media ${Dispositivos.mobileM} {
     font-size: 12px;
     width: 120px;
