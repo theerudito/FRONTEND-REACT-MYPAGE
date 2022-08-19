@@ -33,14 +33,9 @@ import {
   ULTitles,
   ULUsers,
 } from "./Styles/Styles";
-import {
-  ContenedorHeader,
-  ContenedorIconos,
-  ContenedorMenu,
-} from "../Home/styles/Styles";
+import { ContenedorHeader, ContenedorMenu } from "../Home/styles/Styles";
 import { useState } from "react";
 import {
-  incialValueUser,
   MostrarTodosLosContactos,
   MostrarUnContactos,
 } from "../Helpers/ApiRest";
@@ -51,6 +46,7 @@ import {
 } from "../../store/slices/edudito/erudito";
 
 export const MostrarContactoApp = () => {
+  const theme = localStorage.getItem("theme");
   const [isOpenModalCrear, openModalCrear, closeModalCrear] =
     useModalContactApp(false);
   const [isOpenModalEditar, openModalEditar, closeModalEditar] =
@@ -70,6 +66,7 @@ export const MostrarContactoApp = () => {
 
   const GET_ALL_CONTACT = async () => {
     const data = await MostrarTodosLosContactos();
+
     dispatch(getContacts(data));
   };
 
@@ -108,14 +105,12 @@ export const MostrarContactoApp = () => {
         <ContenedorMenu>
           <NavBarMenu />
         </ContenedorMenu>
-
-       
       </ContenedorHeader>
       <hr />
 
       <ContenedorPrincipal>
         <ButtonAccount onClick={() => Account()}>Account</ButtonAccount>
-        <Titulo>Consulta de Contactos</Titulo>
+        <Titulo theme={theme}>Consulta de Contactos</Titulo>
 
         <BotonCrear onClick={openModalCrear}>Crear</BotonCrear>
 

@@ -6,6 +6,7 @@ export const ContenedorPrincipal = styled.div`
   width: auto;
   height: auto;
   margin: auto;
+  margin-top: -40px;
   align-items: center;
   justify-content: center;
   @media ${Dispositivos.mobileM} {
@@ -25,7 +26,8 @@ export const ContenedorPrincipal = styled.div`
 `;
 
 export const ContenedorTitleAccount = styled.div`
-  margin: 40px auto;
+  margin: auto;
+  margin-top: -40px;
   display: flex;
   alignitem: center;
   justifycontent: center;

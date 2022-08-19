@@ -55,13 +55,11 @@ const LI = styled.li`
   text-decoration: none;
   padding: 10px;
   color: ${(props) =>
-    props.theme === null ? ThemeLight.menuColor : ThemeDark.menuColor};
-  color: ${(props) =>
     props.theme === "dark" ? ThemeLight.menuColor : ThemeDark.menuColor};
 
   :hover {
     background-color: ${(props) =>
-      props.theme === "dark" ? ThemeLight.menuBG : ThemeDark.menuBG};
+      props.theme === "light" ? ThemeLight.menuBG : ThemeDark.menuBG};
     :hover {
       color: black;
     }
@@ -72,7 +70,7 @@ const LI = styled.li`
     margin: auto;
     :hover {
       background-color: ${(props) =>
-        props.theme === "light" ? ThemeLight.menuBG : ThemeDark.menuBG};
+        props.theme === "dark" ? ThemeLight.menuBG : ThemeDark.menuBG};
       color: ${(props) =>
         props.theme === "dark" ? ThemeLight.menuColor : ThemeDark.menuColor};
       border-radius: 10px;
@@ -92,7 +90,7 @@ export const MenuBurger = ({ open }) => {
   const languages = localStorage.getItem("language");
   const themes = localStorage.getItem("theme");
   const { login, theme } = useSelector((store) => store.erudito);
-  console.log(theme);
+
   const handleModalClick = (e) => {
     openModalM();
   };

@@ -14,7 +14,6 @@ import {
   ContendorUbiYPais,
   ContenedorFrase,
   ContenedorHeader,
-  ContenedorIconos,
   ContenedorLenguaje,
   ContenedorMenu,
   ContenedorMisCursos,
@@ -104,7 +103,7 @@ export const PageHome = () => {
       </ContenedorModos>
 
       <ContendorSobreME>
-        <YoImagen src={Yo} alt="yo" theme={theme} />
+        <YoImagen src={Programador} alt="yo" theme={theme} />
         <div style={{ margin: "auto" }}>
           {languages === "ES" ? (
             <Eslogan theme={theme}>{SPANISH.slogan} </Eslogan>

@@ -1,10 +1,12 @@
 import styled from "styled-components";
-
+import { ThemeDark, ThemeLight } from "../../Themes/Theme";
 
 export const Titulo = styled.h1`
   display: flex;
   align-items: center;
   justify-content: center;
+  color: ${(props) =>
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
 `;
 
 export const ButtonAccount = styled.button`

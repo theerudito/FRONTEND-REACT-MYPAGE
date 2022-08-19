@@ -44,7 +44,7 @@ export const FormularioHome = () => {
   return (
     <>
       <ContenedorFormularioPrincipal theme={theme}>
-        <Formulario onSubmit={handleSubmit(guardarContacto)} >
+        <Formulario onSubmit={handleSubmit(guardarContacto)} theme={theme}>
           {languages === "ES" ? (
             <h4>{SPANISH.form.contactMe} </h4>
           ) : (

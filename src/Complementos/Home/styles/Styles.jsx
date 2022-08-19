@@ -88,7 +88,7 @@ export const YoImagen = styled.img`
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
-  
+
   margin: 10px auto;
   :hover {
     box-shadow: ${(props) =>
@@ -659,7 +659,10 @@ export const ContenedorFormularioPrincipal = styled.div`
   }
 `;
 
-export const Formulario = styled.form``;
+export const Formulario = styled.form`
+  color: ${(props) =>
+    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
+`;
 
 export const ContenedorBoton = styled.button`
   background-color: greenyellow;
