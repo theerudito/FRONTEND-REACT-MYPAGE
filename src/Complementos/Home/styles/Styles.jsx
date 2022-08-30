@@ -10,7 +10,6 @@ export const ContenedorHeader = styled.div`
 
 export const ContenedorMenu = styled.div`
   color: white;
-
   width: 100px;
 `;
 
@@ -63,6 +62,12 @@ export const ContenedorIconos = styled.div`
   @media ${Dispositivos.laptop} {
     margin-left: 1000px;
   }
+  @media ${Dispositivos.laptopL} {
+    margin-left: 1000px;
+  }
+  @media ${Dispositivos.desktop} {
+    margin-left: 1000px;
+  }
 `;
 
 //==============================MENU==============================
@@ -88,7 +93,6 @@ export const YoImagen = styled.img`
   height: 150px;
   object-fit: cover;
   border-radius: 50%;
-
   margin: 10px auto;
   :hover {
     box-shadow: ${(props) =>
@@ -180,6 +184,10 @@ export const ContenedorFrase = styled.div`
 `;
 
 export const ProgramdorStyled = styled.img`
+  @media ${Dispositivos.mobileS} {
+    width: 60px;
+    height: 60px;
+  }
   @media ${Dispositivos.mobileM} {
     width: 60px;
     height: 60px;
@@ -259,6 +267,7 @@ export const ContenedorSkill = styled.div`
     align-items: center;
     justify-content: center;
     width: 300px;
+    height: 300px;
     border-radius: 10px;
   }
 
@@ -305,17 +314,38 @@ export const ContenedorSkill = styled.div`
   }
 
   @media ${Dispositivos.laptopL} {
-    max-width: 1440px;
-    background-color: yellow;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    height: 240px;
+    width: 900px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
   }
 
   @media ${Dispositivos.desktop} {
-    max-width: 2560px;
-    background-color: burlywood;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    height: 240px;
+    width: 900px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
   }
 `;
 
 export const ContenedorSkill1 = styled.div`
+  @media ${Dispositivos.mobileS} {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: auto;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+  }
+
   @media ${Dispositivos.mobileM} {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -353,6 +383,27 @@ export const ContenedorSkill1 = styled.div`
     align-items: center;
     justify-content: center;
   }
+  @media ${Dispositivos.laptopL} {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin: auto;
+    width: 900px;
+    height: 100px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media ${Dispositivos.desktop} {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    margin: auto;
+    width: 900px;
+    height: 100px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const ContenedorSkill2 = styled(ContenedorSkill1)``;
@@ -361,6 +412,11 @@ export const SkillsImg = styled.img`
   margin: 5px auto;
   padding: 0px;
   align-content: center;
+
+  @media ${Dispositivos.mobileS} {
+    height: 30px;
+    width: 30px;
+  }
 
   @media ${Dispositivos.mobileM} {
     height: 30px;
@@ -381,6 +437,16 @@ export const SkillsImg = styled.img`
     height: 48px;
     width: 48px;
   }
+
+  @media ${Dispositivos.laptopL} {
+    height: 48px;
+    width: 48px;
+  }
+
+  @media ${Dispositivos.desktop} {
+    height: 48px;
+    width: 48px;
+  }
 `;
 
 export const CardSkills = styled.div`
@@ -391,6 +457,12 @@ export const CardSkills = styled.div`
   justify-content: center;
   margin-left: 5px;
   border: solid 1px white;
+
+  @media ${Dispositivos.mobileS} {
+    width: 60px;
+    height: 60px;
+    font-size: 12px;
+  }
 
   @media ${Dispositivos.mobileM} {
     width: 60px;
@@ -410,6 +482,16 @@ export const CardSkills = styled.div`
   }
 
   @media ${Dispositivos.laptop} {
+    height: 100px;
+    width: 100px;
+    font-size: 20px;
+  }
+  @media ${Dispositivos.laptopL} {
+    height: 100px;
+    width: 100px;
+    font-size: 20px;
+  }
+  @media ${Dispositivos.desktop} {
     height: 100px;
     width: 100px;
     font-size: 20px;
@@ -434,54 +516,62 @@ export const Titulos = styled.p`
 //==========================MIS CURSOS============================
 
 export const ContenedorMisCursos = styled.div`
+  @media ${Dispositivos.mobileS} {
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    margin: auto;
+  }
   @media ${Dispositivos.mobileM} {
-    .curso {
-      width: 360px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin: 10px auto;
-    }
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    margin: auto;
   }
 
   @media ${Dispositivos.mobileM} {
-    .curso {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin: 10px auto;
-    }
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    margin: auto;
   }
 
   @media ${Dispositivos.mobileL} {
-    .curso {
-      width: 440px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin: 10px auto;
-    }
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    margin: auto;
   }
 
   @media ${Dispositivos.tablet} {
-    .curso {
-      display: grid;
-      width: 500px;
-      grid-template-columns: repeat(2, 1fr);
-      margin: 10px auto;
-    }
+    max-width: 740px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
   }
 
   @media ${Dispositivos.laptop} {
-    .curso {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin: 10px auto;
-    }
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
 
-    @media ${Dispositivos.laptop} {
-      max-width: 1024px;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      margin: auto;
-    }
+  @media ${Dispositivos.laptopL} {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  @media ${Dispositivos.desktop} {
+    max-width: 1024px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -514,10 +604,20 @@ export const CardMisCursos = styled.div`
         : ThemeDark.cardCursosHover};
     box-shadow: 0px 0px 5px aqua;
   }
+  @media ${Dispositivos.mobileS} {
+    width: 300px;
+    height: 150px;
+    display: grid;
+    margin: 5px auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @media ${Dispositivos.mobileM} {
-    width: 350px;
-    height: 180px;
+    width: 380px;
+    height: 200px;
+    display: grid;
+    margin: 5px auto;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media ${Dispositivos.mobileL} {
@@ -529,7 +629,7 @@ export const CardMisCursos = styled.div`
   }
 
   @media ${Dispositivos.tablet} {
-    width: 400px;
+    width: 360px;
     height: 200px;
     display: grid;
     margin: 5px auto;
@@ -543,12 +643,36 @@ export const CardMisCursos = styled.div`
     margin: 5px auto;
     grid-template-columns: repeat(2, 1fr);
   }
+  @media ${Dispositivos.laptopL} {
+    width: 500px;
+    height: 250px;
+    display: grid;
+    margin: 5px auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media ${Dispositivos.desktop} {
+    width: 500px;
+    height: 250px;
+    display: grid;
+    margin: 5px auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const ImgMisCursos = styled.img`
   border: 1px black;
   border-radius: 5px;
   object-fit: contain;
+
+  @media ${Dispositivos.mobileS} {
+    width: 130px;
+    display: grid;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 25px;
+  }
 
   @media ${Dispositivos.mobileM} {
     width: 150px;
@@ -571,7 +695,7 @@ export const ImgMisCursos = styled.img`
     margin-left: 10px;
   }
   @media ${Dispositivos.tablet} {
-    width: 300px;
+    width: 180px;
     height: 180px;
     display: grid;
     margin: 5px auto;
@@ -581,6 +705,24 @@ export const ImgMisCursos = styled.img`
   }
 
   @media ${Dispositivos.laptop} {
+    width: 360px;
+    height: 200px;
+    display: grid;
+    margin: 10px auto;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: -10px;
+    margin-top: 25px;
+  }
+  @media ${Dispositivos.laptopL} {
+    width: 360px;
+    height: 200px;
+    display: grid;
+    margin: 10px auto;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: -10px;
+    margin-top: 25px;
+  }
+  @media ${Dispositivos.desktop} {
     width: 360px;
     height: 200px;
     display: grid;
@@ -608,21 +750,86 @@ export const CardTitulo = styled.div`
 `;
 
 export const CardButton = styled.button`
-  background-color: greenyellow;
-  border: none;
-  text-decoration: none;
-  border-radius: 10px;
-  width: 140px;
-  :hover {
-    background-color: #00b708;
-    color: black;
+  @media ${Dispositivos.mobileS} {
+    background-color: greenyellow;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 120px;
+    :hover {
+      background-color: #00b708;
+      color: black;
+    }
+  }
+  @media ${Dispositivos.mobileM} {
+    background-color: greenyellow;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 140px;
+    :hover {
+      background-color: #00b708;
+      color: black;
+    }
   }
   @media ${Dispositivos.mobileL} {
+    background-color: greenyellow;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
     width: 140px;
+    :hover {
+      background-color: #00b708;
+      color: black;
+    }
+  }
+  @media ${Dispositivos.tablet} {
+    background-color: greenyellow;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 140px;
+    font-size: 1.2rem;
+    :hover {
+      background-color: #00b708;
+      color: black;
+    }
   }
   @media ${Dispositivos.laptop} {
-    width: 160px;
+    background-color: greenyellow;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 140px;
+    font-size: 1.2rem;
+    :hover {
+      background-color: #00b708;
+      color: black;
+    }
   }
+  @media ${Dispositivos.laptopL} {
+    background-color: greenyellow;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 140px;
+    font-size: 1.2rem;
+    :hover {
+      background-color: #00b708;
+      color: black;
+    }
+  }
+  @media ${Dispositivos.desktop} {
+    background-color: greenyellow;
+    border: none;
+    text-decoration: none;
+    border-radius: 10px;
+    width: 140px;
+    font-size: 1.2rem;
+    :hover {
+      background-color: #00b708;
+      color: black;
+    }
 `;
 
 export const TituloCurso = styled(MisCursosTitulo)`

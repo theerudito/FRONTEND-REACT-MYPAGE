@@ -9,6 +9,16 @@ export const TituloPortafolio = styled.p`
 
 export const ContenedorPrincipalPorfolio = styled.div`
   @media ${Dispositivos.mobileS} {
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    width: auto;
+    margin: auto;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: repeat(1, 1fr);
   }
   @media ${Dispositivos.mobileM} {
     margin: auto;
@@ -71,12 +81,33 @@ export const ContenedorPrincipalPorfolio = styled.div`
     grid-template-columns: repeat(2, 1fr);
   }
   @media ${Dispositivos.desktop} {
-    background-color: orange;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    width: 800px;
+    margin: auto;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
   }
 `;
 
 export const ContenedorCardPortafolio = styled.div`
   @media ${Dispositivos.mobileS} {
+    background-color: #181a2b;
+    border-radius: 5px;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    width: 280px;
+    height: 160px;
+    grid-template-columns: repeat(2, 1fr);
+    :hover {
+      background-color: #181a2b;
+      box-shadow: 0px 0px 5px aqua;
+    }
   }
   @media ${Dispositivos.mobileM} {
     background-color: #181a2b;
@@ -148,7 +179,17 @@ export const ContenedorCardPortafolio = styled.div`
       box-shadow: 0px 0px 5px aqua;
   }
   @media ${Dispositivos.desktop} {
-    background-color: orange;
+    background-color: #181a1b;
+    border-radius: 5px;
+    margin: auto;
+    display: grid;
+    gap: 10px;
+    width: 560px;
+    height: 300px;
+    grid-template-columns: repeat(2, 4fr);
+    :hover {
+      background-color: #181a2b;
+      box-shadow: 0px 0px 5px aqua;
   }
 `;
 
@@ -166,6 +207,15 @@ export const ContenedorImagenPortafolio = styled.div``;
 
 export const ImagenPortafolio = styled.img`
   @media ${Dispositivos.mobileS} {
+    width: 80px;
+    height: 145px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 8px;
+    border-radius: 5px;
+    cursor: pointer;
   }
   @media ${Dispositivos.mobileM} {
     width: 80px;
@@ -223,28 +273,36 @@ export const ImagenPortafolio = styled.img`
     cursor: pointer;
   }
   @media ${Dispositivos.desktop} {
-    background-color: orange;
+    width: 245px;
+    height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
   }
 `;
 
 export const ContenedorBodyPortafolio = styled.div`
   @media ${Dispositivos.mobileS} {
-    b
+    height: 130px;
+    width: 180px;
+    margin-top: 25px;
   }
   @media ${Dispositivos.mobileM} {
-    
     height: 130px;
     width: 180px;
     margin-top: 25px;
   }
   @media ${Dispositivos.mobileL} {
-    
     width: 220px;
     height: 60px;
     margin-top: 15px;
   }
   @media ${Dispositivos.tablet} {
-  
+    
     width: 260px;
     height: 230px;
     margin-top: 5px;
@@ -260,12 +318,19 @@ export const ContenedorBodyPortafolio = styled.div`
     margin-top: 5px;
   }
   @media ${Dispositivos.desktop} {
-    background-color: orange;
+    width: 280px;
+    height: 288px;
+    margin-top: 5px;
   }
 `;
 
 export const ContenedorTitleYGitHub = styled.div`
   @media ${Dispositivos.mobileS} {
+    display: grid;
+    margin-left: -10px;
+    margin-top: -15px;
+    border-bottom: 1px solid white;
+    font-size: 12px;
   }
   @media ${Dispositivos.mobileM} {
     display: grid;
@@ -301,12 +366,20 @@ export const ContenedorTitleYGitHub = styled.div`
     font-size: 20px;
   }
   @media ${Dispositivos.desktop} {
-    background-color: orange;
+    display: grid;
+    margin-left: -22px;
+    border-bottom: 1px solid white;
+    font-size: 20px;
   }
 `;
 
 export const TitlePortafolio = styled.p`
   @media ${Dispositivos.mobileS} {
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 150px;
+    fornt-size: 12px;
   }
   @media ${Dispositivos.mobileM} {
     color: white;
@@ -322,6 +395,11 @@ export const TitlePortafolio = styled.p`
     width: 300px;
   }
   @media ${Dispositivos.tablet} {
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 280px;
+    fornt-size: 20px;
   }
   @media ${Dispositivos.laptop} {
     color: white;
@@ -338,12 +416,21 @@ export const TitlePortafolio = styled.p`
     fornt-size: 20px;
   }
   @media ${Dispositivos.desktop} {
-    background-color: orange;
+    color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 280px;
+    fornt-size: 20px;
   }
 `;
 
 export const ImageGitGub = styled.img`
   @media ${Dispositivos.mobileS} {
+    width: 25px;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-top: -30px;
+    cursor: pointer;
   }
   @media ${Dispositivos.mobileM} {
     width: 25px;
@@ -360,6 +447,11 @@ export const ImageGitGub = styled.img`
     cursor: pointer;
   }
   @media ${Dispositivos.tablet} {
+    width: 40px;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-top: -20px;
+    cursor: pointer;
   }
   @media ${Dispositivos.laptop} {
     width: 40px;
@@ -376,7 +468,11 @@ export const ImageGitGub = styled.img`
     cursor: pointer;
   }
   @media ${Dispositivos.desktop} {
-    background-color: orange;
+    width: 40px;
+    margin-left: auto;
+    margin-right: 5px;
+    margin-top: -20px;
+    cursor: pointer;
   }
 `;
 
@@ -389,6 +485,11 @@ export const ContenedorInfoPortafolio = styled.div`
 
 export const TitleBodyPortafolio = styled.p`
   @media ${Dispositivos.mobileS} {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    font-size: 12px;
   }
   @media ${Dispositivos.mobileM} {
     align-items: center;
@@ -408,7 +509,7 @@ export const TitleBodyPortafolio = styled.p`
     align-items: center;
     justify-content: center;
     display: flex;
-    margin-top: 25px;
+    margin-top: 10px;
     font-size: 18px;
   }
   @media ${Dispositivos.laptop} {
@@ -426,12 +527,28 @@ export const TitleBodyPortafolio = styled.p`
     font-size: 18px;
   }
   @media ${Dispositivos.desktop} {
-    background-color: orange;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+    font-size: 18px;
   }
 `;
 
 export const ButtonBodyPortafolio = styled.button`
   @media ${Dispositivos.mobileS} {
+    border: none;
+    color: black;
+    background-color: greenyellow;
+    border-radius: 5px;
+    display: flex;
+    margin-top: -20px;
+    align-items: center;
+    justify-content: center;
+    :hover {
+      background-color: green;
+      color: white;
+    }
   }
   @media ${Dispositivos.mobileM} {
     border: none;
@@ -462,6 +579,18 @@ export const ButtonBodyPortafolio = styled.button`
     }
   }
   @media ${Dispositivos.tablet} {
+    border: none;
+    color: black;
+    background-color: greenyellow;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+    :hover {
+      background-color: green;
+      color: white;
+    }
   }
   @media ${Dispositivos.laptop} {
     border: none;
@@ -492,7 +621,18 @@ export const ButtonBodyPortafolio = styled.button`
     }
   }
   @media ${Dispositivos.desktop} {
-    background-color: orange;
+    border: none;
+    color: black;
+    background-color: greenyellow;
+    border-radius: 5px;
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+    :hover {
+      background-color: green;
+      color: white;
+    }
   }
 `;
 
@@ -519,7 +659,8 @@ export const ContenedorBodyTechologies = styled.div`
     margin-left: -15px;
   }
   @media ${Dispositivos.laptopL} {
-    background-color: blue;
+    margin-top: 10px;
+    margin-left: -15px;
   }
   @media ${Dispositivos.desktop} {
     margin-top: 10px;
@@ -529,6 +670,11 @@ export const ContenedorBodyTechologies = styled.div`
 
 export const ImageBodyPortafolio = styled.img`
   @media ${Dispositivos.mobileS} {
+    width: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
   }
   @media ${Dispositivos.mobileM} {
     width: 140px;
@@ -566,6 +712,10 @@ export const ImageBodyPortafolio = styled.img`
     margin: auto;
   }
   @media ${Dispositivos.desktop} {
-    background-color: orange;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
   }
 `;
