@@ -251,9 +251,9 @@ export const TituloSkills = styled.h4`
 export const ContenedorSkill = styled.div`
   width: 1200px;
   background-color: ${(props) =>
-    props.theme === "dark"
-      ? ThemeDark.contenedorSkill
-      : ThemeLight.contenedorSkill};
+    props.theme === "light"
+      ? ThemeLight.contenedorSkill
+      : ThemeDark.contenedorSkill};
   :hover {
     background-color: ${(props) =>
       props.theme === "dark"
@@ -499,8 +499,7 @@ export const CardSkills = styled.div`
 `;
 
 export const Titulos = styled.p`
-  color: ${(props) =>
-    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
+  color: white;
 
   color: @media ${Dispositivos.mobileL} {
     font-size: 14px;
