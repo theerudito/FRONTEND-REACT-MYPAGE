@@ -1,6 +1,6 @@
 import axios from "axios";
 const login =
-  "https://backend-react-mypage-production.up.railway.app/auth/login";
+  "https://backend-react-mypage-production.up.railway.app/api/auth/login";
 const url =
   "https://backend-react-mypage-production.up.railway.app/api/contactos";
 const url_dev = "http://localhost:8000/api/contactos";
@@ -61,8 +61,6 @@ export const EliminarContacto = async (id) => {
 };
 
 export const loginUser = async (formData) => {
-  console.log(formData);
-
   try {
     const res = await axios.post(login, formData);
     const data = await res.data;

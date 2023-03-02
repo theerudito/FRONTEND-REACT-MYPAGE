@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useSelector } from "react-redux";
 import {
   ContenedorFormularioPrincipal,
   AlertaFormulario,
