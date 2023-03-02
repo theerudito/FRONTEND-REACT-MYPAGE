@@ -1,6 +1,8 @@
 import axios from "axios";
-const login = "https://erudito-backend.herokuapp.com/api/auth/login";
-const url = "https://erudito-backend.herokuapp.com/api/contactos";
+const login =
+  "https://backend-react-mypage-production.up.railway.app/auth/login";
+const url =
+  "https://backend-react-mypage-production.up.railway.app/api/contactos";
 const url_dev = "http://localhost:8000/api/contactos";
 
 export const incialValueUser = {
@@ -21,13 +23,13 @@ export const MostrarTodosLosContactos = async () => {
 };
 
 export const MostrarUnContactos = async (id) => {
-  try {
-    const res = await axios.get(`${url}/${id}`);
-    const data = res.data;
-    return data;
-  } catch (error) {
-    console.log(error);
-  }
+  // try {
+  //   const res = await axios.get(`${url}/${id}`);
+  //   const data = res.data;
+  //   return data;
+  // } catch (error) {
+  //   console.log(error);
+  // }
 };
 
 export const CrearContacto = async (formData) => {
@@ -44,7 +46,6 @@ export const EditarContacto = async (id, formData) => {
   try {
     const res = await axios.put(`${url}/${id}`, formData);
     const data = await res.data;
-    console.log(data);
     return data;
   } catch (error) {
     console.log(error);

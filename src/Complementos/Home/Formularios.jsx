@@ -15,7 +15,8 @@ import { SPANISH } from "../Languages/ES";
 export const FormularioHome = () => {
   const [enviado, setEnviado] = useState(false);
   const date = new Date().getMilliseconds();
-  const pic = `https://avatars.dicebear.com/api/micah/${date}.svg`;
+  const pic = `https://api.dicebear.com/5.x/micah/svg?seed=${date}`;
+
   const theme = localStorage.getItem("theme");
   const languages = localStorage.getItem("language");
   const {

@@ -6,7 +6,7 @@ export const ENGLISH = {
   myCourses: "My Courses",
   goCourse: "Go to Course",
 
-  Author: "All Rights Reserved 2022",
+  Author: "All Rights Reserved 2023",
   form: {
     contactMe: "Contact Me",
     send: "Send",

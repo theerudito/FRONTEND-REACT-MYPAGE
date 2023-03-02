@@ -29,7 +29,6 @@ export const eruditoSlice = createSlice({
       state.porfolio = actions.payload;
     },
     getContacts: (state, actions) => {
-      console.log(actions.payload);
       state.contacts = actions.payload;
     },
     createContact: (state, actions) => {

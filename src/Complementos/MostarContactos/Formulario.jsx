@@ -19,7 +19,7 @@ export const FormularioContactoCrear = () => {
   const [dataUser, setDataUser] = useState(incialValueUser);
   const dispatch = useDispatch();
   const date = new Date().getMilliseconds();
-  const pic = `https://avatars.dicebear.com/api/micah/${date}.svg`;
+  const pic = `https://api.dicebear.com/5.x/micah/svg?seed=${date}`;
 
   useEffect(() => {
     dispatch(getContacts());
@@ -126,7 +126,9 @@ export const FormularioContactoEditar = () => {
     }, 2000);
   };
 
-  useEffect(() => {}, [user]);
+  useEffect(() => {
+    setDataUser(user);
+  }, [user]);
 
   const handleChange = (e) => {
     setDataUser({
@@ -197,7 +199,7 @@ export const FormularioLogin = () => {
   const [cretentials, setCretentials] = useState({ email: "", password: "" });
   const dispatch = useDispatch();
   const [error, setError] = useState("");
-  const [message, setMessage] = useState(false);
+  const [message] = useState(false);
 
   const loginData = async (e) => {
     e.preventDefault();

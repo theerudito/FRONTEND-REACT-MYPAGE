@@ -6,7 +6,7 @@ export const SPANISH = {
   myCourses: "Mis Cursos",
   goCourse: "Ir al Curso",
 
-  Author: "Todos Los Derechos Reservados 2022",
+  Author: "Todos Los Derechos Reservados 2023",
   form: {
     contactMe: "Contactame",
     send: "Enviar",

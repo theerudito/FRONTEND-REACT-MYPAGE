@@ -70,18 +70,13 @@ export const MostrarContactoApp = () => {
     dispatch(getContacts(data));
   };
 
-  const GET_ONE_CONTACT = async (id) => {
-    const user = await MostrarUnContactos(id);
-    dispatch(editContatct(user));
+  const GET_ONE_CONTACT = async (item) => {
+    dispatch(editContatct(item));
+    openModalEditar();
   };
 
   const DELETE_CONTACT = (id) => {
     dispatch(deleteContact(id));
-    GET_ALL_CONTACT();
-  };
-
-  const EDIT_CONTACT = (id) => {
-    dispatch(editContatct(id));
     GET_ALL_CONTACT();
   };
 
@@ -147,9 +142,7 @@ export const MostrarContactoApp = () => {
               <LIUsers className="phone">{item.phone} </LIUsers>
               <LIUsers className="messages">{item.message} </LIUsers>
               <LIUsers className="actiones">
-                <BotonEditar
-                  onClick={(e) => openModalEditar(GET_ONE_CONTACT(item._id))}
-                >
+                <BotonEditar onClick={(e) => GET_ONE_CONTACT(item)}>
                   Editar
                 </BotonEditar>
 

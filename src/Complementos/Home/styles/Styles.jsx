@@ -601,7 +601,7 @@ export const CardMisCursos = styled.div`
       props.theme === "light"
         ? ThemeLight.cardCursosHover
         : ThemeDark.cardCursosHover};
-    box-shadow: 0px 0px 5px aqua;
+    
   }
   @media ${Dispositivos.mobileS} {
     width: 300px;

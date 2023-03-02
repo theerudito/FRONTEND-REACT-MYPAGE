@@ -38,17 +38,13 @@ export const Navegacion = () => {
 
         <Navbar.Collapse id="responsive-navbar-nav" style={{ margin: "0 5px" }}>
           <Lista>
-            <Nav.Link as={Link} to={RutasApp.curriculum} className="nav">
-              Curriculum
+            <Nav.Link as={Link} to={RutasApp.curriculum} className="nav" >
+              sd
             </Nav.Link>
           </Lista>
 
           <Lista>
-            <Nav.Link
-              as={Link}
-              to={RutasApp.porfolio}
-              className="nav"
-            >
+            <Nav.Link as={Link} to={RutasApp.portfolio} className="nav">
               Prorfolio
             </Nav.Link>
           </Lista>

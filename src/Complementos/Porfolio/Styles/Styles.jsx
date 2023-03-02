@@ -106,7 +106,7 @@ export const ContenedorCardPortafolio = styled.div`
     grid-template-columns: repeat(2, 1fr);
     :hover {
       background-color: #181a2b;
-      box-shadow: 0px 0px 5px aqua;
+      
     }
   }
   @media ${Dispositivos.mobileM} {
@@ -120,7 +120,7 @@ export const ContenedorCardPortafolio = styled.div`
     grid-template-columns: repeat(2, 1fr);
     :hover {
       background-color: #181a2b;
-      box-shadow: 0px 0px 5px aqua;
+      
     }
   }
   @media ${Dispositivos.mobileL} {
@@ -134,7 +134,7 @@ export const ContenedorCardPortafolio = styled.div`
     grid-template-columns: repeat(2, 1fr);
     :hover {
       background-color: #181a2b;
-      box-shadow: 0px 0px 5px aqua;
+      
     }
   }
   @media ${Dispositivos.tablet} {
@@ -148,7 +148,7 @@ export const ContenedorCardPortafolio = styled.div`
     grid-template-columns: repeat(2, 4fr);
     :hover {
       background-color: #181a2b;
-      box-shadow: 0px 0px 5px aqua;
+     
     }
   }
   @media ${Dispositivos.laptop} {
@@ -162,7 +162,7 @@ export const ContenedorCardPortafolio = styled.div`
     grid-template-columns: repeat(2, 4fr);
     :hover {
       background-color: #181a2b;
-      box-shadow: 0px 0px 5px aqua;
+      
     }
   }
   @media ${Dispositivos.laptopL} {
@@ -176,7 +176,7 @@ export const ContenedorCardPortafolio = styled.div`
     grid-template-columns: repeat(2, 4fr);
     :hover {
       background-color: #181a2b;
-      box-shadow: 0px 0px 5px aqua;
+      
   }
   @media ${Dispositivos.desktop} {
     background-color: #181a1b;
@@ -189,7 +189,7 @@ export const ContenedorCardPortafolio = styled.div`
     grid-template-columns: repeat(2, 4fr);
     :hover {
       background-color: #181a2b;
-      box-shadow: 0px 0px 5px aqua;
+     
   }
 `;
 
@@ -302,7 +302,6 @@ export const ContenedorBodyPortafolio = styled.div`
     margin-top: 15px;
   }
   @media ${Dispositivos.tablet} {
-    
     width: 260px;
     height: 230px;
     margin-top: 5px;

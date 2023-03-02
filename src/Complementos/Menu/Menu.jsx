@@ -26,7 +26,7 @@ const Ul = styled.ul`
   @media (max-width: 768px) {
     flex-flow: column nowrap;
     background-color: ${(props) =>
-      props.themes === "light" ? ThemeLight.barraMenu : ThemeDark.barraMenu};
+      props.theme === "light" ? ThemeLight.barraMenu : ThemeDark.barraMenu};
     position: fixed;
     color: ${(props) =>
       props.theme === "light" ? ThemeLight.menuColor : ThemeDark.menuColor};
@@ -55,11 +55,11 @@ const LI = styled.li`
   text-decoration: none;
   padding: 10px;
   color: ${(props) =>
-    props.theme === "dark" ? ThemeLight.menuColor : ThemeDark.menuColor};
+    props.theme === "dark" ? ThemeLight.menuBG : ThemeDark.menuBG};
 
   :hover {
     background-color: ${(props) =>
-      props.theme === "light" ? ThemeLight.menuBG : ThemeDark.menuBG};
+      props.theme === "dark" ? ThemeLight.menuBG : ThemeDark.menuBG};
     :hover {
       color: black;
     }
@@ -70,7 +70,7 @@ const LI = styled.li`
     margin: auto;
     :hover {
       background-color: ${(props) =>
-        props.theme === "dark" ? ThemeLight.menuBG : ThemeDark.menuBG};
+        props.theme === "light" ? ThemeLight.menuBG : ThemeDark.menuBG};
       color: ${(props) =>
         props.theme === "dark" ? ThemeLight.menuColor : ThemeDark.menuColor};
       border-radius: 10px;
