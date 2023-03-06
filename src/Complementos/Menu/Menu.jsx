@@ -121,12 +121,12 @@ export const MenuBurger = ({ open }) => {
         )}
 
         {languages === "ES" ? (
-          <LI as={Link} to={RutasApp.curriculum} theme={themes}>
-            {SPANISH.menu.cv}
+          <LI as={Link} to={RutasApp.blog} theme={themes}>
+            {SPANISH.menu.blog}
           </LI>
         ) : (
-          <LI as={Link} to={RutasApp.curriculum} theme={themes}>
-            {ENGLISH.menu.cv}
+          <LI as={Link} to={RutasApp.blog} theme={themes}>
+            {ENGLISH.menu.blog}
           </LI>
         )}
 

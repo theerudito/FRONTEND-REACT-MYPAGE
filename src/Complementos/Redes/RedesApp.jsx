@@ -28,7 +28,7 @@ export const RedesApp = () => {
           </LinksRedes>
         </Contenedor>
       ))}
-      <Titulo3>By Erudito Dev</Titulo3>
+      <Titulo3>Erudito Dev © All Rights Reserved 2023</Titulo3>
     </ContenedorPrincipal>
   );
 };

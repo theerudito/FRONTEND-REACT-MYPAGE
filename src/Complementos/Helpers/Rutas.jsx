@@ -4,7 +4,7 @@ export const RutasApp = {
   contact: "/api/contactos",
   account: "/account",
   login: "/login",
-  curriculum: "/curriculum",
+  blog: "/blog",
   redes: "socialmedia",
   carousel: "/carousel",
 };

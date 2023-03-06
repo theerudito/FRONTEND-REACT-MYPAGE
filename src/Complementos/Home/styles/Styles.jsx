@@ -133,18 +133,24 @@ export const Ec = styled.h4`
 //==============================YO================================
 
 //==============================RELOJ=============================
-export const ContenedorReloj = styled.div`
-  border: ${(props) =>
-    props.theme === "light" ? ThemeLight.borderReloj : ThemeDark.borderReloj};
-  border-radius: 10px;
-  width: 100px;
+export const ContenedorCurriculum = styled.div`
   margin: auto;
-  display: grid;
   align-items: center;
   justify-content: center;
-  color: ${(props) =>
-    props.theme === "light" ? ThemeLight.color : ThemeDark.color};
+  display: grid;
 `;
+
+export const ButtonCurriculum = styled.button`
+  background-color: aqua;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  :hover {
+    background-color: aquamarine;
+  }
+`;
+
 //==============================RELOJ=============================
 
 //==============================FRASE=============================
@@ -238,6 +244,8 @@ export const ContenedorTituloSkills = styled.div`
 `;
 
 export const Red = styled.span`
+  padding: 5px;
+  text-decoration: none;
   color: ${(props) =>
     props.theme === "light" ? ThemeLight.slogan : ThemeDark.slogan};
 `;
@@ -601,7 +609,6 @@ export const CardMisCursos = styled.div`
       props.theme === "light"
         ? ThemeLight.cardCursosHover
         : ThemeDark.cardCursosHover};
-    
   }
   @media ${Dispositivos.mobileS} {
     width: 300px;

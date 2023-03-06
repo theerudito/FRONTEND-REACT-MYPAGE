@@ -1,6 +1,6 @@
 export const SPANISH = {
   frase:
-    "Soy a desarrollador autodidacta amante de la programación y los videojuegos cada día una nueva meta por cumplir, me puedes encontrar en las redes como ",
+    "Soy a desarrollador autodidacta amante de la programación empece con JavaScript como Frontend ahora estoy con C# y tus tecnologias .Net para dedicarme al Backend y Unity quiero pulirme bien con C#  y los videojuegos con Unity cada día una nueva meta por cumplir, me puedes encontrar en las redes como ",
   slogan: "!Nunca te Rindas¡",
   skill: "Mis Habilidades",
   myCourses: "Mis Cursos",
@@ -25,7 +25,7 @@ export const SPANISH = {
   },
   menu: {
     home: "Inicio",
-    cv: "Curriculum",
+    blog: "Blog",
     portafolio: "Portafolio",
     account: "Cuenta",
     login: "Login",

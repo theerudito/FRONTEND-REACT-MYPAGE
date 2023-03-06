@@ -1,8 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.ce3d3f5a.css",
-    "main.js": "/static/js/main.13c788fb.js",
+    "main.js": "/static/js/main.f6c35d7b.js",
+    "static/media/RESUMEN-IN-ENGLISH.pdf": "/static/media/RESUMEN-IN-ENGLISH.c8b34794682e9bf2e071.pdf",
     "static/media/sun.png": "/static/media/sun.45dd74124b3887010c7c.png",
+    "static/media/webconstruccion.gif": "/static/media/webconstruccion.d91059468678b393059e.gif",
     "static/media/contact.png": "/static/media/contact.9f6814549cf343917f00.png",
     "static/media/programador.png": "/static/media/programador.79d6a426e5f26e0751c2.png",
     "static/media/404.svg": "/static/media/404.6d653eb323699421be5f5553b34ebf4a.svg",
@@ -11,10 +13,10 @@
     "static/media/ecuador.png": "/static/media/ecuador.3b07e5e40e8b71d59bd9.png",
     "index.html": "/index.html",
     "main.ce3d3f5a.css.map": "/static/css/main.ce3d3f5a.css.map",
-    "main.13c788fb.js.map": "/static/js/main.13c788fb.js.map"
+    "main.f6c35d7b.js.map": "/static/js/main.f6c35d7b.js.map"
   },
   "entrypoints": [
     "static/css/main.ce3d3f5a.css",
-    "static/js/main.13c788fb.js"
+    "static/js/main.f6c35d7b.js"
   ]
 }

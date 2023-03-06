@@ -4,6 +4,7 @@ import Yo from "./img/yo.jpg";
 import Ubicacion from "./img/ubicacion.png";
 import Pais from "./img/ecuador.png";
 import Programador from "./img/programador.png";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
   CardButton,
@@ -18,7 +19,6 @@ import {
   ContenedorMenu,
   ContenedorMisCursos,
   ContenedorModos,
-  ContenedorReloj,
   ContenedorSkill,
   ContenedorSkill1,
   ContenedorSkill2,
@@ -40,12 +40,14 @@ import {
   TituloSkills,
   YoImagen,
   HR,
+  ContenedorCurriculum,
+  ButtonCurriculum,
 } from "./styles/Styles";
-
-import { RelojApp } from "./RelojApp";
 
 import { LenguajeBarra, LenguajeEn, LenguajeEs } from "./Lenguaje";
 import { ModoDark, ModoLight } from "./Modos";
+
+import Curriculum from "./../Files/RESUMEN-IN-ENGLISH.pdf";
 
 import { NavBarMenu } from "../Menu/NavBarMenu";
 
@@ -63,6 +65,7 @@ import {
 } from "../../store/slices/edudito/erudito";
 import { SPANISH } from "../Languages/ES";
 import { ENGLISH } from "../Languages/EN";
+import { RutasApp } from "../Helpers/Rutas";
 
 export const PageHome = () => {
   const dispach = useDispatch();
@@ -120,20 +123,28 @@ export const PageHome = () => {
           <Localitation src={Pais} alt="Ecuador" />
         </ContendorUbiYPais>
       </ContendorSobreME>
-      <ContenedorReloj theme={theme}>
-        <RelojApp />
-      </ContenedorReloj>
+      <ContenedorCurriculum theme={theme}>
+        <a href={Curriculum} target="_blank" rel="noreferrer" download>
+          <ButtonCurriculum>
+            Curriculum <i class="fa-solid fa-file-pdf"></i>{" "}
+          </ButtonCurriculum>
+        </a>
+      </ContenedorCurriculum>
       <ContenedorFrase>
         <ProgramdorStyled src={Programador} alt="programador" />
-
         {languages === "ES" ? (
           <Frase theme={theme}>
             {SPANISH.frase}
-            <Red theme={theme}>@theerudito</Red>
+            <Red theme={theme} as={Link} to={RutasApp.redes}>
+              @theerudito
+            </Red>
           </Frase>
         ) : (
           <Frase theme={theme}>
-            {ENGLISH.frase} <Red theme={theme}>@theerudito</Red>{" "}
+            {ENGLISH.frase}
+            <Red theme={theme} as={Link} to={RutasApp.redes}>
+              @theerudito
+            </Red>
           </Frase>
         )}
       </ContenedorFrase>

@@ -1,6 +1,6 @@
 export const ENGLISH = {
   frase:
-    "A self-taught developer who loves programming and video games every day a new goal to meet, you can find me on the networks as",
+    "I am a self-taught developer who loves programming. I started with JavaScript as Frontend. Now I am with C# and your .Net technologies to dedicate myself to Backend and Unity. I want to polish myself well with C# and videogames with Unity. Every day I have a new goal to achieve, you can find me at networks like",
   slogan: "!Never Give Up¡",
   skill: "My Skills",
   myCourses: "My Courses",
@@ -21,11 +21,11 @@ export const ENGLISH = {
       message: "Message is required",
       phone: "Phone is required",
       errorEmail: "Email is not valid",
-    }
+    },
   },
   menu: {
     home: "Home",
-    cv: "Curriculum",
+    blog: "Blog",
     portafolio: "Portfolio",
     login: "Login",
     account: "Account",

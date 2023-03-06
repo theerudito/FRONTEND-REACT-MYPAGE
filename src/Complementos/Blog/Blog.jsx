@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Dispositivos } from "../Medias/Medidas";
 import { ContenedorHeader, ContenedorMenu, HR } from "../Home/styles/Styles";
 import { NavBarMenu } from "../Menu/NavBarMenu";
-
+import ImageEnConstrucion from "./img//webconstruccion.gif";
 import { Footer } from "../Footer/Footer";
 import { ThemeDark, ThemeLight } from "../Themes/Theme";
 
@@ -94,7 +94,7 @@ const Titulos = styled.h4`
     props.theme === "light" ? ThemeLight.color : ThemeDark.color};
 `;
 
-export const Curriculum = () => {
+export const Blog = () => {
   const theme = localStorage.getItem("theme");
   return (
     <>
@@ -106,26 +106,11 @@ export const Curriculum = () => {
       <HR theme={theme} />
 
       <Contenedor theme={theme}>
-        <FlagEnglish>
-          <Titulos theme={theme}>Curriculum in English</Titulos>
-          <a
-            href="https://drive.google.com/file/d/1iKLQ8L3A6d5dE0dIESmeFi4i6NLX2jNW/view?usp=sharing"
-            target="_blanck"
-          >
-            <Flag src={English} alt="english" />
-          </a>
-        </FlagEnglish>
-
-        <FlagSpanish theme={theme}>
-          <Titulos theme={theme}>Curriculum en Español</Titulos>
-          <a
-            href="https://drive.google.com/file/d/1pvTpWKhotcWqk-ko0XzmgV9W2HvcGtA4/view?usp=sharing"
-            target="_blanck"
-          >
-            {" "}
-            <Flag src={Spanish} alt="spanish" />
-          </a>
-        </FlagSpanish>
+        <img
+          src={ImageEnConstrucion}
+          style={{ width: "400px" }}
+          alt="En Construccion"
+        />
       </Contenedor>
       <Footer />
     </>
