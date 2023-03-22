@@ -139,6 +139,20 @@ export const MisCursos = [
     url: "https://ed.team/@iamerudito/curso/reactjs",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/miscursos%2Fcursoreact.svg?alt=media&token=b9f0fc27-234e-4aae-a72b-dcdec0bbe6a2",
   },
+
+  {
+    id: 4,
+    title: "C#",
+    url: "",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/miscursos%2Fcursoc%23.svg?alt=media&token=c26de9a0-6c8f-4d6b-8b45-be6a37e7c0fe",
+  },
+
+  {
+    id: 5,
+    title: ".NET CORE",
+    url: "",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/miscursos%2Fcursonet.svg?alt=media&token=45f12a96-1e73-4911-9b41-da714676ac40",
+  },
 ];
 
 export const Tecnologias1 = [

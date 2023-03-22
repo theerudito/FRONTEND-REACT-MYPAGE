@@ -4,7 +4,7 @@ import Yo from "./img/yo.jpg";
 import Ubicacion from "./img/ubicacion.png";
 import Pais from "./img/ecuador.png";
 import Programador from "./img/programador.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import {
   CardButton,
