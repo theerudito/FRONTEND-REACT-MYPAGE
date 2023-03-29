@@ -102,7 +102,7 @@ export const PostProyects = [
     git: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/tecnologias%2Fgithub-original.svg?alt=media&token=893cc37d-d6b4-43d2-9ee3-f3eedcabf4bb",
   },
   {
-    id: 10,
+    id: 11,
     title: "RINCON VERDE",
     url: "https://rincon-verde.vercel.app/",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/caratulaMyPage%2Fc-rinconverde.png?alt=media&token=a7156876-ed33-4ae0-b4e2-95ffe7516850",

@@ -134,7 +134,7 @@ export const MostrarContactoApp = () => {
         </ContainerTitles>
 
         {contacts.map((item) => (
-          <ContainerUsers key={item._id}>
+          <ContainerUsers key={item.id}>
             <ULUsers>
               <ImgProfile src={item.pic} alt="avatar" className="pic" />
               <LIUsers className="name">{item.name}</LIUsers>
@@ -150,7 +150,7 @@ export const MostrarContactoApp = () => {
                   <FormularioContactoEditar />
                 </Modal>
 
-                <BotonEliminar onClick={() => DELETE_CONTACT(item._id)}>
+                <BotonEliminar onClick={() => DELETE_CONTACT(item.id)}>
                   Eliminar
                 </BotonEliminar>
               </LIUsers>

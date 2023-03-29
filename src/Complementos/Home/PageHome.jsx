@@ -126,7 +126,7 @@ export const PageHome = () => {
       <ContenedorCurriculum theme={theme}>
         <a href={Curriculum} target="_blank" rel="noreferrer" download>
           <ButtonCurriculum>
-            Curriculum <i class="fa-solid fa-file-pdf"></i>{" "}
+            Curriculum <i className="fa-solid fa-file-pdf"></i>{" "}
           </ButtonCurriculum>
         </a>
       </ContenedorCurriculum>

@@ -1,9 +1,10 @@
 import axios from "axios";
-const login =
-  "https://backend-react-mypage-production.up.railway.app/api/auth/login";
-const url =
-  "https://backend-react-mypage-production.up.railway.app/api/contactos";
-const url_dev = "http://localhost:8000/api/contactos";
+
+const backendDev = "http://localhost:5272";
+const backendProduction = "";
+
+const Login = `${backendDev}/Auth/login`;
+const Clients = `${backendDev}/Clients`;
 
 export const incialValueUser = {
   name: "",
@@ -14,7 +15,7 @@ export const incialValueUser = {
 
 export const MostrarTodosLosContactos = async () => {
   try {
-    const res = await axios.get(url);
+    const res = await axios.get(Clients);
     const data = res.data;
     return data;
   } catch (error) {
@@ -34,7 +35,7 @@ export const MostrarUnContactos = async (id) => {
 
 export const CrearContacto = async (formData) => {
   try {
-    const res = await axios.post(url, formData);
+    const res = await axios.post(Clients, formData);
     const data = await res.data;
     return data;
   } catch (error) {
@@ -44,7 +45,7 @@ export const CrearContacto = async (formData) => {
 
 export const EditarContacto = async (id, formData) => {
   try {
-    const res = await axios.put(`${url}/${id}`, formData);
+    const res = await axios.put(`${Clients}/${id}`, formData);
     const data = await res.data;
     return data;
   } catch (error) {
@@ -54,7 +55,7 @@ export const EditarContacto = async (id, formData) => {
 
 export const EliminarContacto = async (id) => {
   try {
-    await axios.delete(`${url}/${id}`);
+    await axios.delete(`${Clients}/${id}`);
   } catch (error) {
     console.log(error);
   }
@@ -62,7 +63,7 @@ export const EliminarContacto = async (id) => {
 
 export const loginUser = async (formData) => {
   try {
-    const res = await axios.post(login, formData);
+    const res = await axios.post(Login, formData);
     const data = await res.data;
     return data;
   } catch (error) {

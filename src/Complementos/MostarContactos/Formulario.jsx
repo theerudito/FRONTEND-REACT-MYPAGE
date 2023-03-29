@@ -118,7 +118,7 @@ export const FormularioContactoEditar = () => {
   const guardarContacto = async (e) => {
     setGuardado(true);
     e.preventDefault();
-    const id = user._id;
+    const id = user.id;
     await EditarContacto(id, dataUser);
     setTimeout(() => {
       setGuardado(false);
