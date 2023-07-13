@@ -1,3 +1,9 @@
+export const GetDate = () => {
+  var date = new Date()
+  return date.getFullYear()
+};
+
+
 export const SPANISH = {
   frase:
     "Soy a desarrollador autodidacta amante de la programación empece con JavaScript como Frontend ahora estoy con C# y tus tecnologias .Net para dedicarme al Backend y Unity quiero pulirme bien con C#  y los videojuegos con Unity cada día una nueva meta por cumplir, me puedes encontrar en las redes como ",
@@ -6,7 +12,7 @@ export const SPANISH = {
   myCourses: "Mis Cursos",
   goCourse: "Ir al Curso",
 
-  Author: "Todos Los Derechos Reservados 2023",
+  Author: `Todos Los Derechos Reservados ${GetDate()}`,
   form: {
     contactMe: "Contactame",
     send: "Enviar",
