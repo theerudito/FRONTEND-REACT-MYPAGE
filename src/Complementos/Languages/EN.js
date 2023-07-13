@@ -1,9 +1,7 @@
 export const GetDate = () => {
-  var date = new Date()
-  return date.getFullYear()
+  var date = new Date();
+  return date.getFullYear();
 };
-
-
 
 export const ENGLISH = {
   frase:

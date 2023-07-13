@@ -1,8 +1,4 @@
-export const GetDate = () => {
-  var date = new Date()
-  return date.getFullYear()
-};
-
+import { GetDate } from "./EN";
 
 export const SPANISH = {
   frase:
