@@ -1,10 +1,10 @@
 import axios from "axios";
 
 const backendDev = "http://localhost:5272";
-const backendProduction = "";
+const backendProduction = "https://mybackenddotnet.web.byerudito.me";
 
-const Login = `${backendDev}/Auth/login`;
-const Clients = `${backendDev}/Clients`;
+const Login = `${backendProduction}/Auth/login`;
+const Clients = `${backendProduction}/Clients`;
 
 export const incialValueUser = {
   name: "",
