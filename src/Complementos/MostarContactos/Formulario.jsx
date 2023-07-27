@@ -18,8 +18,7 @@ export const FormularioContactoCrear = () => {
   const [guardado, setGuardado] = useState(false);
   const [dataUser, setDataUser] = useState(incialValueUser);
   const dispatch = useDispatch();
-  const date = new Date().getMilliseconds();
-  const pic = `https://api.dicebear.com/5.x/micah/svg?seed=${date}`;
+
 
   useEffect(() => {
     dispatch(getContacts());
@@ -33,7 +32,6 @@ export const FormularioContactoCrear = () => {
       email: dataUser.email,
       phone: dataUser.phone,
       message: dataUser.message,
-      pic,
     };
     const data = await CrearContacto(newUser);
     dispatch(createContact(data));
@@ -198,24 +196,33 @@ export const FormularioContactoEditar = () => {
 export const FormularioLogin = (e) => {
   const [cretentials, setCretentials] = useState({ email: "", password: "" });
   const dispatch = useDispatch();
-  const [error, setError] = useState("");
-  const [message] = useState(false);
+  const [errorCredential, setErrorCredential] = useState("");
+  const [message, setMessage] = useState(false);
 
   const loginData = async (e) => {
     e.preventDefault();
     try {
       const credederntialsDB = await loginUser(cretentials);
 
-      if (credederntialsDB) {
+      if (credederntialsDB != null) {
+
         console.log("credenciales correctas");
+
         dispatch(setLogin(false));
+
         localStorage.setItem("accessToken", JSON.stringify(credederntialsDB));
+
         window.location.href = "/account";
+        setMessage(false);
       } else {
-        alert("password or email is incorrect");
+
+        setMessage(true);
+        setErrorCredential("password or email is incorrect");
+
       }
     } catch (error) {
-      setError("password or email is incorrect");
+
+      setErrorCredential("password or email is incorrect");
     }
   };
 
@@ -265,7 +272,7 @@ export const FormularioLogin = (e) => {
             justifyContent: "center",
           }}
         >
-          {message && <span>{error} </span>}
+          {message === true ? <span>{errorCredential}</span> : null}
         </p>
       }
     </ContenedorFormulario>

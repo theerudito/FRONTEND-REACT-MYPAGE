@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const backendDev = "http://localhost:5272";
-const backendProduction = "https://mybackenddotnet.web.byerudito.me";
+const backendDev = "http://localhost:5272/api/v1";
+const backendProduction = "https://mybackenddotnet.web.byerudito.me/api/v1";
 
 const Login = `${backendProduction}/Auth/login`;
 const Clients = `${backendProduction}/Clients`;

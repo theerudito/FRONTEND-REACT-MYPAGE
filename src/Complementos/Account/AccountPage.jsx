@@ -41,8 +41,8 @@ export const AccountPage = () => {
       <HR theme={theme} />
 
       <ContenedorTitleAccount>
-        <TitlePrincipalAccount theme={theme}>
-          !Hi Welcome {dataUser.name}
+        <TitlePrincipalAccount style={theme === "light" ? { color: "black" } : { color: "white" }}  >
+          !Hi Welcome {dataUser.user}
         </TitlePrincipalAccount>
       </ContenedorTitleAccount>
 
