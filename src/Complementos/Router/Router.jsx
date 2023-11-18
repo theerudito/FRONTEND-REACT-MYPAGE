@@ -8,8 +8,11 @@ import { Page404App } from "../Page404/Page404";
 import { PagePorfolio } from "../Porfolio/PagePorfolio";
 import { RedesApp } from "../Redes/RedesApp";
 import { Blog } from "../Blog/Blog";
+import { Policy } from "../Policy/Policy";
+import { UserPolicy } from "../Policy/UserPolicy";
 
-export const Router = () => {
+export const Router = () =>
+{
   return (
     <>
       <Routes>
@@ -19,7 +22,8 @@ export const Router = () => {
         <Route path={RutasApp.contact} element={<MostrarContactoApp />} />
         <Route path={RutasApp.blog} element={<Blog />} />
         <Route path={RutasApp.redes} element={<RedesApp />} />
-
+        <Route path={RutasApp.privacyPolicy} element={<Policy />} />
+        <Route path={RutasApp.policyUser} element={<UserPolicy />} />
         <Route path="*" element={<Page404App />} />
       </Routes>
     </>

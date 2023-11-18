@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ThemeDark, ThemeLight } from "../../Themes/Theme";
 
-export const Titulo = styled.h1`
+export const Titulo = styled.h3`
   display: flex;
   align-items: center;
   justify-content: center;
