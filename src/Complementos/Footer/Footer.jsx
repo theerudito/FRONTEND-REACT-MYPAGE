@@ -3,13 +3,15 @@ import { HR } from "../Home/styles/Styles";
 
 import { ENGLISH } from "../Languages/EN";
 import { SPANISH } from "../Languages/ES";
-import {
-  ContendorFooter,
-  ContenedorDerechos,
-  ContenedorErudito,
-} from "./Styles/StylesFooter";
+import
+  {
+    ContendorFooter,
+    ContenedorDerechos,
+    ContenedorErudito,
+  } from "./Styles/StylesFooter";
 
-export const Footer = () => {
+export const Footer = () =>
+{
   const languages = localStorage.getItem("language");
 
   const theme = localStorage.getItem("theme");

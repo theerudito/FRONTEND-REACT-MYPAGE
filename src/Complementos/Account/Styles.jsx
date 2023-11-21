@@ -33,7 +33,7 @@ export const ContenedorTitleAccount = styled.div`
   justifycontent: center;
 `;
 
-export const TitlePrincipalAccount = styled.h1`
+export const TitlePrincipalAccount = styled.h3`
   margin: 40px auto;
   display: flex;
   alignitem: center;
@@ -137,7 +137,7 @@ export const ContenedorPerfil = styled.img`
   object-fit: cover;
 `;
 
-export const ContenedorTitulo = styled.h1`
+export const ContenedorTitulo = styled.h3`
   color: ${(props) =>
     props.theme === "light" ? ThemeLight.color : ThemeDark.color};
   @media ${Dispositivos.mobileM} {
@@ -185,7 +185,7 @@ export const ContenedorTitulo = styled.h1`
   }
 `;
 
-export const ContenedorName = styled.h1`
+export const ContenedorName = styled.h3`
   font-size: 18px;
   width: 280px;
   margin: auto;
@@ -196,7 +196,7 @@ export const ContenedorName = styled.h1`
     props.theme === "light" ? ThemeLight.color : ThemeDark.color};
 `;
 
-export const ContenedorRol = styled.h1`
+export const ContenedorRol = styled.h3`
   color: ${(props) =>
     props.theme === "light" ? ThemeLight.color : ThemeDark.color};
   @media ${Dispositivos.mobileM} {

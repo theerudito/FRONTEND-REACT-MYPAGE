@@ -1,30 +1,35 @@
-import {
-  CrearContacto,
-  EditarContacto,
-  incialValueUser,
-  loginUser,
-} from "../Helpers/ApiRest";
+import
+  {
+    CrearContacto,
+    EditarContacto,
+    incialValueUser,
+    loginUser,
+  } from "../Helpers/ApiRest";
 
 import { BotonGuardar, ContenedorFormulario } from "./Styles/Styles";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
-import {
-  createContact,
-  getContacts,
-  setLogin,
-} from "../../store/slices/edudito/erudito";
+import
+  {
+    createContact,
+    getContacts,
+    setLogin,
+  } from "../../store/slices/edudito/erudito";
 
-export const FormularioContactoCrear = () => {
+export const FormularioContactoCrear = () =>
+{
   const [guardado, setGuardado] = useState(false);
   const [dataUser, setDataUser] = useState(incialValueUser);
   const dispatch = useDispatch();
 
 
-  useEffect(() => {
+  useEffect(() =>
+  {
     dispatch(getContacts());
   }, [dispatch]);
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e) =>
+  {
     setGuardado(true);
     e.preventDefault();
     const newUser = {
@@ -35,14 +40,16 @@ export const FormularioContactoCrear = () => {
     };
     const data = await CrearContacto(newUser);
     dispatch(createContact(data));
-    setTimeout(() => {
+    setTimeout(() =>
+    {
       setGuardado(false);
       setDataUser(incialValueUser);
     }, 2000);
     console.log("enviando");
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e) =>
+  {
     e.preventDefault();
     setDataUser({
       ...dataUser,
@@ -98,9 +105,9 @@ export const FormularioContactoCrear = () => {
         </BotonGuardar>
         {guardado && (
           <div className="alert alert-info mt-2">
-            <h6 className="d-flex m-2 justify-content-center">
+            <h3 className="d-flex m-2 justify-content-center">
               !Guardado Correctamente¡
-            </h6>
+            </h3>
           </div>
         )}
       </form>
@@ -108,27 +115,32 @@ export const FormularioContactoCrear = () => {
   );
 };
 
-export const FormularioContactoEditar = () => {
+export const FormularioContactoEditar = () =>
+{
   const [guardado, setGuardado] = useState(false);
   const { user } = useSelector((store) => store.erudito);
   const [dataUser, setDataUser] = useState(incialValueUser);
 
-  const guardarContacto = async (e) => {
+  const guardarContacto = async (e) =>
+  {
     setGuardado(true);
     e.preventDefault();
     const id = user.id;
     await EditarContacto(id, dataUser);
-    setTimeout(() => {
+    setTimeout(() =>
+    {
       setGuardado(false);
       setDataUser(incialValueUser);
     }, 2000);
   };
 
-  useEffect(() => {
+  useEffect(() =>
+  {
     setDataUser(user);
   }, [user]);
 
-  const handleChange = (e) => {
+  const handleChange = (e) =>
+  {
     setDataUser({
       ...dataUser,
       [e.target.name]: e.target.value,
@@ -183,9 +195,9 @@ export const FormularioContactoEditar = () => {
         </BotonGuardar>
         {guardado && (
           <div className="alert alert-info mt-2">
-            <h6 className="d-flex m-2 justify-content-center">
+            <h3 className="d-flex m-2 justify-content-center">
               !Editado Correctamente¡
-            </h6>
+            </h3>
           </div>
         )}
       </form>
@@ -193,18 +205,22 @@ export const FormularioContactoEditar = () => {
   );
 };
 
-export const FormularioLogin = (e) => {
+export const FormularioLogin = (e) =>
+{
   const [cretentials, setCretentials] = useState({ email: "", password: "" });
   const dispatch = useDispatch();
   const [errorCredential, setErrorCredential] = useState("");
   const [message, setMessage] = useState(false);
 
-  const loginData = async (e) => {
+  const loginData = async (e) =>
+  {
     e.preventDefault();
-    try {
+    try
+    {
       const credederntialsDB = await loginUser(cretentials);
 
-      if (credederntialsDB != null) {
+      if (credederntialsDB != null)
+      {
 
         console.log("credenciales correctas");
 
@@ -214,19 +230,22 @@ export const FormularioLogin = (e) => {
 
         window.location.href = "/account";
         setMessage(false);
-      } else {
+      } else
+      {
 
         setMessage(true);
         setErrorCredential("password or email is incorrect");
 
       }
-    } catch (error) {
+    } catch (error)
+    {
 
       setErrorCredential("password or email is incorrect");
     }
   };
 
-  const onChange = (e) => {
+  const onChange = (e) =>
+  {
     setCretentials({
       ...cretentials,
       [e.target.name]: e.target.value,
