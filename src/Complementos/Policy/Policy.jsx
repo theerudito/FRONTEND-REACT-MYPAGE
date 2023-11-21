@@ -1,5 +1,9 @@
 import React from 'react'
+<<<<<<< HEAD
 import { ContainerPrivacyPolicy, ContainerRight } from './StylePolicy'
+=======
+import { ContainerPrivacyPolicy } from './StylePolicy'
+>>>>>>> 8343f091e279af75457c2b7d7ae6adb598c675ad
 import { GetDate } from '../Languages/EN'
 
 export const Policy = () =>
@@ -9,7 +13,11 @@ export const Policy = () =>
   const TextEN = {
     1: 'Privacy Policy',
     2: '1. General information',
+<<<<<<< HEAD
     3: 'Welcome to Between Byte Software, our applications are designed to be appropriate for children and all ages. In OUR APPS, we value the privacy and security of our users. This privacy policy explains how we collect, use, protect and share the personal and advertising information, including rewarded video ads, of our app users.',
+=======
+    3: 'Welcome to JL Software, our applications are designed to be appropriate for children and all ages. In OUR APPS, we value the privacy and security of our users. This privacy policy explains how we collect, use, protect and share the personal and advertising information, including rewarded video ads, of our app users.',
+>>>>>>> 8343f091e279af75457c2b7d7ae6adb598c675ad
     4: '2. Information we collect',
     5: 'Personal Information: We do not collect personally identifiable information from users, especially those under the age of 13, without verifiable parental or legal guardian consent.',
     6: 'Ad Information (AdMob): OUR APPS contains rewarded video ads from AdMob, a third-party advertising platform. AdMob collects non-personal information related to advertising, such as ad view statistics, ad interactions, and ad preferences. This information is used to improve the relevance of ads and is not used to identify individual users.',
@@ -45,13 +53,20 @@ export const Policy = () =>
     36: '13. AdMob Advertising in our Application',
     37: 'We want to clarify that we have no control over the ads that appear in our application, such as banner, interstitial or rewarded video ads. These ads are managed by third parties, however, we work diligently to ensure that they are relevant and respectful of the user experience.',
     38: 'Sincerely',
+<<<<<<< HEAD
     39: 'All Rights Reserved 2022'
+=======
+>>>>>>> 8343f091e279af75457c2b7d7ae6adb598c675ad
   }
 
   const TextES = {
     1: 'Política de Privacidad',
     2: '1. Información General',
+<<<<<<< HEAD
     3: '¡Bienvenido/a Between Byte Software nuestras aplicaciónes estan diseñada para ser apropiada para niños y todas las edades! En NUESTRAS APPS, valoramos la privacidad y la seguridad de nuestros usuarios. Esta política de privacidad explica cómo recopilamos, utilizamos, protegemos y compartimos la información personal y de anuncios, incluyendo anuncios de video recompensados, de los usuarios de nuestra aplicación.',
+=======
+    3: '¡Bienvenido/a JL Software nuestras aplicaciónes estan diseñada para ser apropiada para niños y todas las edades! En NUESTRAS APPS, valoramos la privacidad y la seguridad de nuestros usuarios. Esta política de privacidad explica cómo recopilamos, utilizamos, protegemos y compartimos la información personal y de anuncios, incluyendo anuncios de video recompensados, de los usuarios de nuestra aplicación.',
+>>>>>>> 8343f091e279af75457c2b7d7ae6adb598c675ad
     4: '2. Información que Recopilamos',
     5: 'Información Personal: No recopilamos información personal identificable de los usuarios, especialmente de aquellos que son menores de 13 años, sin el consentimiento verificable de los padres o tutores legales.',
     6: 'Información de Anuncios (AdMob): NUESTRAS APPS contiene anuncios de video recompensados de AdMob, una plataforma de publicidad de terceros. AdMob recopila información no personal relacionada con la publicidad, como estadísticas de visualización de anuncios, interacciones con anuncios y preferencias publicitarias. Esta información se utiliza para mejorar la relevancia de los anuncios y no se utiliza para identificar a usuarios individuales.',
@@ -87,7 +102,10 @@ export const Policy = () =>
     36: '13. Publicidad de AdMob en nuestra Aplicación',
     37: 'Queremos aclarar que no tenemos control sobre los anuncios que aparecen en nuestra aplicación, como los anuncios de banner, intersticiales o videos recompensados. Estos anuncios son gestionados por terceros, sin embargo, trabajamos diligentemente para garantizar que sean relevantes y respetuosos con la experiencia del usuario.',
     38: 'Atentamente',
+<<<<<<< HEAD
     39: `Todos Los Derechos Reservados 2022`
+=======
+>>>>>>> 8343f091e279af75457c2b7d7ae6adb598c675ad
   }
 
   return (
@@ -162,6 +180,7 @@ export const Policy = () =>
 
       <h3>{idioma === "en-US" ? TextEN[38] : TextES[38]}</h3>
 
+<<<<<<< HEAD
       <h3>Between Byte Software</h3>
 
 
@@ -169,6 +188,9 @@ export const Policy = () =>
         <h3>{idioma === "en-US" ? `${TextEN[39]} - ${GetDate()}` : `${TextES[39]} - ${GetDate()}`}</h3>
       </ContainerRight>
 
+=======
+      <h3>JL Software {GetDate()} </h3>
+>>>>>>> 8343f091e279af75457c2b7d7ae6adb598c675ad
 
     </ContainerPrivacyPolicy>
   )
