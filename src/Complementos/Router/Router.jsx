@@ -10,9 +10,9 @@ import { RedesApp } from "../Redes/RedesApp";
 import { Blog } from "../Blog/Blog";
 import { Policy } from "../Policy/Policy";
 import { UserPolicy } from "../Policy/UserPolicy";
+import { DeleteAccount } from "../Aps/DeleteAccount";
 
-export const Router = () =>
-{
+export const Router = () => {
   return (
     <>
       <Routes>
@@ -24,6 +24,7 @@ export const Router = () =>
         <Route path={RutasApp.redes} element={<RedesApp />} />
         <Route path={RutasApp.privacyPolicy} element={<Policy />} />
         <Route path={RutasApp.policyUser} element={<UserPolicy />} />
+        <Route path={RutasApp.deleteAccount} element={<DeleteAccount />} />
         <Route path="*" element={<Page404App />} />
       </Routes>
     </>

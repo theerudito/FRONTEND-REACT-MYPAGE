@@ -9,4 +9,5 @@ export const RutasApp = {
   carousel: "/carousel",
   privacyPolicy: "/privacy-policy",
   policyUser: "/policy-user",
+  deleteAccount: "/delete-account",
 };

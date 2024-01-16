@@ -9,10 +9,5 @@ export const ContainerPrivacyPolicy = styled.div`
   align-items: center;
   padding: 20px;
 `;
-<<<<<<< HEAD
 
-export const ContainerRight = styled.div`
-
-`
-=======
->>>>>>> 8343f091e279af75457c2b7d7ae6adb598c675ad
+export const ContainerRight = styled.div``;
