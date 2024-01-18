@@ -1,3 +1,7 @@
+import imgFacebok from "..//Redes/facebook.png";
+import imgGoolePlay from "..//Redes/googleplay.png";
+import imgThread from "..//Redes/thread.png";
+
 export const PostProyects = [
   {
     id: 0,
@@ -256,38 +260,50 @@ export const SocialMedia = [
   },
   {
     id: 2,
+    title: "Google Play",
+    pic: `${imgGoolePlay}`,
+    url: "https://play.google.com/store/apps/dev?id=7520063035768778420",
+  },
+  {
+    id: 4,
     title: "Linkedin",
     pic: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg",
     url: "https://www.linkedin.com/in/theerudito/",
   },
   {
-    id: 3,
+    id: 5,
     title: "Facebook",
-    pic: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/facebook/facebook-original.svg",
+    pic: `${imgFacebok}`,
     url: "https://www.facebook.com/theerudito1",
   },
   {
-    id: 4,
+    id: 6,
     title: "Instagram",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Redes%20Sociales%2Finstagram.png?alt=media&token=a3111e90-7471-4cc0-b993-cd3bdab65b52",
     url: "https://www.instagram.com/theerudito/",
   },
   {
-    id: 5,
-    title: "Tiktok",
-    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Redes%20Sociales%2Ftiktok.png?alt=media&token=d1fbc111-db3a-495d-ab60-33e1c174933b",
-    url: "https://www.tiktok.com/@theerudito",
+    id: 7,
+    title: "Threads",
+    pic: `${imgThread}`,
+    url: "https://www.threads.net/@theerudito",
   },
   {
-    id: 6,
+    id: 8,
+    title: "Tiktok",
+    pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Redes%20Sociales%2Ftiktok.png?alt=media&token=d1fbc111-db3a-495d-ab60-33e1c174933b",
+    url: "https://www.tiktok.com/@betweenbytesoftware",
+  },
+  {
+    id: 9,
     title: "Twitter",
     pic: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/twitter/twitter-original.svg",
     url: "https://twitter.com/theerudito",
   },
   {
-    id: 7,
+    id: 10,
     title: "Contact",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Redes%20Sociales%2Fgmail.png?alt=media&token=f5dde377-4c8c-499a-b769-2f0fd0b7f71e",
-    url: "mailto:erudito.tv@gmail.com",
+    url: "mailto:erudito.dev@gmail.com",
   },
 ];
