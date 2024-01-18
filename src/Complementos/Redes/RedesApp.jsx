@@ -11,6 +11,7 @@ import {
   Titulo3,
 } from "./Styles";
 import Programador from "../Home/img/programador.png";
+import { GetDate } from "../Languages/EN";
 
 export const RedesApp = () => {
   const [redes, setRedes] = useState(SocialMedia);
@@ -28,7 +29,7 @@ export const RedesApp = () => {
           </LinksRedes>
         </Contenedor>
       ))}
-      <Titulo3>Erudito Dev © All Rights Reserved 2023</Titulo3>
+      <Titulo3> Erudito Dev © All Rights Reserved {GetDate()}</Titulo3>
     </ContenedorPrincipal>
   );
 };
