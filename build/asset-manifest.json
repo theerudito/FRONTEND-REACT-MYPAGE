@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.ce3d3f5a.css",
-    "main.js": "/static/js/main.8402be70.js",
+    "main.js": "/static/js/main.ac231e23.js",
     "static/media/RESUMEN-IN-ENGLISH.pdf": "/static/media/RESUMEN-IN-ENGLISH.d0e4b8c79ceec2f2888e.pdf",
     "static/media/sun.png": "/static/media/sun.45dd74124b3887010c7c.png",
     "static/media/webconstruccion.gif": "/static/media/webconstruccion.d91059468678b393059e.gif",
@@ -16,10 +16,10 @@
     "static/media/ecuador.png": "/static/media/ecuador.3b07e5e40e8b71d59bd9.png",
     "index.html": "/index.html",
     "main.ce3d3f5a.css.map": "/static/css/main.ce3d3f5a.css.map",
-    "main.8402be70.js.map": "/static/js/main.8402be70.js.map"
+    "main.ac231e23.js.map": "/static/js/main.ac231e23.js.map"
   },
   "entrypoints": [
     "static/css/main.ce3d3f5a.css",
-    "static/js/main.8402be70.js"
+    "static/js/main.ac231e23.js"
   ]
 }

@@ -38,15 +38,17 @@ export const Policy = () => {
     28: "9. Changes to the Privacy Policy",
     29: "We reserve the right to make changes to this privacy policy. Any major changes will be notified to users through an update in the app store and on our website.",
     30: "10. Questions and Contact",
-    31: "If you have any questions about this privacy policy or wish to exercise your privacy rights, you can contact us at scholar.dev@gmail.com",
+    31: "If you have any questions about this privacy policy or wish to exercise your privacy rights, you can contact us at erudito.dev@gmail.com",
     32: "11. Consent",
     33: "By using OUR APPS, you accept this privacy policy. If you do not agree with this policy, please do not use our application.",
     34: "12. Links to Third Parties",
     35: "Our application may contain links to other sites that may be of interest to you. Once you click on these links and leave our application, we no longer have control over the site to which you are redirected and, therefore, we are not responsible for the terms or privacy or the protection of your data on those other third-party sites. Such sites are subject to their own privacy policies, so it is advisable to consult them to confirm that you agree with these.",
     36: "13. AdMob Advertising in our Application",
     37: "We want to clarify that we have no control over the ads that appear in our application, such as banner, interstitial or rewarded video ads. These ads are managed by third parties, however, we work diligently to ensure that they are relevant and respectful of the user experience.",
-    38: "Sincerely",
-    39: "All Rights Reserved 2022",
+    38: "14. Third-Party Tools",
+    39: "In certain cases, our app may recommend or facilitate the download of third-party open-source code editors or database engines for an optimal learning experience. These tools are globally recognized as secure and open-source, ensuring the safety of your data. Your information within these tools remains secure and is not accessed or stored by us",
+    40: "Sincerely",
+    41: "All Rights Reserved 2022",
   };
 
   const TextES = {
@@ -87,8 +89,10 @@ export const Policy = () => {
     35: "Nuestra aplicación podría contener enlaces a otros sitios que pudieran ser de tu interés. Una vez que hagas click en estos enlaces y abandones nuestra aplicación, ya no tenemos control sobre el sitio al que te redirigen y, por lo tanto, no somos responsables de los términos o privacidad ni de la protección de tus datos en esos otros sitios de terceros. Dichos sitios están sujetos a sus propias políticas de privacidad, por lo cual es recomendable que los consultes para confirmar que estás de acuerdo con estas.",
     36: "13. Publicidad de AdMob en nuestra Aplicación",
     37: "Queremos aclarar que no tenemos control sobre los anuncios que aparecen en nuestra aplicación, como los anuncios de banner, intersticiales o videos recompensados. Estos anuncios son gestionados por terceros, sin embargo, trabajamos diligentemente para garantizar que sean relevantes y respetuosos con la experiencia del usuario.",
-    38: "Atentamente",
-    39: `Todos Los Derechos Reservados 2022`,
+    38: "14. Herramientas de Terceros",
+    39: "En ciertos casos, nuestra aplicación puede recomendar o facilitar la descarga de editores de código fuente de terceros o motores de bases de datos de código abierto para una experiencia de aprendizaje óptima. Estas herramientas son reconocidas mundialmente como seguras y de código abierto, garantizando la seguridad de sus datos. Su información dentro de estas herramientas permanece segura y no es accedida ni almacenada por nosotros",
+    40: "Atentamente",
+    41: `Todos Los Derechos Reservados 2022`,
   };
 
   return (
@@ -151,15 +155,17 @@ export const Policy = () => {
       <p>{idioma === "en-US" ? TextEN[37] : TextES[37]}</p>
 
       <h3>{idioma === "en-US" ? TextEN[38] : TextES[38]}</h3>
+      <p>{idioma === "en-US" ? TextEN[39] : TextES[39]}</p>
 
+      <h3>{idioma === "en-US" ? TextEN[40] : TextES[40]}</h3>
+      <h3>Between Byte Software </h3>
       <ContainerRight>
         <h3>
           {idioma === "en-US"
-            ? `${TextEN[39]} - ${GetDate()}`
-            : `${TextES[39]} - ${GetDate()}`}
+            ? `${TextEN[41]} - ${GetDate()}`
+            : `${TextES[41]} - ${GetDate()}`}
         </h3>
       </ContainerRight>
-      <h3>Between Byte Software </h3>
     </ContainerPrivacyPolicy>
   );
 };
