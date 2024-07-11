@@ -5,7 +5,7 @@ export const RutasApp = {
   account: "/account",
   login: "/login",
   blog: "/blog",
-  redes: "socialmedia",
+  redes: "/socialmedia",
   carousel: "/carousel",
   privacyPolicy: "/privacy-policy",
   policyUser: "/policy-user",

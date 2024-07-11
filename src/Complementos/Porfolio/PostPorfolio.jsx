@@ -250,7 +250,7 @@ export const SocialMedia = [
     id: 0,
     title: "Website",
     pic: "https://firebasestorage.googleapis.com/v0/b/imagenes-cd065.appspot.com/o/Redes%20Sociales%2Fbrowser.png?alt=media&token=1bf4f68b-e0a9-4567-a6b9-73083a854be3",
-    url: "https://byerudito.web.app/",
+    url: "https://jorgeloor-dev.web.app/",
   },
   {
     id: 1,

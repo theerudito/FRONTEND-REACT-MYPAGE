@@ -14,7 +14,7 @@ import Programador from "../Home/img/programador.png";
 import { GetDate } from "../Languages/EN";
 
 export const RedesApp = () => {
-  const [redes, setRedes] = useState(SocialMedia);
+  const [redes] = useState(SocialMedia);
 
   return (
     <ContenedorPrincipal>

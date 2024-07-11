@@ -13,9 +13,3 @@ ReactDOM.render(
 
   document.getElementById("root")
 );
-
-
-
-    function myFunction(value) {
-      console.log(value)
-    }

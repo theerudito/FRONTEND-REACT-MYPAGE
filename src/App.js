@@ -16,7 +16,7 @@ function App() {
       localStorage.setItem("theme", themeState);
     }
   }, [themeState]);
-  
+
   return (
     <Contenedor theme={theme}>
       <BrowserRouter>

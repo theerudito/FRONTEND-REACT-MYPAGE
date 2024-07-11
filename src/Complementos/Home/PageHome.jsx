@@ -47,7 +47,7 @@ import {
 import { LenguajeBarra, LenguajeEn, LenguajeEs } from "./Lenguaje";
 import { ModoDark, ModoLight } from "./Modos";
 
-import Curriculum from "./../Files/RESUMEN-IN-ENGLISH.pdf";
+import Curriculum from "./../Files/CV-EN.pdf";
 
 import { NavBarMenu } from "../Menu/NavBarMenu";
 
